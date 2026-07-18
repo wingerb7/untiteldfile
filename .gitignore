@@ -1,0 +1,30 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local caches
+.cache/
+.matplotlib/
+
+# Large/local StatsBomb source clone
+data/open-data/
+
+# Generated render outputs
+renders/
+
+# Local editor files
+.idea/
+.vscode/

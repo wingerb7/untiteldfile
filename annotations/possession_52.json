@@ -1,0 +1,60 @@
+{
+  "possession": 52,
+  "match_id": 3869685,
+  "annotations": [
+    {
+      "kind": "player_highlight",
+      "t_start": 5.5,
+      "t_end": 8.8,
+      "x": 63.2,
+      "y": 68.2,
+      "label": "derde man: Alvarez"
+    },
+    {
+      "kind": "pass_highlight",
+      "t_start": 5.8,
+      "t_end": 9.2,
+      "from": [63.2, 68.2],
+      "to": [99.3, 54.9],
+      "label": "switch of play"
+    },
+    {
+      "kind": "text_callout",
+      "t_start": 6.0,
+      "t_end": 9.2,
+      "x": 78.0,
+      "y": 61.5,
+      "label": "Frankrijk kantelt"
+    },
+    {
+      "kind": "space_zone",
+      "t_start": 8.6,
+      "t_end": 11.3,
+      "polygon": [[96.0, 22.0], [120.0, 22.0], [120.0, 45.0], [101.0, 45.0]],
+      "label": "ruimte achter de backline"
+    },
+    {
+      "kind": "run_arrow",
+      "t_start": 8.9,
+      "t_end": 11.0,
+      "path": [[101.0, 43.0], [106.0, 35.0], [111.8, 32.1]],
+      "label": "Di Maria loopt vrij in"
+    },
+    {
+      "kind": "player_highlight",
+      "t_start": 9.0,
+      "t_end": 11.4,
+      "x": 111.8,
+      "y": 32.1,
+      "label": "vrije man"
+    },
+    {
+      "kind": "pass_highlight",
+      "t_start": 9.25,
+      "t_end": 10.85,
+      "from": [99.3, 54.9],
+      "to": [111.8, 32.1],
+      "label": "laatste pass"
+    }
+  ]
+}

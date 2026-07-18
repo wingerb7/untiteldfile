@@ -1,0 +1,6811 @@
+{
+  "match_id": 3788754,
+  "possession_id": 40,
+  "match_label": "Italy 3-0 Switzerland, UEFA Euro 2020 (Locatelli first goal)",
+  "source": "open-data",
+  "coordinate_system": {
+    "provider": "StatsBomb",
+    "length": 120,
+    "width": 80
+  },
+  "events": [
+    {
+      "id": "f3761d40-7236-4128-9ce5-a6e84d2e0dc8",
+      "index": 1043,
+      "period": 1,
+      "timestamp": "00:24:24.046",
+      "duration": 1.416717,
+      "minute": 24,
+      "second": 24,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        9.5,
+        22.8
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        8.8,
+        26.7
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": true,
+          "location": [
+            9.5,
+            22.799999237060547
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            13.588322389869518,
+            19.4607285236971
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            17.23121438192203,
+            42.327044519282126
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.09521522704165,
+            55.07014245247508
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.42617068669081,
+            8.64427899002466
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.23461422276283,
+            6.541460727057412
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            36.778698197500404,
+            22.5679764712106
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            36.792914050415774,
+            31.250495766673254
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            39.47509940199558,
+            7.324697096119792
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        30.5074052042296,
+        16.312522305292,
+        0.0,
+        28.8892009354131,
+        0.0,
+        42.1204961081141,
+        4.61019075954021,
+        30.0133843553776,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605",
+      "index": 1044,
+      "period": 1,
+      "timestamp": "00:24:25.462",
+      "duration": 1.647384,
+      "minute": 24,
+      "second": 25,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        8.8,
+        26.7
+      ],
+      "pass_recipient": "Leonardo Bonucci",
+      "recipient_id": 7173,
+      "pass_outcome": null,
+      "pass_end_location": [
+        17.1,
+        40.9
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": true,
+          "location": [
+            8.800000190734863,
+            26.700000762939453
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            13.400474314156469,
+            19.39994057742483
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            17.151296141380442,
+            41.12143736190521
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.185842373554763,
+            56.680702270404325
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            27.20654690346143,
+            10.359782834355258
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.754969085447186,
+            4.462938400402152
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.34403815799712,
+            30.399566965603782
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.99502770824091,
+            20.927255682996872
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        31.7284379968531,
+        16.4772437812395,
+        0.0,
+        29.5827195332542,
+        0.0,
+        42.0740238877041,
+        4.2322744517094,
+        29.6756217001793,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "192924bb-8c59-48ca-9c06-b80bc58a8827",
+      "index": 1045,
+      "period": 1,
+      "timestamp": "00:24:27.110",
+      "duration": null,
+      "minute": 24,
+      "second": 27,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        17.1,
+        40.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            10.273772874554695,
+            30.542787645835332
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.348280424961715,
+            21.36624850532948
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            17.100000381469727,
+            40.900001525878906
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.15909539883198,
+            59.82154465738047
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.517816734090232,
+            13.109624110342509
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            36.51412743528624,
+            2.608916830532607
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.86006847752711,
+            32.074270542572954
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.10658650197807,
+            27.85070327532877
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.94938526660302,
+            46.86454525651211
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.46609584485718,
+            19.982712132399826
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.505117805665975,
+            34.368454877774155
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.942209441649325,
+            25.463222631285667
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.9152659637049,
+            5.7272465724171155
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        47.12190637736,
+        21.2082149501168,
+        0.0,
+        32.0454528402022,
+        0.0,
+        45.5988700743323,
+        3.82969937671429,
+        38.0179598999533,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "83ee676f-c508-4cc8-abc3-1b7940cd9e2a",
+      "index": 1046,
+      "period": 1,
+      "timestamp": "00:24:27.110",
+      "duration": 7.808686,
+      "minute": 24,
+      "second": 27,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        17.1,
+        40.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        36.3,
+        42.1
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            10.273772874554695,
+            30.542787645835332
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.348280424961715,
+            21.36624850532948
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            17.100000381469727,
+            40.900001525878906
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.15909539883198,
+            59.82154465738047
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.517816734090232,
+            13.109624110342509
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            36.51412743528624,
+            2.608916830532607
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.86006847752711,
+            32.074270542572954
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.10658650197807,
+            27.85070327532877
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.94938526660302,
+            46.86454525651211
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.46609584485718,
+            19.982712132399826
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.505117805665975,
+            34.368454877774155
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.942209441649325,
+            25.463222631285667
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.9152659637049,
+            5.7272465724171155
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        47.12190637736,
+        21.2082149501168,
+        0.0,
+        32.0454528402022,
+        0.0,
+        45.5988700743323,
+        3.82969937671429,
+        38.0179598999533,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "5fd931c4-7bb3-4430-ab22-df88b545c85b",
+      "index": 1047,
+      "period": 1,
+      "timestamp": "00:24:34.918",
+      "duration": 1.6,
+      "minute": 24,
+      "second": 34,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        36.3,
+        42.1
+      ],
+      "pass_recipient": "Giovanni Di Lorenzo",
+      "recipient_id": 11514,
+      "pass_outcome": null,
+      "pass_end_location": [
+        40.7,
+        70.9
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [],
+      "visible_area": null
+    },
+    {
+      "id": "ba848efe-15f3-4e8c-ac8d-e79d521b6ba2",
+      "index": 1048,
+      "period": 1,
+      "timestamp": "00:24:36.518",
+      "duration": null,
+      "minute": 24,
+      "second": 36,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 11514,
+      "player": "Giovanni Di Lorenzo",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        40.7,
+        70.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [],
+      "visible_area": null
+    },
+    {
+      "id": "8a83d53a-f9e6-4312-b20f-55dc094b3e21",
+      "index": 1049,
+      "period": 1,
+      "timestamp": "00:24:36.518",
+      "duration": 1.999999,
+      "minute": 24,
+      "second": 36,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 11514,
+      "player": "Giovanni Di Lorenzo",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        40.7,
+        70.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        41.7,
+        72.1
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [],
+      "visible_area": null
+    },
+    {
+      "id": "12f7bd2d-6420-41c6-92bb-ae10fd7111db",
+      "index": 1050,
+      "period": 1,
+      "timestamp": "00:24:38.518",
+      "duration": 2.101614,
+      "minute": 24,
+      "second": 38,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 11514,
+      "player": "Giovanni Di Lorenzo",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        41.7,
+        72.1
+      ],
+      "pass_recipient": "Leonardo Bonucci",
+      "recipient_id": 7173,
+      "pass_outcome": null,
+      "pass_end_location": [
+        25.9,
+        49.9
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.460791077967215,
+            31.747268363517463
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            41.70000076293945,
+            72.0999984741211
+          ],
+          "player_id": 11514,
+          "player_name": "Giovanni Di Lorenzo",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.826636047664024,
+            53.96284936943867
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            46.52168416473559,
+            49.91023257140951
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.53590778990191,
+            30.994043514596235
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            49.04010337516196,
+            69.28411683532623
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.98610476097953,
+            10.523770182405968
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.83443546793711,
+            67.31025937026018
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.02506697389771,
+            59.15924360808889
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.95511764018776,
+            50.50200616151258
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.157374975146894,
+            53.99540614210985
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.7705222557261,
+            70.42337756660388
+          ]
+        }
+      ],
+      "visible_area": [
+        20.8707093365252,
+        80.0,
+        43.4113316640273,
+        6.1846920715273,
+        64.8369705095979,
+        8.96571675422858,
+        67.5633130355175,
+        80.0,
+        20.8707093365252,
+        80.0
+      ]
+    },
+    {
+      "id": "d4e7fe67-31c0-471d-812c-8d1157c6142d",
+      "index": 1051,
+      "period": 1,
+      "timestamp": "00:24:40.620",
+      "duration": null,
+      "minute": 24,
+      "second": 40,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        25.9,
+        49.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            25.899999618530273,
+            49.900001525878906
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.155585796429662,
+            28.084703967273065
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.25702572837149,
+            69.277167936392
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.25511796540606,
+            51.955615275730715
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.95077565291878,
+            50.37788998025873
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            47.839474103767984,
+            30.558277053177576
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.47118529401554,
+            64.08908236576772
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.013229012475605,
+            64.7151253838793
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.92589098306424,
+            7.495433031143733
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.10608285766574,
+            57.76515698286636
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.47675817504928,
+            48.91619373954609
+          ]
+        }
+      ],
+      "visible_area": [
+        8.22153570137265,
+        80.0,
+        35.4438013706921,
+        0.0,
+        45.5293319463345,
+        0.0,
+        59.274597626054,
+        2.7086934372138,
+        58.6863141723584,
+        80.0,
+        8.22153570137265,
+        80.0
+      ]
+    },
+    {
+      "id": "ee42b8ec-c044-4115-803c-41a9caf90880",
+      "index": 1052,
+      "period": 1,
+      "timestamp": "00:24:40.620",
+      "duration": 1.629366,
+      "minute": 24,
+      "second": 40,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        25.9,
+        49.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        28.0,
+        49.9
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            25.899999618530273,
+            49.900001525878906
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.155585796429662,
+            28.084703967273065
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.25702572837149,
+            69.277167936392
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.25511796540606,
+            51.955615275730715
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.95077565291878,
+            50.37788998025873
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            47.839474103767984,
+            30.558277053177576
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.47118529401554,
+            64.08908236576772
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.013229012475605,
+            64.7151253838793
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.92589098306424,
+            7.495433031143733
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.10608285766574,
+            57.76515698286636
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.47675817504928,
+            48.91619373954609
+          ]
+        }
+      ],
+      "visible_area": [
+        8.22153570137265,
+        80.0,
+        35.4438013706921,
+        0.0,
+        45.5293319463345,
+        0.0,
+        59.274597626054,
+        2.7086934372138,
+        58.6863141723584,
+        80.0,
+        8.22153570137265,
+        80.0
+      ]
+    },
+    {
+      "id": "8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf",
+      "index": 1053,
+      "period": 1,
+      "timestamp": "00:24:42.249",
+      "duration": 2.199858,
+      "minute": 24,
+      "second": 42,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        28.0,
+        49.9
+      ],
+      "pass_recipient": "Francesco Acerbi",
+      "recipient_id": 7119,
+      "pass_outcome": null,
+      "pass_end_location": [
+        35.2,
+        25.8
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            28.0,
+            49.900001525878906
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            28.036696361960253,
+            25.646214513772776
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.150796955121024,
+            70.74954350047695
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.390088898419236,
+            50.16131471389692
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.51692252359689,
+            50.07890862342396
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            46.24205188945507,
+            32.85017369501454
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            47.29169749461505,
+            63.31074206133677
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.131947507434006,
+            10.081904368811479
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.247404912406935,
+            46.84662338229668
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.28529625355887,
+            65.76362538989639
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.32120984397106,
+            49.93443588445513
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.45444770299672,
+            57.27098311305372
+          ]
+        }
+      ],
+      "visible_area": [
+        5.06659106063945,
+        80.0,
+        33.2973383849144,
+        0.0,
+        57.3457178807434,
+        0.0,
+        57.389609270861,
+        80.0,
+        5.06659106063945,
+        80.0
+      ]
+    },
+    {
+      "id": "afb607ba-5ce1-4f67-b46e-004467267f16",
+      "index": 1054,
+      "period": 1,
+      "timestamp": "00:24:44.449",
+      "duration": null,
+      "minute": 24,
+      "second": 44,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        35.2,
+        25.8
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.432127446702182,
+            48.44387524352644
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            35.20000076293945,
+            25.799999237060547
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.98301837004928,
+            69.66551709689435
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.49137434039919,
+            47.119514267095155
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.88114448105702,
+            48.25861703956848
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.66963135729952,
+            31.44001842491791
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.74019483958729,
+            62.41912828678167
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.245637556212486,
+            42.03720700998727
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.31028126883241,
+            10.895941550096893
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.68415711740657,
+            41.33292153885882
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.2790936825475,
+            63.95111767964994
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.05849477220872,
+            55.54262688062736
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.71790070380099,
+            17.11182453265917
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.651792695463435,
+            65.68609869575587
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.95600629059678,
+            24.118904319377094
+          ]
+        }
+      ],
+      "visible_area": [
+        12.3706382055458,
+        80.0,
+        38.1919539060996,
+        0.0,
+        62.2724221491158,
+        0.0,
+        65.4102383343716,
+        80.0,
+        12.3706382055458,
+        80.0
+      ]
+    },
+    {
+      "id": "f79c20a4-f70f-4ef3-b4f3-d6e0a2d7fafe",
+      "index": 1055,
+      "period": 1,
+      "timestamp": "00:24:44.449",
+      "duration": 1.156344,
+      "minute": 24,
+      "second": 44,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        35.2,
+        25.8
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        36.6,
+        19.2
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.432127446702182,
+            48.44387524352644
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            35.20000076293945,
+            25.799999237060547
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.98301837004928,
+            69.66551709689435
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.49137434039919,
+            47.119514267095155
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.88114448105702,
+            48.25861703956848
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.66963135729952,
+            31.44001842491791
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.74019483958729,
+            62.41912828678167
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.245637556212486,
+            42.03720700998727
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.31028126883241,
+            10.895941550096893
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.68415711740657,
+            41.33292153885882
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.2790936825475,
+            63.95111767964994
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.05849477220872,
+            55.54262688062736
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.71790070380099,
+            17.11182453265917
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.651792695463435,
+            65.68609869575587
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.95600629059678,
+            24.118904319377094
+          ]
+        }
+      ],
+      "visible_area": [
+        12.3706382055458,
+        80.0,
+        38.1919539060996,
+        0.0,
+        62.2724221491158,
+        0.0,
+        65.4102383343716,
+        80.0,
+        12.3706382055458,
+        80.0
+      ]
+    },
+    {
+      "id": "f42c6b85-d665-4c51-b2d5-6ccab8a27270",
+      "index": 1056,
+      "period": 1,
+      "timestamp": "00:24:45.606",
+      "duration": 1.904993,
+      "minute": 24,
+      "second": 45,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        36.6,
+        19.2
+      ],
+      "pass_recipient": "Leonardo Bonucci",
+      "recipient_id": 7173,
+      "pass_outcome": null,
+      "pass_end_location": [
+        29.5,
+        45.5
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.710696732843772,
+            39.536238106669664
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            36.599998474121094,
+            19.200000762939453
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.8907113072796,
+            61.848382205344734
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.4692386690928,
+            35.61720620355614
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            46.25400324030444,
+            21.327707091345673
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            47.616274935025714,
+            37.563503632607876
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.95579560730701,
+            53.2985045217233
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.467694938390835,
+            30.130269228676354
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.64383058465273,
+            2.908965649173794
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.384708895581696,
+            29.46061697472939
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.49730772564305,
+            54.23256318426931
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.18330647178503,
+            8.015341725991021
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.513805355769975,
+            43.518647016876486
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.855869333506,
+            15.549338287914438
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.7915924134733,
+            56.119648792736
+          ]
+        }
+      ],
+      "visible_area": [
+        11.5642578200685,
+        80.0,
+        37.2034061662188,
+        0.0,
+        63.5429849195089,
+        0.0,
+        67.7119566482467,
+        80.0,
+        11.5642578200685,
+        80.0
+      ]
+    },
+    {
+      "id": "5264a92d-d564-46ff-a26d-14d8fb54db95",
+      "index": 1057,
+      "period": 1,
+      "timestamp": "00:24:47.511",
+      "duration": null,
+      "minute": 24,
+      "second": 47,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        29.5,
+        45.5
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            29.5,
+            45.5
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            34.4424692462903,
+            21.860485633667956
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.69160582617164,
+            44.21183225383996
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.63599644515911,
+            68.80407875110996
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.0710472480509,
+            43.06170260432403
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.55039851145537,
+            27.626181461503812
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            49.24021460872976,
+            32.401850145058305
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            49.843452431617436,
+            59.5490439429615
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            51.91789599007717,
+            35.5847836399194
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.85404121304889,
+            6.3422626478621495
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.868893382127524,
+            11.46343363366342
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.378387442300415,
+            50.76640755369858
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.74311219167539,
+            57.58983164538415
+          ]
+        }
+      ],
+      "visible_area": [
+        11.8378424720692,
+        80.0,
+        37.7730998334963,
+        0.0,
+        61.8483755757735,
+        0.0,
+        62.8855145877903,
+        80.0,
+        11.8378424720692,
+        80.0
+      ]
+    },
+    {
+      "id": "8545ee8e-bae9-4cca-8b0f-cb6eabc283eb",
+      "index": 1058,
+      "period": 1,
+      "timestamp": "00:24:47.511",
+      "duration": 2.113187,
+      "minute": 24,
+      "second": 47,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        29.8,
+        43.6
+      ],
+      "pass_recipient": "Francesco Acerbi",
+      "recipient_id": 7119,
+      "pass_outcome": null,
+      "pass_end_location": [
+        31.4,
+        22.8
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            29.799999237060547,
+            43.599998474121094
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            34.74246848335085,
+            19.96048410778905
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.991605063232186,
+            42.31183072796105
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.935995682219655,
+            66.90407722523105
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.37104648511145,
+            41.16170107844513
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.85039774851592,
+            25.726179935624906
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            49.540213845790305,
+            30.5018486191794
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.14345166867798,
+            57.64904241708259
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            52.21789522713772,
+            33.684782114040495
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.154040450109434,
+            4.442261121983243
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.16889261918807,
+            9.563432107784514
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.67838667936096,
+            48.86640602781967
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.04311142873593,
+            55.689830119505245
+          ]
+        }
+      ],
+      "visible_area": [
+        11.5218788521201,
+        80.0,
+        37.4571362135472,
+        0.0,
+        62.1730068841513,
+        0.0,
+        63.2101458961681,
+        80.0,
+        11.5218788521201,
+        80.0
+      ]
+    },
+    {
+      "id": "e287d31d-ee72-4ce6-83c2-bf05a1e37382",
+      "index": 1059,
+      "period": 1,
+      "timestamp": "00:24:49.624",
+      "duration": null,
+      "minute": 24,
+      "second": 49,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        31.4,
+        22.8
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.729465925495163,
+            48.359874598221474
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            31.399999618530273,
+            22.799999237060547
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.77368119441324,
+            42.40803814544752
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.73592445263823,
+            69.80890019791713
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.05307702977727,
+            24.388232891176095
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.66269120937784,
+            43.63350143968968
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.769357914207674,
+            29.982889109372003
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.82701231830917,
+            32.651180838718496
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.01998114911254,
+            59.219387906558055
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.83458853147546,
+            6.041587274373548
+          ]
+        }
+      ],
+      "visible_area": [
+        3.47747836610025,
+        80.0,
+        32.6794390929078,
+        0.005426290344845,
+        56.1116617751643,
+        5.25161867871257,
+        54.3210649205299,
+        80.0,
+        3.47747836610025,
+        80.0
+      ]
+    },
+    {
+      "id": "fd2664dd-c01f-44cb-9445-b39d6b3db33d",
+      "index": 1060,
+      "period": 1,
+      "timestamp": "00:24:49.624",
+      "duration": 2.306151,
+      "minute": 24,
+      "second": 49,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        31.4,
+        22.8
+      ],
+      "pass_recipient": "Gianluigi Donnarumma",
+      "recipient_id": 7036,
+      "pass_outcome": null,
+      "pass_end_location": [
+        7.1,
+        40.5
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.729465925495163,
+            48.359874598221474
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            31.399999618530273,
+            22.799999237060547
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.77368119441324,
+            42.40803814544752
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.73592445263823,
+            69.80890019791713
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.05307702977727,
+            24.388232891176095
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.66269120937784,
+            43.63350143968968
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.769357914207674,
+            29.982889109372003
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.82701231830917,
+            32.651180838718496
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.01998114911254,
+            59.219387906558055
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.83458853147546,
+            6.041587274373548
+          ]
+        }
+      ],
+      "visible_area": [
+        3.47747836610025,
+        80.0,
+        32.6794390929078,
+        0.005426290344845,
+        56.1116617751643,
+        5.25161867871257,
+        54.3210649205299,
+        80.0,
+        3.47747836610025,
+        80.0
+      ]
+    },
+    {
+      "id": "28bafad9-8613-419c-8c81-a6e0a97742fe",
+      "index": 1061,
+      "period": 1,
+      "timestamp": "00:24:51.930",
+      "duration": null,
+      "minute": 24,
+      "second": 51,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        7.1,
+        40.5
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            7.099999904632568,
+            40.5
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.358020875605547,
+            46.08742773544681
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.73937104693215,
+            17.433399779255183
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.65596294441012,
+            39.183703766054215
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            32.302067985235425,
+            22.59816721483827
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            32.458103949593564,
+            36.925135605275486
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.66618500422388,
+            70.30800846114691
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.1481345370577,
+            26.137088177662072
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.078393597839295,
+            26.96928508598053
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.4911329240625,
+            4.702437759071273
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        40.6527133582381,
+        20.60987658743,
+        0.0,
+        48.4204344430988,
+        0.0,
+        39.2423849067003,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "fbd5530c-448a-4ff8-aaf0-b043bb54bf9c",
+      "index": 1062,
+      "period": 1,
+      "timestamp": "00:24:51.930",
+      "duration": 1.855059,
+      "minute": 24,
+      "second": 51,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        7.1,
+        40.5
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        7.1,
+        40.5
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            7.099999904632568,
+            40.5
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.358020875605547,
+            46.08742773544681
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.73937104693215,
+            17.433399779255183
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.65596294441012,
+            39.183703766054215
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            32.302067985235425,
+            22.59816721483827
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            32.458103949593564,
+            36.925135605275486
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.66618500422388,
+            70.30800846114691
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.1481345370577,
+            26.137088177662072
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.078393597839295,
+            26.96928508598053
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.4911329240625,
+            4.702437759071273
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        40.6527133582381,
+        20.60987658743,
+        0.0,
+        48.4204344430988,
+        0.0,
+        39.2423849067003,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "c7f6375f-3fe2-4856-b6f6-3988640e9adf",
+      "index": 1063,
+      "period": 1,
+      "timestamp": "00:24:53.785",
+      "duration": 1.2,
+      "minute": 24,
+      "second": 53,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        7.1,
+        40.5
+      ],
+      "pass_recipient": "Leonardo Bonucci",
+      "recipient_id": 7173,
+      "pass_outcome": null,
+      "pass_end_location": [
+        13.7,
+        48.9
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": true,
+          "location": [
+            7.099999904632568,
+            40.5
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.327854568199541,
+            50.037413006185744
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            17.363994828099635,
+            22.788892337850676
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.167999805783296,
+            45.25851145638517
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            28.784193233049038,
+            27.008931957380426
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.209445726213772,
+            43.396654588768996
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.975010681368445,
+            76.74641673220785
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.81751079314671,
+            32.249165395334245
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.56939302344452,
+            33.16935850392811
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.13397019871071,
+            64.31722732561656
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.560634613496546,
+            9.479938337081975
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        41.1091920270019,
+        20.8131104314104,
+        0.0,
+        48.2239414354433,
+        0.0,
+        39.9283391352901,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "f5bae712-9be5-4f4e-abc4-45a2f8c97f4b",
+      "index": 1064,
+      "period": 1,
+      "timestamp": "00:24:54.985",
+      "duration": null,
+      "minute": 24,
+      "second": 54,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        13.7,
+        48.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            7.17867227232405,
+            35.051176689824835
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            13.699999809265137,
+            48.900001525878906
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.15311537013153,
+            22.752868438717407
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.964762421245695,
+            46.36913678281041
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            27.712439627104686,
+            26.776585604620145
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.395143013046663,
+            45.122575164795
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.481913932329434,
+            76.14973888265558
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.431737382885245,
+            31.062219055994227
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.33062968089813,
+            32.531651796315096
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            39.131198135870804,
+            63.37734699894467
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.992417299147064,
+            8.886396137350552
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        43.4448437068444,
+        21.4598771190815,
+        0.0,
+        34.312772905402,
+        0.0,
+        48.330315970388,
+        4.26702875927826,
+        41.1036334712071,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "f7311fe6-e54b-40e9-9672-f8755850ca48",
+      "index": 1065,
+      "period": 1,
+      "timestamp": "00:24:54.985",
+      "duration": 3.199999,
+      "minute": 24,
+      "second": 54,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        13.7,
+        48.9
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        15.2,
+        48.5
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            7.17867227232405,
+            35.051176689824835
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            13.699999809265137,
+            48.900001525878906
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.15311537013153,
+            22.752868438717407
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.964762421245695,
+            46.36913678281041
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            27.712439627104686,
+            26.776585604620145
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.395143013046663,
+            45.122575164795
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.481913932329434,
+            76.14973888265558
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.431737382885245,
+            31.062219055994227
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.33062968089813,
+            32.531651796315096
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            39.131198135870804,
+            63.37734699894467
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.992417299147064,
+            8.886396137350552
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        43.4448437068444,
+        21.4598771190815,
+        0.0,
+        34.312772905402,
+        0.0,
+        48.330315970388,
+        4.26702875927826,
+        41.1036334712071,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "615f8cd8-ac13-4d3d-9ca1-ec1d13327815",
+      "index": 1066,
+      "period": 1,
+      "timestamp": "00:24:58.185",
+      "duration": 2.4,
+      "minute": 24,
+      "second": 58,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7173,
+      "player": "Leonardo Bonucci",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        15.2,
+        48.5
+      ],
+      "pass_recipient": "Gianluigi Donnarumma",
+      "recipient_id": 7036,
+      "pass_outcome": null,
+      "pass_end_location": [
+        6.8,
+        33.1
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            15.199999809265137,
+            48.5
+          ],
+          "player_id": 7173,
+          "player_name": "Leonardo Bonucci",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.78639605830739,
+            46.21654034328432
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.378344045753053,
+            70.46448667859141
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.085693888879746,
+            32.96030482335872
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.830260937544736,
+            24.089222320818422
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            28.953468604512608,
+            48.847010013024054
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.86450814312181,
+            34.72559809244022
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.96482766725909,
+            49.442648005287076
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            34.87740383265755,
+            59.48781559906466
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.65140288481996,
+            5.019141066677115
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.93418611075151,
+            55.32624271647078
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        61.2478349757738,
+        25.0574420800757,
+        0.402276780396924,
+        47.5496847488003,
+        5.99089572676404,
+        42.6379435390034,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "27af0a1a-5f1c-4572-91b5-37959c8bf962",
+      "index": 1067,
+      "period": 1,
+      "timestamp": "00:25:00.585",
+      "duration": null,
+      "minute": 25,
+      "second": 0,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        6.8,
+        33.1
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": true,
+          "location": [
+            6.800000190734863,
+            33.099998474121094
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            11.352781754830943,
+            17.521127377363655
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            16.61919013993034,
+            51.72058828447882
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            19.737322917421494,
+            47.23192053006224
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            22.648326266234733,
+            73.34015297827713
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.863502751944225,
+            37.91917214597549
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.78897673505,
+            25.840145693786695
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.207295523626698,
+            35.67509802756382
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            28.646444246387546,
+            49.625864113466534
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        32.0298564062059,
+        17.0421461998498,
+        0.0,
+        31.0985987755326,
+        0.0,
+        42.4105362279676,
+        4.0596248758502,
+        28.3258933371169,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "89569e82-3968-4eaf-9461-5bb14a0ba260",
+      "index": 1068,
+      "period": 1,
+      "timestamp": "00:25:00.585",
+      "duration": 3.199995,
+      "minute": 25,
+      "second": 0,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        6.8,
+        33.1
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        8.0,
+        31.9
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": true,
+          "location": [
+            6.800000190734863,
+            33.099998474121094
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            11.352781754830943,
+            17.521127377363655
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            16.61919013993034,
+            51.72058828447882
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            19.737322917421494,
+            47.23192053006224
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            22.648326266234733,
+            73.34015297827713
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.863502751944225,
+            37.91917214597549
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.78897673505,
+            25.840145693786695
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.207295523626698,
+            35.67509802756382
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            28.646444246387546,
+            49.625864113466534
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        32.0298564062059,
+        17.0421461998498,
+        0.0,
+        31.0985987755326,
+        0.0,
+        42.4105362279676,
+        4.0596248758502,
+        28.3258933371169,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "6c6f68dc-da7b-4eb3-afa6-9680c2d5a51f",
+      "index": 1069,
+      "period": 1,
+      "timestamp": "00:25:03.785",
+      "duration": 0.993653,
+      "minute": 25,
+      "second": 3,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7036,
+      "player": "Gianluigi Donnarumma",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        8.0,
+        31.9
+      ],
+      "pass_recipient": "Francesco Acerbi",
+      "recipient_id": 7119,
+      "pass_outcome": null,
+      "pass_end_location": [
+        9.1,
+        12.1
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": true,
+          "location": [
+            8.0,
+            31.899999618530273
+          ],
+          "player_id": 7036,
+          "player_name": "Gianluigi Donnarumma",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            9.15877361473136,
+            15.975201310784854
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            16.108199757057236,
+            50.60641069435026
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.649136989843555,
+            45.14464214310372
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            22.375196749505704,
+            24.67598808972231
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.48228789677043,
+            38.9846433852814
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.80002205176143,
+            75.12595579210186
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            27.111019310112255,
+            33.03683769623591
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.50440250392154,
+            47.664666206711374
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.05291892277229,
+            7.6614297347410485
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        25.8052477876972,
+        14.621561313321,
+        0.0,
+        30.2682703975249,
+        0.0,
+        41.3870121508334,
+        4.3458342789561,
+        25.5497163575908,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "6ef7fbcd-7098-4861-9082-3186b1dd5ce6",
+      "index": 1070,
+      "period": 1,
+      "timestamp": "00:25:04.779",
+      "duration": null,
+      "minute": 25,
+      "second": 4,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        9.1,
+        12.1
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            4.802066934578534,
+            28.87959504838497
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            9.100000381469727,
+            12.100000381469727
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.424593721848652,
+            44.68709704422828
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            19.495009605770008,
+            40.674655586332115
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.754015058710877,
+            18.630477149737388
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.819972231995763,
+            33.87275568821041
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.3318746975432,
+            71.13730399523587
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.550837977523287,
+            27.24793693292746
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.349074421208428,
+            41.872672896974215
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.920971272464925,
+            2.368365599790053
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        18.7927244429473,
+        10.7127633289854,
+        0.0,
+        40.3492965787192,
+        0.0,
+        23.4080526557161,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "6aa340be-ec66-4d5a-82da-bb89681b40d9",
+      "index": 1071,
+      "period": 1,
+      "timestamp": "00:25:04.779",
+      "duration": 0.919999,
+      "minute": 25,
+      "second": 4,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        9.1,
+        12.1
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        9.3,
+        9.4
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            4.802066934578534,
+            28.87959504838497
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            9.100000381469727,
+            12.100000381469727
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.424593721848652,
+            44.68709704422828
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            19.495009605770008,
+            40.674655586332115
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.754015058710877,
+            18.630477149737388
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.819972231995763,
+            33.87275568821041
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.3318746975432,
+            71.13730399523587
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.550837977523287,
+            27.24793693292746
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.349074421208428,
+            41.872672896974215
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.920971272464925,
+            2.368365599790053
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        18.7927244429473,
+        10.7127633289854,
+        0.0,
+        40.3492965787192,
+        0.0,
+        23.4080526557161,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "60719aaf-0c36-4aa6-a13f-ad6c69943646",
+      "index": 1072,
+      "period": 1,
+      "timestamp": "00:25:05.699",
+      "duration": 1.602615,
+      "minute": 25,
+      "second": 5,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7119,
+      "player": "Francesco Acerbi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        9.3,
+        9.4
+      ],
+      "pass_recipient": "Leonardo Spinazzola",
+      "recipient_id": 8286,
+      "pass_outcome": null,
+      "pass_end_location": [
+        30.2,
+        4.6
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            4.166314429234049,
+            25.79841916281564
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            9.300000190734863,
+            9.399999618530273
+          ],
+          "player_id": 7119,
+          "player_name": "Francesco Acerbi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.275907530956843,
+            42.185493210831424
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            18.32350026512698,
+            37.02890618134197
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            18.884379761655424,
+            13.110485531748544
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.571249240389946,
+            31.32396309481048
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.848747495152452,
+            68.40626851943615
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.189515877826793,
+            24.139395347581072
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.586682656741104,
+            38.37610488087434
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.926022003504514,
+            -1.3030717678454806
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        14.3982333193391,
+        8.31887997030629,
+        0.0,
+        39.334741953412,
+        0.0,
+        21.8632915586853,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "fdcd62c6-5bc4-4a8b-8388-81e554a7cda9",
+      "index": 1074,
+      "period": 1,
+      "timestamp": "00:25:07.301",
+      "duration": null,
+      "minute": 25,
+      "second": 7,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 8286,
+      "player": "Leonardo Spinazzola",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        30.2,
+        4.6
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            5.6114435335392585,
+            31.30260952269306
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            10.14622408085988,
+            12.268868105839204
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            18.42104649554726,
+            45.78168492774283
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            18.89772427560885,
+            37.40317778656741
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            20.696996022086537,
+            13.451595043889824
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.5691035685263,
+            32.689082088130434
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.616277489458284,
+            71.46248653669889
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.801396321568106,
+            25.982646761515895
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            30.200000762939453,
+            4.599999904632568
+          ],
+          "player_id": 8286,
+          "player_name": "Leonardo Spinazzola",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.207543548876245,
+            6.214673478058543
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.88053030724119,
+            42.07966046099497
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        26.4076297370039,
+        14.9445169107423,
+        0.0,
+        42.818844387943,
+        0.0,
+        26.3632001424115,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "98a22299-e98a-486d-b6cf-5b25a7659b89",
+      "index": 1075,
+      "period": 1,
+      "timestamp": "00:25:07.301",
+      "duration": 2.192789,
+      "minute": 25,
+      "second": 7,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 8286,
+      "player": "Leonardo Spinazzola",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        29.3,
+        3.9
+      ],
+      "pass_recipient": "Ciro Immobile",
+      "recipient_id": 7788,
+      "pass_outcome": null,
+      "pass_end_location": [
+        52.9,
+        30.5
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            4.711442007660352,
+            30.602609713427924
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            9.246222554980974,
+            11.568868296574067
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            17.521044969668353,
+            45.081685118477694
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            17.997722749729945,
+            36.703177977302275
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            19.79699449620763,
+            12.751595234624688
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            23.669102042647395,
+            31.989082278865297
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.716275963579378,
+            70.76248672743375
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            28.9013947956892,
+            25.282646952250758
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            29.299999237060547,
+            3.9000000953674316
+          ],
+          "player_id": 8286,
+          "player_name": "Leonardo Spinazzola",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            32.30754202299734,
+            5.514673668793407
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            32.98052878136228,
+            41.379660651729836
+          ]
+        }
+      ],
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        24.1172869812187,
+        13.648373849585,
+        0.0,
+        41.774856014149,
+        0.0,
+        25.3192117686175,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "id": "2d23a4c4-a1f1-4ef2-91b7-3e7e16d32e2a",
+      "index": 1076,
+      "period": 1,
+      "timestamp": "00:25:09.494",
+      "duration": null,
+      "minute": 25,
+      "second": 9,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7788,
+      "player": "Ciro Immobile",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        52.9,
+        30.5
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            19.802874926043827,
+            42.12783781847936
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.509889520048247,
+            30.84757903945564
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.68193398821863,
+            64.79800566803692
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.428744468337058,
+            28.90053116367362
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            34.82650422586501,
+            6.529027673382686
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.372217817904826,
+            39.10441776947952
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            36.68109268736676,
+            23.592317368126572
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.586056118417346,
+            51.38397807688051
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.97214150802033,
+            12.289476309419513
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.2121531262696,
+            32.258644194480596
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            51.52634704744737,
+            18.11081131157868
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            52.900001525878906,
+            30.5
+          ],
+          "player_id": 7788,
+          "player_name": "Ciro Immobile",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.54981707353039,
+            33.631207362021684
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.11139416094109,
+            30.325896198228406
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.32900715414143,
+            54.07090686037664
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.38152419434031,
+            34.92038766773233
+          ]
+        }
+      ],
+      "visible_area": [
+        4.02957248406494,
+        80.0,
+        32.5581101106773,
+        0.0,
+        59.7561924159402,
+        0.0,
+        60.0228280044874,
+        80.0,
+        4.02957248406494,
+        80.0
+      ]
+    },
+    {
+      "id": "a10e93ca-9968-4472-8209-1441ac94b02a",
+      "index": 1077,
+      "period": 1,
+      "timestamp": "00:25:09.494",
+      "duration": 0.463048,
+      "minute": 25,
+      "second": 9,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7788,
+      "player": "Ciro Immobile",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        54.1,
+        28.9
+      ],
+      "pass_recipient": "Nicol\u00f2 Barella",
+      "recipient_id": 8181,
+      "pass_outcome": "Incomplete",
+      "pass_end_location": [
+        55.8,
+        35.3
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.002871874286015,
+            40.52783743700963
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            22.709886468290435,
+            29.247578657985912
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.88193093646082,
+            63.198005286567195
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.628741416579246,
+            27.300530782203893
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            36.026501174107196,
+            4.929027291912959
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            36.57221476614701,
+            37.50441738800979
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            37.881089635608944,
+            21.992316986656846
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.786053066659534,
+            49.78397769541078
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.172138456262516,
+            10.689475927949786
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            51.412150074511786,
+            30.65864381301087
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            52.72634399568956,
+            16.510810930108953
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            54.099998474121094,
+            28.899999618530273
+          ],
+          "player_id": 7788,
+          "player_name": "Ciro Immobile",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.74981402177258,
+            32.03120698055196
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.311391109183276,
+            28.72589581675868
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.52900410238362,
+            52.47090647890691
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.581521142582496,
+            33.3203872862626
+          ]
+        }
+      ],
+      "visible_area": [
+        4.65899854374022,
+        80.0,
+        33.1875361703525,
+        0.0,
+        60.9615220772247,
+        0.0,
+        61.2281576657719,
+        80.0,
+        4.65899854374022,
+        80.0
+      ]
+    },
+    {
+      "id": "1cba92f6-e388-483f-8e77-ecf792df4809",
+      "index": 1078,
+      "period": 1,
+      "timestamp": "00:25:09.957",
+      "duration": null,
+      "minute": 25,
+      "second": 9,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 8181,
+      "player": "Nicol\u00f2 Barella",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        58.5,
+        36.7
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.672854398918226,
+            4.602296455312697
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.734542067535905,
+            40.498212023506404
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.18266963565976,
+            23.62693523851263
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.331903459030066,
+            41.73903324055756
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            64.30000305175781,
+            44.79999923706055
+          ],
+          "player_id": 8181,
+          "player_name": "Nicol\u00f2 Barella",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.94158830446786,
+            58.24375169184637
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.2447163435153,
+            44.858588111005936
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.56211798669383,
+            64.98005897468451
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.91292803086772,
+            43.509280106994
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.31156524388237,
+            51.689157142377375
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.47391492098502,
+            24.517436914314978
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.83821634843052,
+            69.46631306048371
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.98232912073864,
+            37.9715932703817
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.92583151990368,
+            49.037988251806794
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            94.09701699805039,
+            14.03300861527049
+          ]
+        }
+      ],
+      "visible_area": [
+        83.8019645683252,
+        80.0,
+        58.3117665648391,
+        80.0,
+        56.1470101675566,
+        0.0,
+        109.688956978858,
+        0.0,
+        83.8019645683252,
+        80.0
+      ]
+    },
+    {
+      "id": "e795a26f-89e9-47eb-97bb-30e681294249",
+      "index": 1079,
+      "period": 1,
+      "timestamp": "00:25:09.957",
+      "duration": 1.284002,
+      "minute": 25,
+      "second": 9,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 5537,
+      "player": "Fabian Lukas Sch\u00e4r",
+      "team_id": 773,
+      "team": "Switzerland",
+      "location": [
+        64.3,
+        44.8
+      ],
+      "pass_recipient": "Granit Xhaka",
+      "recipient_id": 3500,
+      "pass_outcome": "Incomplete",
+      "pass_end_location": [
+        66.7,
+        41.6
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.672854398918226,
+            4.602296455312697
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.734542067535905,
+            40.498212023506404
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.18266963565976,
+            23.62693523851263
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.331903459030066,
+            41.73903324055756
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            64.30000305175781,
+            44.79999923706055
+          ],
+          "player_id": 5537,
+          "player_name": "Fabian Lukas Sch\u00e4r",
+          "team_name": "Switzerland"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.94158830446786,
+            58.24375169184637
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.2447163435153,
+            44.858588111005936
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.56211798669383,
+            64.98005897468451
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.91292803086772,
+            43.509280106994
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.31156524388237,
+            51.689157142377375
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.47391492098502,
+            24.517436914314978
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.83821634843052,
+            69.46631306048371
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.98232912073864,
+            37.9715932703817
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.92583151990368,
+            49.037988251806794
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            94.09701699805039,
+            14.03300861527049
+          ]
+        }
+      ],
+      "visible_area": [
+        83.8019645683252,
+        80.0,
+        58.3117665648391,
+        80.0,
+        56.1470101675566,
+        0.0,
+        109.688956978858,
+        0.0,
+        83.8019645683252,
+        80.0
+      ]
+    },
+    {
+      "id": "d164fb2a-b35c-4b4e-a273-5c7ed724e5f1",
+      "index": 1080,
+      "period": 1,
+      "timestamp": "00:25:11.241",
+      "duration": null,
+      "minute": 25,
+      "second": 11,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 3500,
+      "player": "Granit Xhaka",
+      "team_id": 773,
+      "team": "Switzerland",
+      "location": [
+        68.1,
+        41.6
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.8985761387475,
+            61.88757592884746
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.56696541413487,
+            31.3835559511558
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.570862694663305,
+            14.21906318409335
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.00684377883849,
+            41.22853540937742
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.209101770586855,
+            51.05322650260579
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.667110909966866,
+            30.521053953671533
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            53.002125560075,
+            38.520448700802845
+          ],
+          "player_id": 3500,
+          "player_name": "Granit Xhaka",
+          "team_name": "Switzerland"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            53.400001525878906,
+            38.5
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.28102467085587,
+            13.78259982794436
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.07297381302271,
+            34.371845986639194
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.85333769599974,
+            21.67201082491858
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.241509637175106,
+            55.057681084912275
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.03050277926614,
+            32.205036684722494
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.46659622742693,
+            71.64556615167251
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.28618714762811,
+            34.41491934918785
+          ]
+        }
+      ],
+      "visible_area": [
+        17.7414921821002,
+        80.0,
+        41.3186153732692,
+        0.0,
+        48.4565793188988,
+        0.0,
+        64.6706054611501,
+        1.8223970812763,
+        69.3621062962771,
+        80.0,
+        17.7414921821002,
+        80.0
+      ]
+    },
+    {
+      "id": "5a0ce72c-057a-4155-80a8-b17bc3160d3d",
+      "index": 1082,
+      "period": 1,
+      "timestamp": "00:25:11.241",
+      "duration": 1.081634,
+      "minute": 25,
+      "second": 11,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7788,
+      "player": "Ciro Immobile",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        53.4,
+        38.5
+      ],
+      "pass_recipient": "Manuel Locatelli",
+      "recipient_id": 7038,
+      "pass_outcome": null,
+      "pass_end_location": [
+        47.5,
+        41.6
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.8985761387475,
+            61.88757592884746
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            38.56696541413487,
+            31.3835559511558
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.570862694663305,
+            14.21906318409335
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.00684377883849,
+            41.22853540937742
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.209101770586855,
+            51.05322650260579
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.667110909966866,
+            30.521053953671533
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            53.002125560075,
+            38.520448700802845
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            53.400001525878906,
+            38.5
+          ],
+          "player_id": 7788,
+          "player_name": "Ciro Immobile",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.28102467085587,
+            13.78259982794436
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.07297381302271,
+            34.371845986639194
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.85333769599974,
+            21.67201082491858
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.241509637175106,
+            55.057681084912275
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.03050277926614,
+            32.205036684722494
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.46659622742693,
+            71.64556615167251
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.28618714762811,
+            34.41491934918785
+          ]
+        }
+      ],
+      "visible_area": [
+        17.7414921821002,
+        80.0,
+        41.3186153732692,
+        0.0,
+        48.4565793188988,
+        0.0,
+        64.6706054611501,
+        1.8223970812763,
+        69.3621062962771,
+        80.0,
+        17.7414921821002,
+        80.0
+      ]
+    },
+    {
+      "id": "8ea6dc96-9de9-42e4-aae0-41de853a228c",
+      "index": 1084,
+      "period": 1,
+      "timestamp": "00:25:12.323",
+      "duration": null,
+      "minute": 25,
+      "second": 12,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7038,
+      "player": "Manuel Locatelli",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        47.5,
+        41.6
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.027570960084205,
+            62.35167496998639
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.619862030276764,
+            22.42591661149909
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.3213154812688,
+            35.25801580004051
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.43948173411863,
+            53.814145534784174
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            47.5,
+            41.599998474121094
+          ],
+          "player_id": 7038,
+          "player_name": "Manuel Locatelli",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.12078634245995,
+            38.15384975690709
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            53.12469819652402,
+            39.229504986817204
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            53.8836444506795,
+            39.66413398651868
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.153794639380294,
+            37.39327819802619
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.411694957026434,
+            20.133693401513796
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.28290877885401,
+            24.824823435279527
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.58391082857717,
+            58.855139016106925
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.86804806702065,
+            35.836037327154116
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.37079483301892,
+            75.08738463485646
+          ]
+        }
+      ],
+      "visible_area": [
+        19.8404130952712,
+        80.0,
+        42.4645527586517,
+        5.99103962198399,
+        64.6441167281618,
+        8.6042533080346,
+        68.509320184833,
+        80.0,
+        19.8404130952712,
+        80.0
+      ]
+    },
+    {
+      "id": "b72ae147-e085-42ce-b03f-c93749f44580",
+      "index": 1085,
+      "period": 1,
+      "timestamp": "00:25:12.323",
+      "duration": 0.012064001,
+      "minute": 25,
+      "second": 12,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7038,
+      "player": "Manuel Locatelli",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        47.5,
+        41.6
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        46.1,
+        40.2
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.027570960084205,
+            62.35167496998639
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.619862030276764,
+            22.42591661149909
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.3213154812688,
+            35.25801580004051
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.43948173411863,
+            53.814145534784174
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            47.5,
+            41.599998474121094
+          ],
+          "player_id": 7038,
+          "player_name": "Manuel Locatelli",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            48.12078634245995,
+            38.15384975690709
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            53.12469819652402,
+            39.229504986817204
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            53.8836444506795,
+            39.66413398651868
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.153794639380294,
+            37.39327819802619
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.411694957026434,
+            20.133693401513796
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.28290877885401,
+            24.824823435279527
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.58391082857717,
+            58.855139016106925
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.86804806702065,
+            35.836037327154116
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.37079483301892,
+            75.08738463485646
+          ]
+        }
+      ],
+      "visible_area": [
+        19.8404130952712,
+        80.0,
+        42.4645527586517,
+        5.99103962198399,
+        64.6441167281618,
+        8.6042533080346,
+        68.509320184833,
+        80.0,
+        19.8404130952712,
+        80.0
+      ]
+    },
+    {
+      "id": "e51fde20-708e-49e4-ae77-5bc768e5f411",
+      "index": 1086,
+      "period": 1,
+      "timestamp": "00:25:12.335",
+      "duration": 2.708791,
+      "minute": 25,
+      "second": 12,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7038,
+      "player": "Manuel Locatelli",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        46.1,
+        40.2
+      ],
+      "pass_recipient": "Domenico Berardi",
+      "recipient_id": 7131,
+      "pass_outcome": null,
+      "pass_end_location": [
+        74.3,
+        79.6
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            31.62756942877428,
+            60.95167727379706
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            41.219860294452104,
+            21.025918965640663
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            42.92131386779734,
+            33.858018138869284
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.03948025845362,
+            52.41414778312957
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            46.099998474121094,
+            40.20000076293945
+          ],
+          "player_id": 7038,
+          "player_name": "Manuel Locatelli",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            46.72078480132669,
+            36.75385205123187
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            51.72469672999104,
+            37.829507224455234
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            52.48364299553887,
+            38.26413621396289
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.75379323529862,
+            35.993280374811995
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.01169348592401,
+            18.733695564413402
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.88290737692534,
+            23.42482558728119
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.18390955380903,
+            57.455140966829376
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.46804672058412,
+            34.436039446286436
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.97079361388606,
+            73.68738624281164
+          ]
+        }
+      ],
+      "visible_area": [
+        18.01243984223,
+        80.0,
+        41.0645509136368,
+        4.59104188803419,
+        63.2441152982756,
+        7.20425536951144,
+        67.185111721198,
+        80.0,
+        18.01243984223,
+        80.0
+      ]
+    },
+    {
+      "id": "9141f1b5-8961-4842-b566-e583d271c6d3",
+      "index": 1087,
+      "period": 1,
+      "timestamp": "00:25:15.044",
+      "duration": null,
+      "minute": 25,
+      "second": 15,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7131,
+      "player": "Domenico Berardi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        74.3,
+        79.6
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.06109416092987,
+            42.53493365105621
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.616254181142686,
+            41.66561998229658
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.67289335713658,
+            45.764593099567506
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.7126999115646,
+            49.90731496567729
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.5349522095188,
+            20.227405288454094
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.44137300867476,
+            39.06055601122581
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.52469174105485,
+            37.36287022964278
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.0794708846212,
+            26.216309919614453
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            74.30000305175781,
+            79.5999984741211
+          ],
+          "player_id": 7131,
+          "player_name": "Domenico Berardi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.55714043915349,
+            62.49908529353126
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.01887199511836,
+            43.2153707449975
+          ]
+        }
+      ],
+      "visible_area": [
+        52.1110397901092,
+        80.0,
+        55.2765996494137,
+        5.10982310292923,
+        78.6163456407696,
+        2.21125095545384,
+        101.828671624284,
+        80.0,
+        52.1110397901092,
+        80.0
+      ]
+    },
+    {
+      "id": "bf030fd5-c8e0-47b5-8be9-96d9b5a7fc12",
+      "index": 1088,
+      "period": 1,
+      "timestamp": "00:25:15.044",
+      "duration": 6.592668,
+      "minute": 25,
+      "second": 15,
+      "type": "Carry",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7131,
+      "player": "Domenico Berardi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        74.3,
+        79.6
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": [
+        117.4,
+        55.5
+      ],
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.06109416092987,
+            42.53493365105621
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.616254181142686,
+            41.66561998229658
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.67289335713658,
+            45.764593099567506
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.7126999115646,
+            49.90731496567729
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.5349522095188,
+            20.227405288454094
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.44137300867476,
+            39.06055601122581
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.52469174105485,
+            37.36287022964278
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.0794708846212,
+            26.216309919614453
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            74.30000305175781,
+            79.5999984741211
+          ],
+          "player_id": 7131,
+          "player_name": "Domenico Berardi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.55714043915349,
+            62.49908529353126
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.01887199511836,
+            43.2153707449975
+          ]
+        }
+      ],
+      "visible_area": [
+        52.1110397901092,
+        80.0,
+        55.2765996494137,
+        5.10982310292923,
+        78.6163456407696,
+        2.21125095545384,
+        101.828671624284,
+        80.0,
+        52.1110397901092,
+        80.0
+      ]
+    },
+    {
+      "id": "c5c47922-95e2-425f-bea5-ba40caf2339f",
+      "index": 1090,
+      "period": 1,
+      "timestamp": "00:25:21.636",
+      "duration": 0.627252,
+      "minute": 25,
+      "second": 21,
+      "type": "Pass",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7131,
+      "player": "Domenico Berardi",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        117.4,
+        55.5
+      ],
+      "pass_recipient": "Manuel Locatelli",
+      "recipient_id": 7038,
+      "pass_outcome": null,
+      "pass_end_location": [
+        116.2,
+        39.2
+      ],
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            107.87611883873234,
+            25.346650492545194
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            107.9335326221128,
+            43.51254661827533
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            108.11059641019584,
+            48.832788018490824
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            111.5608201729845,
+            43.477023796930446
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            111.8555408741336,
+            48.03164910476952
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            113.2190007098538,
+            35.37312385856906
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            115.13398416872965,
+            51.56938978312009
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            116.36929451951076,
+            55.249433460003445
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            117.21923640549625,
+            49.670235770493846
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            117.4000015258789,
+            55.5
+          ],
+          "player_id": 7131,
+          "player_name": "Domenico Berardi",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            118.9488421276879,
+            44.27015585171968
+          ]
+        }
+      ],
+      "visible_area": [
+        110.575517428013,
+        80.0,
+        91.0341376553716,
+        15.2160399942568,
+        110.74806585889,
+        6.28034589730464,
+        120.0,
+        22.3591978726358,
+        120.0,
+        80.0,
+        110.575517428013,
+        80.0
+      ]
+    },
+    {
+      "id": "cbae2ef1-c60c-4ad7-882f-9d5d0a0a61cb",
+      "index": 1091,
+      "period": 1,
+      "timestamp": "00:25:22.263",
+      "duration": null,
+      "minute": 25,
+      "second": 22,
+      "type": "Ball Receipt*",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7038,
+      "player": "Manuel Locatelli",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        116.2,
+        39.2
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            109.5926292458636,
+            23.971355688422747
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            109.67128830348065,
+            45.5063715336836
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            111.77275373517502,
+            40.06843022775415
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            114.77725481467576,
+            46.253897226277445
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            115.24652478885805,
+            33.52468584443923
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            115.61798558353021,
+            44.74084965101633
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            116.19999694824219,
+            39.20000076293945
+          ],
+          "player_id": 7038,
+          "player_name": "Manuel Locatelli",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            118.78350789487102,
+            49.38379366644337
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            119.01832494611003,
+            46.73322560238549
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            119.10933517972192,
+            40.48245132500027
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            121.70684030671742,
+            53.353738324154826
+          ]
+        }
+      ],
+      "visible_area": [
+        114.390806515832,
+        80.0,
+        92.6846868668518,
+        12.4836295288808,
+        112.030365495208,
+        3.52339856592852,
+        120.0,
+        17.1870046376516,
+        120.0,
+        80.0,
+        114.390806515832,
+        80.0
+      ]
+    },
+    {
+      "id": "e0c628ae-6a37-414e-818e-5e3911c07dfc",
+      "index": 1092,
+      "period": 1,
+      "timestamp": "00:25:22.263",
+      "duration": 0.359822,
+      "minute": 25,
+      "second": 22,
+      "type": "Shot",
+      "play_pattern": "Regular Play",
+      "possession_team": "Italy",
+      "player_id": 7038,
+      "player": "Manuel Locatelli",
+      "team_id": 914,
+      "team": "Italy",
+      "location": [
+        115.6,
+        41.3
+      ],
+      "pass_recipient": null,
+      "recipient_id": null,
+      "pass_outcome": null,
+      "pass_end_location": null,
+      "carry_end_location": null,
+      "shot_end_location": [
+        120.0,
+        40.4,
+        1.0
+      ],
+      "shot_outcome": "Goal",
+      "shot_statsbomb_xg": 0.7414222,
+      "freeze_frame": [
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            108.99263077174251,
+            26.07135416254384
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            109.07128982935956,
+            47.60637000780469
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            111.17275526105392,
+            42.16842870187524
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            114.17725634055466,
+            48.35389570039854
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            114.64652631473696,
+            35.62468431856033
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            115.01798710940912,
+            46.84084812513743
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": true,
+          "keeper": false,
+          "location": [
+            115.5999984741211,
+            41.29999923706055
+          ],
+          "player_id": 7038,
+          "player_name": "Manuel Locatelli",
+          "team_name": "Italy"
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            118.18350942074993,
+            51.48379214056446
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            118.41832647198893,
+            48.83322407650658
+          ]
+        },
+        {
+          "teammate": false,
+          "actor": false,
+          "keeper": true,
+          "location": [
+            118.50933670560083,
+            42.58244979912136
+          ]
+        },
+        {
+          "teammate": true,
+          "actor": false,
+          "keeper": false,
+          "location": [
+            121.10684183259633,
+            55.45373679827592
+          ]
+        }
+      ],
+      "visible_area": [
+        113.115670770204,
+        80.0,
+        92.0846883927307,
+        14.5836280030019,
+        111.430367021087,
+        5.62339704004961,
+        120.0,
+        20.3156754792565,
+        120.0,
+        80.0,
+        113.115670770204,
+        80.0
+      ]
+    }
+  ]
+}

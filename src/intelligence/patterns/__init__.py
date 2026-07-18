@@ -1,0 +1,1 @@
+"""Tactical pattern detectors."""

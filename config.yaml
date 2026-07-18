@@ -1,0 +1,87 @@
+match:
+  match_id: 3869685
+  possession_id: 52
+  label: "Argentina 2-0 France, FIFA World Cup Final 2022 (36')"
+
+data:
+  output_dir: "data"
+  possession_file: "data/possession_52.json"
+  open_data_dir: "data/open-data"
+
+render:
+  output_file: "renders/passmap.png"
+  pitch:
+    type: "statsbomb"
+    length: 120
+    width: 80
+  figure:
+    width: 9
+    height: 16
+    dpi: 200
+  text:
+    title: "WHY THIS WORKED"
+    source: "Data: StatsBomb"
+
+animation:
+  output_file: "renders/possession_52.mp4"
+  fps: 30
+  width: 1080
+  height: 1920
+  playback_speed: 1.0
+  start_hold_seconds: 1.0
+  end_hold_seconds: 1.5
+  show_player_names: false
+  annotations_file: "annotations/possession_52.json"
+  fm_output_file: "renders/possession_52_fm_analysis.mp4"
+  hook_text: "Waarom stond Di Maria helemaal vrij?"
+  hook_hold_seconds: 2.0
+  hook_model_time: 9.35
+  debug: false
+
+tracking:
+  maximum_speed_mps: 9.5
+  movement_tolerance_m: 2.0
+  max_missing_snapshots: 1
+  unmatched_cost: 1000000
+
+intelligence:
+  line_break:
+    attacking_direction: "left_to_right"
+    minimum_forward_progress: 8.0
+    minimum_goal_distance_reduction: 8.0
+    minimum_defenders_bypassed: 2
+    maximum_receiver_pressure_distance: 8.0
+    minimum_confidence: 0.60
+
+narrative:
+  language: "en"
+
+brand:
+  colors:
+    field: "#0F3A25"
+    field_stripe: "#1B5135"
+    pitch_lines: "#F2F7EF"
+    pass: "#46A7FF"
+    carry: "#FFFFFF"
+    shot: "#FFD84D"
+    defender: "#E84A4A"
+    attack: "#75BDEB"
+    defense: "#D94E45"
+    player_edge: "#172017"
+    analysis: "#FFD84D"
+    analysis_alt: "#FFFFFF"
+    space_zone: "#E7D65A"
+    text: "#FFFFFF"
+    muted_text: "#B9C7BE"
+  pitch:
+    stripe_count: 12
+  line_widths:
+    pass: 3.0
+    carry: 2.2
+    shot: 3.5
+  marker_sizes:
+    pass_start: 36
+    pass_number: 120
+    shot: 90
+    goal_star: 260
+    defender: 52
