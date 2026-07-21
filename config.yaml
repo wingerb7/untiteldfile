@@ -43,6 +43,18 @@ tracking:
   movement_tolerance_m: 2.0
   max_missing_snapshots: 1
   unmatched_cost: 1000000
+  enable_team_shape_propagation: false
+
+relevance:
+  minimum_attackers: 3
+  target_attackers: 5
+  maximum_attackers: 6
+  minimum_defenders: 3
+  target_defenders: 5
+  maximum_defenders: 6
+  maximum_total_outfield_players: 10
+  nearby_distance_m: 14.0
+  pressure_distance_m: 8.0
 
 intelligence:
   line_break:
@@ -52,6 +64,13 @@ intelligence:
     minimum_defenders_bypassed: 2
     maximum_receiver_pressure_distance: 8.0
     minimum_confidence: 0.60
+  positional_patterns:
+    minimum_confidence: 0.55
+    overload_radius: 12.0
+    support_radius: 28.0
+    switch_minimum_lateral_change: 32.0
+    late_support_window_events: 4
+    cutback_minimum_backward_x: 3.0
 
 narrative:
   language: "en"

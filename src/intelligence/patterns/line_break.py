@@ -4,7 +4,7 @@ from dataclasses import asdict, dataclass
 from math import isinf
 
 from src.domain.enums import AttackingDirection
-from src.domain.models import Event, NormalizedPossession, PlayerSnapshot
+from src.domain.models import Event, NormalizedPossession, PlayerSnapshot, TacticalFinding
 from src.intelligence.features.defensive_lines import estimate_line_break
 from src.intelligence.features.progression import calculate_forward_progress, calculate_goal_distance_reduction
 from src.intelligence.features.space import calculate_receiver_space
@@ -18,17 +18,6 @@ class LineBreakConfig:
     minimum_defenders_bypassed: int = 2
     maximum_receiver_pressure_distance: float = 8.0
     minimum_confidence: float = 0.60
-
-
-@dataclass(frozen=True)
-class TacticalFinding:
-    finding_id: str
-    pattern_type: str
-    event_id: str
-    confidence: float
-    evidence: dict
-    explanation_key: str
-    limitations: list[str]
 
 
 def _defenders(event: Event) -> list[PlayerSnapshot]:
@@ -79,6 +68,12 @@ def _score(event: Event, config: LineBreakConfig) -> tuple[float, dict, list[str
             "data_quality": data_quality_component,
         },
     }
+    evidence["feature_values"] = {
+        "forward_progress": evidence["forward_progress"],
+        "goal_distance_reduction": evidence["goal_distance_reduction"],
+        "defenders_bypassed": evidence["defenders_bypassed"],
+        "receiver_space": evidence["receiver_space"],
+    }
     return round(max(0.0, min(1.0, confidence)), 3), evidence, limitations
 
 
@@ -105,6 +100,16 @@ def detect_line_breaking_passes(possession: NormalizedPossession, config: LineBr
                 evidence=evidence,
                 explanation_key="line_breaking_pass",
                 limitations=limitations,
+                players_involved=[player for player in [event.player_id, event.recipient_id] if player],
+                feature_values={
+                    "progression": evidence["forward_progress"],
+                    "goal_distance_reduction": evidence["goal_distance_reduction"],
+                    "defenders_bypassed": evidence["defenders_bypassed"],
+                    "receiver_space": evidence["receiver_space"],
+                },
+                actors=[event.player_id] if event.player_id else [],
+                receivers=[event.recipient_id] if event.recipient_id else [],
+                created_space_for=[event.recipient_id] if event.recipient_id else [],
             )
         )
     return findings

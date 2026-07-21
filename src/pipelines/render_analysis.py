@@ -24,9 +24,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import yaml
 from matplotlib.animation import FFMpegWriter
+from matplotlib.image import imread
 from matplotlib.patches import Circle
 
-from analysis.interpolate import build_animation_model, state_at
+from analysis.interpolate import apply_relevant_player_selection, build_animation_model, state_at
 from analysis.normalize import load_and_normalize
 from render.animation import actor_player, coordinates, split_players
 from render.pitch import draw_pitch, sb_to_plot
@@ -44,17 +45,29 @@ def event_start_times(model: dict[str, Any]) -> dict[str, float]:
     return {item.event["id"]: item.start for item in model["timeline"]}
 
 
-def scene_event_time(scene: dict[str, Any], starts: dict[str, float], by_id: dict[str, Any], key: str = "at_event_id") -> float | None:
+def scene_event_time(
+    scene: dict[str, Any],
+    starts: dict[str, float],
+    by_id: dict[str, Any],
+    key: str = "at_event_id",
+    fps: float = 30.0,
+) -> float | None:
     event_id = scene.get(key)
     if scene.get("at_event_boundary") == "end":
         item = by_id.get(event_id)
-        return item.end if item else None
-    return starts.get(event_id)
+        base_time = item.end if item else None
+    else:
+        base_time = starts.get(event_id)
+    if base_time is None:
+        return None
+    frame_offset = float(scene.get("pause_frame_offset") or 0.0) / max(1.0, fps)
+    return base_time + frame_offset + float(scene.get("pause_offset_seconds") or 0.0)
 
 
 def scene_segments(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[dict[str, Any]]:
     starts = event_start_times(model)
     by_id = {item.event["id"]: item for item in model["timeline"]}
+    fps = float((scene_plan.get("format") or {}).get("fps") or 30.0)
     segments: list[dict[str, Any]] = []
     output_cursor = 0.0
 
@@ -63,13 +76,22 @@ def scene_segments(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[di
         if scene_type == "play":
             start_event_id = scene.get("from_event_id")
             end_event_id = scene.get("to_event_id")
-            model_start = starts.get(start_event_id, 0.0)
+            if scene.get("from_event_boundary") == "end":
+                start_item = by_id.get(start_event_id)
+                model_start = start_item.end if start_item else starts.get(start_event_id, 0.0)
+            else:
+                model_start = starts.get(start_event_id, 0.0)
             end_item = by_id.get(end_event_id)
             model_end = end_item.end if end_item else model["duration"]
             if model_end <= model_start:
                 continue
-            speed = max(0.1, float(scene.get("playback_speed") or 1.0))
-            duration = (model_end - model_start) / speed
+            target_duration = scene.get("target_duration_seconds")
+            if target_duration is not None:
+                duration = max(0.1, float(target_duration))
+                speed = max(0.1, (model_end - model_start) / duration)
+            else:
+                speed = max(0.1, float(scene.get("playback_speed") or 1.0))
+                duration = (model_end - model_start) / speed
             segments.append(
                 {
                     "type": "play",
@@ -85,9 +107,16 @@ def scene_segments(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[di
             continue
 
         if scene_type == "tactical_pause":
-            model_time = scene_event_time(scene, starts, by_id)
+            model_time = scene_event_time(scene, starts, by_id, fps=fps)
             if model_time is None:
                 continue
+            # Captions activate on a real frame at or before the tactical boundary.
+            # Shorten the preceding play by the sub-frame remainder; never push the
+            # explanation to the frame after the action.
+            resolved_start = int(output_cursor * fps + 1e-9) / fps
+            if segments and resolved_start < output_cursor:
+                segments[-1]["output_end"] = resolved_start
+            output_cursor = resolved_start
             duration = max(0.0, float(scene.get("duration_seconds") or 0.0))
             segments.append(
                 {
@@ -104,7 +133,7 @@ def scene_segments(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[di
             continue
 
         if scene_type == "hold":
-            model_time = scene_event_time(scene, starts, by_id) or model["duration"]
+            model_time = scene_event_time(scene, starts, by_id, fps=fps) or model["duration"]
             duration = max(0.0, float(scene.get("duration_seconds") or 0.0))
             segments.append(
                 {
@@ -160,6 +189,64 @@ def map_render_time(t: float, segments: list[dict[str, Any]], hook_hold: float, 
         return hook_model_time, None, True
     model_t, active_pause = map_output_time(t - hook_hold, segments)
     return model_t, active_pause, False
+
+
+def social_intro(scene_plan: dict[str, Any]) -> tuple[float, float, dict[str, Any]]:
+    social = scene_plan.get("social_video") or {}
+    identity = social.get("identity_hook") or {}
+    pacing = social.get("pacing_profile") or {}
+    return float(identity.get("duration") or 0.0), float(pacing.get("transition_duration") or 0.0), identity
+
+
+def resolved_social_intro(scene_plan: dict[str, Any], fps: int) -> tuple[float, float, dict[str, Any]]:
+    hook, transition, identity = social_intro(scene_plan)
+    resolved_total = int((hook + transition) * fps + 1e-9) / fps
+    return hook, max(0.0, resolved_total - hook), identity
+
+
+def caption_timing_diagnostics(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[dict[str, Any]]:
+    from src.presentation.social_format import resolve_caption_frame
+
+    fps = int((scene_plan.get("format") or {}).get("fps") or 30)
+    hook, transition, _ = resolved_social_intro(scene_plan, fps)
+    rows = []
+    for segment in scene_segments(scene_plan, model):
+        caption = next((item.get("text") for item in segment.get("instructions", []) if item.get("type") == "show_caption"), None)
+        if not caption:
+            continue
+        event_time = hook + transition + float(segment["output_start"])
+        timing = resolve_caption_frame(event_time, event_time, fps)
+        rows.append({
+            "scene_id": segment["scene"].get("scene_id"),
+            "caption": caption,
+            "event_id": segment.get("event_id"),
+            "event_relative_timestamp": round(float(segment.get("model_time", 0.0)), 6),
+            **timing,
+        })
+    return rows
+
+
+def scene_trace(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[dict[str, Any]]:
+    fps = int((scene_plan.get("format") or {}).get("fps") or 30)
+    hook, transition, _ = resolved_social_intro(scene_plan, fps)
+    offset = hook + transition
+    result = []
+    if hook:
+        result.append({"scene_id": "identity_hook", "type": "identity_hook", "output_start": 0.0, "output_end": hook})
+    if transition:
+        result.append({"scene_id": "identity_transition", "type": "transition", "output_start": hook, "output_end": offset})
+    for segment in scene_segments(scene_plan, model):
+        caption = next((item.get("text") for item in segment.get("instructions", []) if item.get("type") == "show_caption"), None)
+        result.append({
+            "scene_id": segment["scene"].get("scene_id"), "type": segment["type"],
+            "output_start": round(offset + segment["output_start"], 6),
+            "output_end": round(offset + segment["output_end"], 6),
+            "caption": caption,
+            "model_time": segment.get("model_time"),
+            "model_start": segment.get("model_start"), "model_end": segment.get("model_end"),
+            "event_id": segment.get("event_id"),
+        })
+    return result
 
 
 def jersey_number(player: dict[str, Any]) -> str:
@@ -436,13 +523,21 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
     fps = int(scene_plan.get("format", {}).get("fps") or animation_config.get("fps", 30))
     width = int(scene_plan.get("format", {}).get("width") or animation_config.get("width", 1080))
     height = int(scene_plan.get("format", {}).get("height") or animation_config.get("height", 1920))
-    hook_hold = max(0.0, float(animation_config.get("hook_hold_seconds", 0.0)))
+    social_hook, transition_duration, identity_hook = resolved_social_intro(scene_plan, fps)
+    hook_hold = social_hook + transition_duration if identity_hook else max(0.0, float(animation_config.get("hook_hold_seconds", 0.0)))
     hook_text_value = str(animation_config.get("hook_text") or "")
     hook_model_time = max(0.0, float(animation_config.get("hook_model_time", 0.0)))
     debug_mode = bool(animation_config.get("debug", False))
     dpi = 100
     style = colors(config)
     model = build_animation_model(possession, config)
+    window = scene_plan.get("narrative_window") or {}
+    if window.get("window_start_event_id") and window.get("window_end_event_id"):
+        events = possession.get("events", [])
+        start_idx = next((idx for idx, event in enumerate(events) if event["id"] == window["window_start_event_id"]), 0)
+        end_idx = next((idx for idx, event in enumerate(events) if event["id"] == window["window_end_event_id"]), len(events) - 1)
+        event_ids = {str(event["id"]) for event in events[start_idx : end_idx + 1]}
+        model = apply_relevant_player_selection(model, config, event_ids, scene_plan.get("selected_finding"))
     annotations_file = animation_config.get("annotations_file")
     annotations_path = ROOT / annotations_file if annotations_file else None
     annotations = load_annotations(annotations_path)
@@ -466,6 +561,16 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
     progress_bar = timeline_line.axvspan(0, 0, color=style["ball"], ymin=0, ymax=1)
 
     xg_text = fig.text(0.5, 0.89, "", ha="center", va="top", color=style["ball"], fontsize=16, weight="bold")
+    identity_name = fig.text(0.5, 0.66, "", ha="center", va="center", color=style["text"], fontsize=42, weight="bold")
+    identity_context = fig.text(0.5, 0.61, "", ha="center", va="center", color=style["muted_text"], fontsize=17)
+    identity_hook_text = fig.text(0.5, 0.52, "", ha="center", va="center", color=style["text"], fontsize=25, weight="bold", wrap=True)
+    portrait_artist = None
+    portrait_path = identity_hook.get("portrait_path")
+    if portrait_path and Path(portrait_path).is_file():
+        portrait_ax = fig.add_axes([0.29, 0.69, 0.42, 0.2])
+        portrait_ax.imshow(imread(portrait_path))
+        portrait_ax.axis("off")
+        portrait_artist = portrait_ax
     overlay_artists = create_overlay_artists(ax, fig, style)
     total_frames = max(1, int(duration * fps))
     dynamic_artists: list[Any] = []
@@ -489,6 +594,18 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
             trail_history.clear()
         camera["last_model_t"] = model_t
         clear_dynamic_artists()
+        in_identity = bool(identity_hook) and output_t < social_hook
+        in_transition = bool(identity_hook) and social_hook <= output_t < hook_hold
+        intro_alpha = 1.0 if in_identity else (max(0.0, 1.0 - (output_t - social_hook) / max(transition_duration, 1e-6)) if in_transition else 0.0)
+        ax.set_alpha(1.0 - intro_alpha)
+        identity_name.set_text(str(identity_hook.get("player_name") or "") if intro_alpha else "")
+        identity_context.set_text(str(identity_hook.get("team_context") or identity_hook.get("shirt_number") or "") if intro_alpha else "")
+        identity_hook_text.set_text(str(identity_hook.get("hook_text") or "") if intro_alpha else "")
+        for artist in (identity_name, identity_context, identity_hook_text):
+            artist.set_alpha(intro_alpha)
+        if portrait_artist is not None:
+            portrait_artist.set_visible(intro_alpha > 0)
+            portrait_artist.patch.set_alpha(intro_alpha)
         apply_camera(ax, state, annotations, camera, animation_config, model["timeline"])
         event = state["event"] or {}
         start = sb_to_plot(event.get("start_location"))
@@ -536,7 +653,8 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
         if active_pause:
             pause_event = event_by_id.get(active_pause["event_id"], event)
             for instruction in active_pause["instructions"]:
-                execute_instruction(instruction, pause_event, overlay_artists)
+                instruction_event = event_by_id.get(instruction.get("event_id") or active_pause["event_id"], pause_event)
+                execute_instruction(instruction, instruction_event, overlay_artists)
 
         progress_bar.remove()
         progress_bar = timeline_line.axvspan(0, output_t, color=style["ball"], ymin=0, ymax=1)
@@ -546,6 +664,9 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
             event_text,
             detail_text,
             xg_text,
+            identity_name,
+            identity_context,
+            identity_hook_text,
             progress_bar,
             *overlay_artists.values(),
         ]

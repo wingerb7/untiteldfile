@@ -110,8 +110,8 @@ def render_animation(model: dict[str, Any], config: dict[str, Any], output_path:
 
         attack_scatter.set_offsets(offsets(ax_x, ax_y))
         defense_scatter.set_offsets(offsets(dx, dy))
-        attack_scatter.set_alpha(0.95)
-        defense_scatter.set_alpha(0.95)
+        attack_scatter.set_alpha(alpha_list(attackers) or 0.95)
+        defense_scatter.set_alpha(alpha_list(defenders) or 0.95)
 
         actor = actor_player(state["players"])
         actor_point = sb_to_plot(actor.get("location")) if actor else None

@@ -19,6 +19,7 @@ os.environ.setdefault("MPLCONFIGDIR", str(LOCAL_MPLCONFIG))
 
 from analysis.interpolate import build_animation_model, state_at
 from analysis.normalize import load_and_normalize
+from src.intelligence.reasoning.build_causal_chain import action_chain_to_dict, build_causal_chain_from_payload
 from src.pipelines.analyze_possession import load_config
 from src.pipelines.render_analysis import map_output_time, render_scene_plan, scene_segments
 
@@ -133,24 +134,28 @@ def score_narrative_finding(possession: dict[str, Any], finding: dict[str, Any])
 
 
 def select_narrative_anchor(possession: dict[str, Any], analysis: dict[str, Any]) -> dict[str, Any]:
-    scored = [score_narrative_finding(possession, finding) for finding in analysis.get("findings", [])]
+    scored = []
+    for finding in analysis.get("findings", []):
+        item = score_narrative_finding(possession, finding)
+        chain = build_causal_chain_from_payload(possession, {**analysis, "selected_finding_id": finding["finding_id"]})
+        item["action_chain"] = action_chain_to_dict(chain)
+        item["score"] = round(min(1.0, item["score"] * 0.55 + (chain.score if chain else 0.0) * 0.45), 3)
+        scored.append(item)
     scored.sort(key=lambda item: item["score"], reverse=True)
     if not scored:
         raise RuntimeError("No supported finding available for narrative selection.")
     selected = scored[0]
     alternative = scored[1] if len(scored) > 1 else None
-    passer = selected["event"].get("player_name") or "The passer"
-    receiver = selected["event"].get("recipient_name") or "the receiver"
+    chain_steps = (selected.get("action_chain") or {}).get("steps") or []
     return {
         "selected": selected,
         "summary": {
             "selected_finding_id": selected["finding"]["finding_id"],
-            "selection_reason": (
-                f"This pass starts the immediate goal sequence: {passer} breaks the line to {receiver}, "
-                f"and {receiver} immediately carries into the right channel before cutting the ball back for the goal."
-            ),
+            "selection_reason": " ".join(step["caption"] for step in chain_steps[:4])
+            or "This finding starts the immediate goal sequence.",
             "seconds_before_goal": selected["seconds_before_goal"],
             "events_between_finding_and_goal": selected["events_between_finding_and_goal"],
+            "action_chain": selected.get("action_chain"),
             "alternative_finding": None
             if alternative is None
             else {
@@ -187,59 +192,304 @@ def previous_event(possession: dict[str, Any], event_id: str) -> dict[str, Any]:
     return events[max(0, idx - 1)]
 
 
+def next_receipt_event(possession: dict[str, Any], pass_event: dict[str, Any]) -> dict[str, Any] | None:
+    events = possession["events"]
+    idx = next(idx for idx, event in enumerate(events) if event["id"] == pass_event["id"])
+    recipient_id = pass_event.get("recipient_id")
+    recipient_name = pass_event.get("recipient_name")
+    for event in events[idx + 1 :]:
+        if float(event["timestamp"]) - float(pass_event["timestamp"]) > 3.0:
+            return None
+        if event.get("type") != "Ball Receipt*":
+            continue
+        if recipient_id is not None and event.get("player_id") == recipient_id:
+            return event
+        if recipient_id is None and recipient_name and event.get("player_name") == recipient_name:
+            return event
+    return None
+
+
+def event_by_id(possession: dict[str, Any], event_id: str | None) -> dict[str, Any] | None:
+    return next((event for event in possession["events"] if event["id"] == event_id), None)
+
+
+def chain_step(chain_steps: list[dict[str, Any]], step_type: str) -> dict[str, Any] | None:
+    return next((step for step in chain_steps if step.get("step_type") == step_type), None)
+
+
+def actor_name(event: dict[str, Any] | None, fallback: str) -> str:
+    return str((event or {}).get("player_name") or fallback)
+
+
+def receiver_name(event: dict[str, Any] | None, fallback: str) -> str:
+    return str((event or {}).get("recipient_name") or fallback)
+
+
+def story_scene(
+    scene: dict[str, Any],
+    *,
+    scene_goal: str,
+    viewer_question: str,
+    tactical_message: str,
+    required_visual_state: str,
+    caption: str,
+    camera_instruction: str,
+    overlay_instruction: list[dict[str, Any]],
+    required_event_anchor: dict[str, Any],
+) -> dict[str, Any]:
+    return {
+        **scene,
+        "scene_goal": scene_goal,
+        "viewer_question": viewer_question,
+        "tactical_message": tactical_message,
+        "required_visual_state": required_visual_state,
+        "caption": caption,
+        "camera_instruction": camera_instruction,
+        "overlay_instruction": overlay_instruction,
+        "required_event_anchor": required_event_anchor,
+    }
+
+
 def build_short_scene_plan(possession: dict[str, Any], analysis: dict[str, Any], selection: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
     selected_event = selection["selected"]["event"]
     start_event = window_start_event(possession, selected_event)
     goal_event = possession["shot"]
-    pre_pause_end = previous_event(possession, selected_event["id"])
     finding = selection["selected"]["finding"]
-    passer = selected_event.get("player_name") or "Passer"
+    action_chain = selection["selected"].get("action_chain")
+    chain_steps = list((action_chain or {}).get("steps") or [])
+    if not chain_steps:
+        passer = selected_event.get("player_name") or "Passer"
+        chain_steps = [
+            {
+                "step_type": "line_break",
+                "event_id": selected_event["id"],
+                "caption": f"{passer} breaks the line into the runner.",
+            }
+        ]
+
+    line_step = chain_step(chain_steps, "line_break") or chain_steps[0]
+    carry_step = chain_step(chain_steps, "wide_carry")
+    return_step = chain_step(chain_steps, "return_pass")
+    finish_step = chain_step(chain_steps, "finish")
+    line_event = event_by_id(possession, line_step.get("event_id")) or selected_event
+    carry_event = event_by_id(possession, carry_step.get("event_id") if carry_step else None)
+    return_event = event_by_id(possession, return_step.get("event_id") if return_step else None)
+    receipt_event = next_receipt_event(possession, return_event) if return_event else None
+    finish_event = event_by_id(possession, finish_step.get("event_id") if finish_step else None) or goal_event
+    passer = actor_name(line_event, "The passer")
+    receiver = receiver_name(line_event, "the receiver")
+
+    line_caption = f"{passer} breaks the defensive line."
+    carry_caption = f"{receiver} keeps the attack wide."
+    return_caption = f"The return pass finds {passer}'s continued run."
+    finish_caption = f"{passer} finishes the move he started."
+
+    scenes: list[dict[str, Any]] = [
+        story_scene(
+            {
+                "scene_id": "short_scene_1",
+                "type": "play",
+                "from_event_id": start_event["id"],
+                "to_event_id": line_event["id"],
+                "target_duration_seconds": 3.2,
+            },
+            scene_goal="Introduce the attacking shape before the decisive action.",
+            viewer_question="What breaks the defence?",
+            tactical_message=f"The attack is set up to find {passer} between the buildup and the final action.",
+            required_visual_state="The ball reaches the player who can break the line.",
+            caption="",
+            camera_instruction="Keep the passer, receiver and defensive line context in frame.",
+            overlay_instruction=[],
+            required_event_anchor={"event_id": line_event["id"], "boundary": "end", "role": "line-break setup"},
+        )
+    ]
+
+    scene_number = 2
+    play_start_event_id = line_event["id"]
+    play_start_boundary = "end"
+
+    line_overlays = [
+        {"type": "highlight_player", "target": "passer", "event_id": line_event["id"]},
+        {"type": "highlight_player", "target": "receiver", "event_id": line_event["id"]},
+        {"type": "draw_pass_arrow", "event_id": line_event["id"]},
+        {"type": "draw_defensive_line", "x": finding["evidence"].get("defensive_line_x")},
+    ]
+    scenes.append(
+        story_scene(
+            {
+                "scene_id": f"short_scene_{scene_number}",
+                "type": "tactical_pause",
+                "at_event_id": line_event["id"],
+                "at_event_boundary": "end",
+                "duration_seconds": 2.0,
+                "instructions": [*line_overlays, {"type": "show_caption", "text": line_caption}],
+            },
+            scene_goal="Explain the first tactical advantage.",
+            viewer_question="What breaks the defence?",
+            tactical_message=f"{passer}'s pass removes the first defensive line from the attack.",
+            required_visual_state="The completed pass has reached the receiver beyond the line.",
+            caption=line_caption,
+            camera_instruction="Freeze with passer, receiver and defensive line visible.",
+            overlay_instruction=line_overlays,
+            required_event_anchor={"event_id": line_event["id"], "boundary": "end", "role": "completed line break"},
+        )
+    )
+    scene_number += 1
+
+    if carry_event is not None:
+        scenes.append(
+            story_scene(
+                {
+                    "scene_id": f"short_scene_{scene_number}",
+                    "type": "play",
+                    "from_event_id": play_start_event_id,
+                    "from_event_boundary": play_start_boundary,
+                    "to_event_id": carry_event["id"],
+                    "target_duration_seconds": 2.8,
+                },
+                scene_goal="Show the attack continuing after the line break.",
+                viewer_question="What happens after the line break?",
+                tactical_message=f"{receiver} carries the attack into a wide finishing lane.",
+                required_visual_state="The receiver advances the ball into the wide channel.",
+                caption="",
+                camera_instruction="Follow the ball while preserving the runner and box context.",
+                overlay_instruction=[],
+                required_event_anchor={"event_id": carry_event["id"], "boundary": "end", "role": "wide carry completion"},
+            )
+        )
+        scene_number += 1
+        play_start_event_id = carry_event["id"]
+        play_start_boundary = "end"
+        carry_overlays = [{"type": "highlight_player", "target": "passer", "event_id": carry_event["id"]}]
+        scenes.append(
+            story_scene(
+                {
+                    "scene_id": f"short_scene_{scene_number}",
+                    "type": "tactical_pause",
+                    "at_event_id": carry_event["id"],
+                    "at_event_boundary": "end",
+                    "duration_seconds": 1.8,
+                    "instructions": [*carry_overlays, {"type": "show_caption", "text": carry_caption}],
+                },
+                scene_goal="Explain why the wide carry matters.",
+                viewer_question="Why does the carry matter?",
+                tactical_message=f"{receiver} preserves width instead of collapsing the attack into traffic.",
+                required_visual_state="The ball carrier is high and wide with the attack stretched across the box.",
+                caption=carry_caption,
+                camera_instruction="Freeze after the carry with the wide lane and central runners visible.",
+                overlay_instruction=carry_overlays,
+                required_event_anchor={"event_id": carry_event["id"], "boundary": "end", "role": "wide tactical state"},
+            )
+        )
+        scene_number += 1
+
+    if return_event is not None:
+        return_to_event = receipt_event or return_event
+        scenes.append(
+            story_scene(
+                {
+                    "scene_id": f"short_scene_{scene_number}",
+                    "type": "play",
+                    "from_event_id": play_start_event_id,
+                    **({"from_event_boundary": play_start_boundary} if play_start_boundary else {}),
+                    "to_event_id": return_to_event["id"],
+                    "target_duration_seconds": 1.5,
+                },
+                scene_goal="Show the ball coming back after width has been created.",
+                viewer_question="How does the original passer become free again?",
+                tactical_message=f"The wide action gives {passer} time to arrive for the return.",
+                required_visual_state="The return pass travels from the wide player back toward the runner.",
+                caption="",
+                camera_instruction="Keep the return-pass path and the receiver's run in frame.",
+                overlay_instruction=[],
+                required_event_anchor={"event_id": return_to_event["id"], "boundary": "start", "role": "return pass completion"},
+            )
+        )
+        scene_number += 1
+        return_overlays = [
+            {"type": "highlight_player", "target": "passer", "event_id": return_event["id"]},
+            {"type": "highlight_player", "target": "receiver", "event_id": return_event["id"]},
+            {"type": "draw_pass_arrow", "event_id": return_event["id"]},
+        ]
+        scenes.append(
+            story_scene(
+                {
+                    "scene_id": f"short_scene_{scene_number}",
+                    "type": "tactical_pause",
+                    "at_event_id": return_to_event["id"],
+                    **({"pause_frame_offset": 1} if receipt_event is not None else {"at_event_boundary": "end"}),
+                    "duration_seconds": 2.0,
+                    "instructions": [*return_overlays, {"type": "show_caption", "text": return_caption}],
+                },
+                scene_goal="Explain the second advantage created by the original pass.",
+                viewer_question="How does the original passer become free again?",
+                tactical_message=f"{passer} continues the move and receives after the ball has gone wide.",
+                required_visual_state="The return pass has arrived and the original passer is in the finishing lane.",
+                caption=return_caption,
+                camera_instruction="Freeze after receipt with the return path and receiving runner visible.",
+                overlay_instruction=return_overlays,
+                required_event_anchor={"event_id": return_to_event["id"], "boundary": "start", "frame_offset": 1, "role": "receipt after return"},
+            )
+        )
+        scene_number += 1
+        play_start_event_id = return_to_event["id"]
+        play_start_boundary = None
+
+    scenes.extend(
+        [
+            story_scene(
+                {
+                    "scene_id": f"short_scene_{scene_number}",
+                    "type": "play",
+                    "from_event_id": play_start_event_id,
+                    **({"from_event_boundary": play_start_boundary} if play_start_boundary else {}),
+                    "to_event_id": finish_event["id"],
+                    "target_duration_seconds": 1.4,
+                },
+                scene_goal="Show the advantage becoming a shot.",
+                viewer_question="How is the attack finished?",
+                tactical_message=f"{passer} attacks the space opened by the combination.",
+                required_visual_state="The receiver of the return pass moves into the shot.",
+                caption="",
+                camera_instruction="Follow the runner through the shot without adding explanatory text.",
+                overlay_instruction=[],
+                required_event_anchor={"event_id": finish_event["id"], "boundary": "end", "role": "finish"},
+            ),
+            story_scene(
+                {
+                    "scene_id": f"short_scene_{scene_number + 1}",
+                    "type": "hold",
+                    "at_event_id": finish_event["id"],
+                    "at_event_boundary": "end",
+                    "duration_seconds": 1.7,
+                    "instructions": [
+                        {"type": "highlight_player", "target": "passer", "event_id": finish_event["id"]},
+                        {"type": "show_caption", "text": finish_caption},
+                    ],
+                },
+                scene_goal="Let the viewer connect the finish back to the first action.",
+                viewer_question="Why did the attack succeed?",
+                tactical_message=f"The player who broke the line is also the player arriving to finish.",
+                required_visual_state="The shot has been taken and the attacking move is complete.",
+                caption=finish_caption,
+                camera_instruction="Hold the goal frame long enough for the final message to land.",
+                overlay_instruction=[{"type": "highlight_player", "target": "passer", "event_id": finish_event["id"]}],
+                required_event_anchor={"event_id": finish_event["id"], "boundary": "end", "role": "goal hold"},
+            ),
+        ]
+    )
     scene_plan = {
         "possession_id": possession["possession_id"],
         "format": {"width": 1080, "height": 1920, "fps": 30},
         "selected_finding_id": finding["finding_id"],
         "selected_finding": finding,
+        "action_chain": action_chain,
         "narrative_window": {
             "window_start_event_id": start_event["id"],
             "window_end_event_id": goal_event["id"],
             **selection["summary"],
         },
-        "scenes": [
-            {
-                "scene_id": "short_scene_1",
-                "type": "play",
-                "from_event_id": start_event["id"],
-                "to_event_id": pre_pause_end["id"],
-                "playback_speed": 1.1,
-            },
-            {
-                "scene_id": "short_scene_2",
-                "type": "tactical_pause",
-                "at_event_id": selected_event["id"],
-                "duration_seconds": 1.7,
-                "instructions": [
-                    {"type": "highlight_player", "target": "passer", "event_id": selected_event["id"]},
-                    {"type": "highlight_player", "target": "receiver", "event_id": selected_event["id"]},
-                    {"type": "draw_pass_arrow", "event_id": selected_event["id"]},
-                    {"type": "draw_defensive_line", "x": finding["evidence"].get("defensive_line_x")},
-                    {"type": "show_caption", "text": f"{passer} breaks the line into the runner."},
-                ],
-            },
-            {
-                "scene_id": "short_scene_3",
-                "type": "play",
-                "from_event_id": selected_event["id"],
-                "to_event_id": goal_event["id"],
-                "playback_speed": 1.0,
-            },
-            {
-                "scene_id": "short_scene_4",
-                "type": "hold",
-                "at_event_id": goal_event["id"],
-                "at_event_boundary": "end",
-                "duration_seconds": 0.8,
-            },
-        ],
+        "scenes": scenes,
     }
     return scene_plan, {"start_event": start_event, "goal_event": goal_event}
 

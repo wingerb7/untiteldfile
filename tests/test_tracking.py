@@ -23,6 +23,14 @@ def player(x: float, y: float, teammate: bool, keeper: bool = False) -> dict:
     return {"location": [x, y], "teammate": teammate, "keeper": keeper, "team_id": None}
 
 
+def identified_player(x: float, y: float, teammate: bool, player_id: int, keeper: bool = False) -> dict:
+    return {
+        **player(x, y, teammate, keeper),
+        "player_id": player_id,
+        "player_name": f"Player {player_id}",
+    }
+
+
 def frame(event_id: str, players: list[dict], index: int = 1) -> dict:
     return {"event_id": event_id, "event_index": index, "timestamp": float(index), "players": players}
 
@@ -96,9 +104,11 @@ def test_temporary_disappearance_and_termination() -> None:
         TrackingConfig(max_missing_snapshots=1),
     )
     assert len(visible(built[0])) == 1
-    assert len(visible(built[1])) == 0
+    assert len(visible(built[1])) == 1
     assert len(built[1].players) == 1
-    assert len(built[2].players) == 0
+    assert visible(built[1])[0].status == ObservationStatus.PREDICTED_OR_HELD
+    assert len(built[2].players) == 1
+    assert visible(built[2])[0].status == ObservationStatus.MISSING_BUT_ALIVE
 
 
 def test_reappearance_matches_temporarily_missing_track_if_plausible() -> None:
@@ -201,6 +211,266 @@ def test_renderer_split_players_only_returns_visible_players() -> None:
     )
     assert len(attackers) == 1
     assert len(defenders) == 1
+
+
+def test_track_survives_one_missing_snapshot_without_becoming_invisible() -> None:
+    built = states(
+        [
+            frame("a", [player(10, 10, True)]),
+            frame("b", []),
+        ],
+        TrackingConfig(max_missing_snapshots=1),
+    )
+    held = visible(built[1])[0]
+    assert held.tracking_id == visible(built[0])[0].tracking_id
+    assert held.observed is False
+    assert held.status == ObservationStatus.PREDICTED_OR_HELD
+    assert held.position_confidence < 1.0
+    assert held.visible is True
+
+
+def test_unsafe_team_shape_propagation_is_disabled_by_default() -> None:
+    frames = [
+        frame(
+            "a",
+            [
+                identified_player(30, 20, False, 1),
+                identified_player(30, 35, False, 2),
+                identified_player(30, 50, False, 3),
+                identified_player(30, 65, False, 4),
+            ],
+        ),
+        frame(
+            "b",
+            [
+                identified_player(34, 20, False, 1),
+                identified_player(34, 35, False, 2),
+                identified_player(34, 50, False, 3),
+            ],
+        ),
+    ]
+    timeline = [
+        type("Timeline", (), {"event": {"id": item["event_id"]}, "start": float(idx)})()
+        for idx, item in enumerate(frames)
+    ]
+    built, diagnostics = build_frame_states(possession(frames), timeline, TrackingConfig(max_missing_snapshots=1))
+    missing = next(item for item in visible(built[1]) if item.player_id == 4)
+    assert diagnostics["summary"]["team_shape"]["enabled"] is False
+    assert missing.observed is False
+    assert missing.status == ObservationStatus.PREDICTED_OR_HELD
+    assert missing.position.x == pytest.approx(30.0)
+    assert missing.position.y == pytest.approx(65.0)
+
+
+def test_missing_defender_is_held_without_team_shape_feature_flag() -> None:
+    built = states(
+        [
+            frame(
+                "a",
+                [
+                    identified_player(30, 20, False, 1),
+                    identified_player(30, 35, False, 2),
+                    identified_player(30, 50, False, 3),
+                    identified_player(30, 65, False, 4),
+                ],
+            ),
+            frame(
+                "b",
+                [
+                    identified_player(34, 20, False, 1),
+                    identified_player(34, 35, False, 2),
+                    identified_player(34, 50, False, 3),
+                ],
+            ),
+        ],
+        TrackingConfig(max_missing_snapshots=1),
+    )
+    missing = next(item for item in visible(built[1]) if item.player_id == 4)
+    assert missing.observed is False
+    assert missing.status == ObservationStatus.PREDICTED_OR_HELD
+    assert missing.position.x == pytest.approx(30.0)
+    assert missing.position.y == pytest.approx(65.0)
+
+
+def test_missing_midfielder_is_held_without_team_shape_centroid_translation() -> None:
+    built = states(
+        [
+            frame(
+                "a",
+                [
+                    identified_player(40, 25, True, 11),
+                    identified_player(45, 40, True, 12),
+                    identified_player(40, 55, True, 13),
+                    identified_player(38, 40, True, 14),
+                ],
+            ),
+            frame(
+                "b",
+                [
+                    identified_player(46, 25, True, 11),
+                    identified_player(51, 40, True, 12),
+                    identified_player(46, 55, True, 13),
+                ],
+            ),
+        ],
+        TrackingConfig(max_missing_snapshots=1),
+    )
+    missing = next(item for item in visible(built[1]) if item.player_id == 14)
+    assert missing.position.x == pytest.approx(38.0)
+    assert missing.position.y == pytest.approx(40.0)
+
+
+def test_team_shape_observed_player_never_overridden() -> None:
+    built = states(
+        [
+            frame(
+                "a",
+                [
+                    identified_player(10, 10, True, 21),
+                    identified_player(10, 30, True, 22),
+                    identified_player(10, 50, True, 23),
+                ],
+            ),
+            frame(
+                "b",
+                [
+                    identified_player(18, 10, True, 21),
+                    identified_player(21, 30, True, 22),
+                    identified_player(18, 50, True, 23),
+                ],
+            ),
+        ]
+    )
+    observed = next(item for item in visible(built[1]) if item.player_id == 22)
+    assert observed.observed is True
+    assert observed.position.x == pytest.approx(21.0)
+    assert observed.position.y == pytest.approx(30.0)
+
+
+def test_team_shape_preserves_formation_offset() -> None:
+    built = states(
+        [
+            frame(
+                "a",
+                [
+                    identified_player(20, 20, False, 31),
+                    identified_player(20, 35, False, 32),
+                    identified_player(20, 50, False, 33),
+                    identified_player(20, 65, False, 34),
+                ],
+            ),
+            frame(
+                "b",
+                [
+                    identified_player(25, 20, False, 31),
+                    identified_player(25, 35, False, 32),
+                    identified_player(25, 50, False, 33),
+                ],
+            ),
+        ],
+        TrackingConfig(max_missing_snapshots=1),
+    )
+    observed_shape_y = [item.position.y for item in visible(built[1]) if item.observed]
+    missing = next(item for item in visible(built[1]) if item.player_id == 34)
+    assert max(observed_shape_y) < missing.position.y
+    assert missing.position.y - max(observed_shape_y) == pytest.approx(15.0, abs=0.4)
+
+
+def test_team_shape_translation_stops_when_confidence_low() -> None:
+    built = states(
+        [
+            frame("a", [identified_player(20, 20, True, 41), identified_player(20, 35, True, 42)]),
+            frame("b", [identified_player(30, 20, True, 41)]),
+        ],
+        TrackingConfig(max_missing_snapshots=1),
+    )
+    missing = next(item for item in visible(built[1]) if item.player_id == 42)
+    assert missing.position.x == pytest.approx(20.0)
+    assert missing.position.y == pytest.approx(35.0)
+
+
+def test_low_position_confidence_does_not_terminate_identity() -> None:
+    built = states(
+        [
+            frame("a", [{**player(10, 10, True), "player_id": 9, "player_name": "Runner"}]),
+            frame("b", []),
+            frame("c", []),
+        ],
+        TrackingConfig(max_missing_snapshots=0, continuity_horizon_seconds=5.0),
+    )
+    runner = visible(built[-1])[0]
+    assert runner.player_id == 9
+    assert runner.identity_confidence > runner.position_confidence
+    assert runner.status == ObservationStatus.MISSING_BUT_ALIVE
+
+
+def test_pass_actor_is_anchored_at_start_location_by_name() -> None:
+    event_id = "pass"
+    timeline = [type("Timeline", (), {"event": {"id": event_id, "type": "Pass", "player_name": "Passer", "start_location": [10, 10], "end_location": [20, 20]}, "start": 0.0})()]
+    built, _ = build_frame_states(possession([frame(event_id, [player(10.2, 10.1, True)], index=0)]), timeline, TrackingConfig())
+    passer = visible(built[0])[0]
+    assert passer.player_name == "Passer"
+    assert passer.actor is True
+
+
+def test_pass_recipient_soft_anchor_uses_explicit_recipient() -> None:
+    event_id = "pass"
+    timeline = [
+        type(
+            "Timeline",
+            (),
+            {
+                "event": {
+                    "id": event_id,
+                    "type": "Pass",
+                    "player_name": "Passer",
+                    "recipient_name": "Receiver",
+                    "start_location": [10, 10],
+                    "end_location": [20, 20],
+                },
+                "start": 0.0,
+            },
+        )()
+    ]
+    built, _ = build_frame_states(
+        possession([frame(event_id, [player(10, 10, True), player(20.5, 20.0, True)], index=0)]),
+        timeline,
+        TrackingConfig(),
+    )
+    assert any(item.player_name == "Receiver" for item in visible(built[0]))
+
+
+def test_shot_actor_is_anchored_at_shot_location() -> None:
+    event_id = "shot"
+    timeline = [type("Timeline", (), {"event": {"id": event_id, "type": "Shot", "player_id": 7, "player_name": "Shooter", "start_location": [50, 30]}, "start": 0.0})()]
+    built, _ = build_frame_states(possession([frame(event_id, [player(50, 30.2, True)], index=0)]), timeline, TrackingConfig())
+    shooter = visible(built[0])[0]
+    assert shooter.player_id == 7
+    assert shooter.player_name == "Shooter"
+    assert shooter.actor is True
+
+
+def test_carry_actor_identity_survives_start_to_end() -> None:
+    carry = {
+        "id": "carry",
+        "type": "Carry",
+        "player_id": 11,
+        "player_name": "Carrier",
+        "start_location": [30, 30],
+        "end_location": [42, 30],
+    }
+    receipt = {"id": "receipt", "type": "Ball Receipt*", "player_id": 11, "player_name": "Carrier", "start_location": [42, 30]}
+    timeline = [
+        type("Timeline", (), {"event": carry, "start": 0.0})(),
+        type("Timeline", (), {"event": receipt, "start": 2.0})(),
+    ]
+    built, _ = build_frame_states(
+        possession([frame("carry", [player(30, 30, True)], index=0), frame("receipt", [player(42, 30, True)], index=1)]),
+        timeline,
+        TrackingConfig(identity_max_gap_seconds=3.0),
+    )
+    assert visible(built[0])[0].tracking_id == visible(built[1])[0].tracking_id
+    assert visible(built[1])[0].player_id == 11
 
 
 def test_tactical_detection_uses_event_freeze_frame_not_reconstructed_tracks() -> None:
