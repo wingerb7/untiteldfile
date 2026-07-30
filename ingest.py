@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import json
 import math
 import os
@@ -150,8 +151,7 @@ def load_from_open_data(match_id: int, open_data_dir: Path) -> tuple[list[dict[s
     return events, frames
 
 
-def load_match_data(config: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]], str]:
-    match_id = int(config["match"]["match_id"])
+def load_match_data(config: dict[str, Any], match_id: int) -> tuple[list[dict[str, Any]], list[dict[str, Any]], str]:
     open_data_dir = Path(config["data"]["open_data_dir"])
 
     try:
@@ -194,9 +194,10 @@ def build_frame_index(frames: list[dict[str, Any]]) -> dict[str, dict[str, Any]]
     return frame_by_event_id
 
 
-def build_possession_payload(config: dict[str, Any]) -> dict[str, Any]:
-    events, frames, source = load_match_data(config)
-    possession_id = int(config["match"]["possession_id"])
+def build_possession_payload(
+    config: dict[str, Any], match_id: int, possession_id: int, match_label: str
+) -> dict[str, Any]:
+    events, frames, source = load_match_data(config, match_id)
 
     frame_by_event_id = build_frame_index(frames)
     included_types = {"Pass", "Ball Receipt*", "Carry", "Shot"}
@@ -210,9 +211,9 @@ def build_possession_payload(config: dict[str, Any]) -> dict[str, Any]:
     normalized_events = [normalize_event(event, frame_by_event_id) for event in possession_events]
 
     return {
-        "match_id": int(config["match"]["match_id"]),
+        "match_id": match_id,
         "possession_id": possession_id,
-        "match_label": config["match"]["label"],
+        "match_label": match_label,
         "source": source,
         "coordinate_system": {
             "provider": "StatsBomb",
@@ -224,9 +225,21 @@ def build_possession_payload(config: dict[str, Any]) -> dict[str, Any]:
 
 
 def main() -> None:
-    config = load_config()
-    payload = build_possession_payload(config)
-    output_path = Path(config["data"]["possession_file"])
+    parser = argparse.ArgumentParser(
+        description="Ingest a single StatsBomb possession into a normalized possession JSON file. "
+        "Match identity is explicit and CLI-supplied so it is never inherited from the "
+        "shared renderer config.yaml."
+    )
+    parser.add_argument("--match-id", type=int, required=True)
+    parser.add_argument("--possession-id", type=int, required=True)
+    parser.add_argument("--label", type=str, required=True)
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--config", type=Path, default=CONFIG_PATH)
+    args = parser.parse_args()
+
+    config = load_config(args.config)
+    payload = build_possession_payload(config, args.match_id, args.possession_id, args.label)
+    output_path = args.output or Path(config["data"]["possession_file"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, ensure_ascii=True)

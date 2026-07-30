@@ -1,0 +1,2 @@
+class GraphBackedTacticalEpisodeError(ValueError):
+    pass

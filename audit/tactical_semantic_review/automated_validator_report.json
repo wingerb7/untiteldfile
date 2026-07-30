@@ -1,0 +1,991 @@
+{
+  "di_maria": {
+    "detail": "select_source_documents() rejects this fixture before any tactical episode, causal, identity, or render-grounding logic runs. This is the fixture's existing negative-fixture contract (see tests/test_action_graph.py::test_locatelli_and_depay_succeed_and_di_maria_fails_before_action_graph). Per instructions this restriction was not bypassed: no tactical episodes exist for Di Maria to validate, and none of the validators in this audit were run against it.",
+    "error_code": "SRC_EVENT_INDEX_INVALID",
+    "match_id": 3869685,
+    "possession_id": 52,
+    "status": "REJECTED_UPSTREAM"
+  },
+  "fixtures": {
+    "depay": {
+      "counts": {
+        "FAIL": 1,
+        "PASS": 55,
+        "WARN": 7
+      },
+      "results": [
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "switch_of_play_changes_channel",
+          "detail": "labelled SWITCH_OF_PLAY but evidence.feature_values.changed_side=False; the ball did not demonstrably move attacking focus to the other side of the pitch",
+          "evidence": {
+            "feature_values": {
+              "ball_circulation_speed": 11.88,
+              "changed_side": false,
+              "lateral_change": 32.4
+            }
+          },
+          "outcome": "FAIL",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by -33.4m over the episode span (no net progress toward goal despite the episode label claiming an attacking advantage)",
+          "evidence": {
+            "end": [
+              7.8,
+              38.8
+            ],
+            "goal_distance_reduction": -33.400000000000006,
+            "start": [
+              41.2,
+              28.7
+            ]
+          },
+          "outcome": "WARN",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by 20.1m over the episode span (net progress toward goal)",
+          "evidence": {
+            "end": [
+              27.9,
+              35.1
+            ],
+            "goal_distance_reduction": 20.10000000000001,
+            "start": [
+              7.8,
+              38.8
+            ]
+          },
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by 13.9m over the episode span (net progress toward goal)",
+          "evidence": {
+            "end": [
+              41.8,
+              77.0
+            ],
+            "goal_distance_reduction": 13.899999999999991,
+            "start": [
+              27.9,
+              35.1
+            ]
+          },
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by -33.0m over the episode span (no net progress toward goal despite the episode label claiming an attacking advantage)",
+          "evidence": {
+            "end": [
+              8.8,
+              38.5
+            ],
+            "goal_distance_reduction": -33.0,
+            "start": [
+              41.8,
+              77.0
+            ]
+          },
+          "outcome": "WARN",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "episode type does not depend on a specific defender being visible",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "3311: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "3669: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:874d063e70100624"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "required defender(s) are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "3669: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "8326: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:dc9a1aa0-6970-47ad-8d68-e565c3b46271:1: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:283efcb45602010a"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "episode type does not depend on a specific defender being visible",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "3669: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "8118: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:cd4e2356-a699-4aff-8f50-21b532223687:2: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:9ab6fb5db66ef047"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "required defender(s) are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "3669: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "8125: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:59521513-b2dc-43f1-9b3f-738b802459b1:5: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:f3ac99e003eee69e"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "required defender(s) are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "21809: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "8326: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:ccb4756f-3aa6-4b0d-b83a-7126e78bd630:4: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:e869ff80d404c7d9"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "episode type does not depend on a specific defender being visible",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "2988: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:2785afffc30cf649"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:0: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:2785afffc30cf649"
+        }
+      ]
+    },
+    "locatelli": {
+      "counts": {
+        "FAIL": 0,
+        "PASS": 56,
+        "WARN": 6
+      },
+      "results": [
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "temporal_order",
+          "detail": "chronologically ordered and non-overlapping",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "evidence_within_interval",
+          "detail": "all participating action ids fall within the declared interval",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "no_duplicate_decisive_action",
+          "detail": "decisive action is unique to this episode",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "supported_episode_type",
+          "detail": "episode_type is in the supported catalogue",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "switch_of_play_changes_channel",
+          "detail": "evidence confirms the ball crossed to the opposite side",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by 8.3m over the episode span (net progress toward goal)",
+          "evidence": {
+            "end": [
+              17.1,
+              40.9
+            ],
+            "goal_distance_reduction": 8.299999999999997,
+            "start": [
+              8.8,
+              26.7
+            ]
+          },
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by 8.8m over the episode span (net progress toward goal)",
+          "evidence": {
+            "end": [
+              25.9,
+              49.9
+            ],
+            "goal_distance_reduction": 8.800000000000011,
+            "start": [
+              17.1,
+              40.9
+            ]
+          },
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by 9.3m over the episode span (net progress toward goal)",
+          "evidence": {
+            "end": [
+              35.2,
+              25.8
+            ],
+            "goal_distance_reduction": 9.299999999999997,
+            "start": [
+              25.9,
+              49.9
+            ]
+          },
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "episode_forward_progress",
+          "detail": "distance-to-goal reduced by -5.7m over the episode span (no net progress toward goal despite the episode label claiming an attacking advantage)",
+          "evidence": {
+            "end": [
+              29.5,
+              45.5
+            ],
+            "goal_distance_reduction": -5.700000000000003,
+            "start": [
+              35.2,
+              25.8
+            ]
+          },
+          "outcome": "WARN",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "low_confidence_retention",
+          "detail": "confidence 1.0 meets the retention threshold",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "episode type does not depend on a specific defender being visible",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7036: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:9f53225404c3a0cb"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "required defender(s) are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7036: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7173: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605:4: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:a7f121e0cf4571fd"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "required defender(s) are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "11514: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7173: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:12f7bd2d-6420-41c6-92bb-ae10fd7111db:2: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:f84f5d48a3d06af8"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "required defender(s) are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7119: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7173: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:5: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:d98b2e3d758a88c4"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "episode type does not depend on a specific defender being visible",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7119: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7173: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:f42c6b85-d665-4c51-b2d5-6ccab8a27270:3: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:e0f5c262eb612cd4"
+        },
+        {
+          "check": "actor_visibility",
+          "detail": "all primary actors are visible in the scene",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "defender_visibility",
+          "detail": "episode type does not depend on a specific defender being visible",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "7038: matches a source-provided StatsBomb player_id",
+          "evidence": {},
+          "outcome": "PASS",
+          "subject_id": "episode:e6e35b12273b76b8"
+        },
+        {
+          "check": "identity_resolution",
+          "detail": "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:2: synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "evidence": {},
+          "outcome": "WARN",
+          "subject_id": "episode:e6e35b12273b76b8"
+        }
+      ]
+    }
+  },
+  "schema_id": "tip.tactical_semantic_review.automated_validator_report"
+}

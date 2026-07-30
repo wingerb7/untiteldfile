@@ -44,6 +44,9 @@ class TrackingConfig:
     identity_max_gap_seconds: float = 12.0
     identity_reacquisition_tolerance_m: float = 5.0
     enable_team_shape_propagation: bool = False
+    stale_fade_start_seconds: float = 0.75
+    stale_omit_seconds: float = 2.0
+    stale_visibility_hysteresis_seconds: float = 0.25
 
 
 @dataclass(frozen=True)
@@ -139,6 +142,7 @@ class FramePlayerState:
     individual_confidence: float = 1.0
     team_confidence: float = 1.0
     motion_confidence: float = 1.0
+    last_observed_timestamp: float | None = None
 
 
 @dataclass(frozen=True)
@@ -200,6 +204,7 @@ def player_state_to_dict(player: FramePlayerState) -> dict[str, Any]:
         "individual_confidence": clamp(float(player.individual_confidence)),
         "team_confidence": clamp(float(player.team_confidence)),
         "motion_confidence": clamp(float(player.motion_confidence)),
+        "last_observed_timestamp": player.last_observed_timestamp,
     }
 
 
@@ -235,6 +240,13 @@ def tracking_config(config: dict[str, Any]) -> TrackingConfig:
         ),
         enable_team_shape_propagation=bool(
             values.get("enable_team_shape_propagation", TrackingConfig.enable_team_shape_propagation)
+        ),
+        stale_fade_start_seconds=float(
+            values.get("stale_fade_start_seconds", TrackingConfig.stale_fade_start_seconds)
+        ),
+        stale_omit_seconds=float(values.get("stale_omit_seconds", TrackingConfig.stale_omit_seconds)),
+        stale_visibility_hysteresis_seconds=float(
+            values.get("stale_visibility_hysteresis_seconds", TrackingConfig.stale_visibility_hysteresis_seconds)
         ),
     )
 
@@ -284,11 +296,19 @@ def team_id_for_player(player: dict[str, Any]) -> str:
     return TEAM_ATTACK if player.get("teammate") else TEAM_DEFENSE
 
 
-def observations_from_frame(frame: dict[str, Any], timeline_time: float) -> list[PlayerObservation]:
+def supported_pitch_position(location: list[float] | tuple[float, ...] | None) -> bool:
+    return bool(location and len(location) >= 2 and isfinite(float(location[0])) and isfinite(float(location[1])) and 0.0 <= float(location[0]) <= SB_PITCH_LENGTH and 0.0 <= float(location[1]) <= SB_PITCH_WIDTH)
+
+
+def observations_from_frame(frame: dict[str, Any], timeline_time: float, invalid_positions: list[dict[str, Any]] | None = None) -> list[PlayerObservation]:
     observations = []
     event_id = str(frame["event_id"])
     for idx, player in enumerate(frame.get("players", [])):
         location = player["location"]
+        if not supported_pitch_position(location):
+            if invalid_positions is not None:
+                invalid_positions.append({"event_id": event_id, "source_index": int(player.get("source_index", idx)), "player_id": player.get("player_id"), "player_name": player.get("player_name"), "location": list(location) if isinstance(location, (list, tuple)) else location, "resolution": "EXCLUDED_INVALID_SOURCE_POSITION_LAST_VALID_TRACK_STATE_PRESERVED"})
+            continue
         team_id = team_id_for_player(player)
         observations.append(
             PlayerObservation(
@@ -353,6 +373,13 @@ def observation_identity(observation: PlayerObservation) -> str | None:
 
 def track_identity(track: PlayerTrack) -> str | None:
     return player_identity(track.player_id, track.player_name)
+
+
+def authenticated_identities_conflict(track: PlayerTrack, observation: PlayerObservation) -> bool:
+    """True only when both sides carry different authenticated identities."""
+    left = track_identity(track)
+    right = observation_identity(observation)
+    return left is not None and right is not None and left != right
 
 
 def event_team_id(event: dict[str, Any]) -> str | None:
@@ -491,6 +518,7 @@ def assign_group(
     tracks: list[PlayerTrack],
     observations: list[PlayerObservation],
     config: TrackingConfig,
+    association_diagnostics: list[dict[str, Any]] | None = None,
 ) -> tuple[list[tuple[PlayerTrack, PlayerObservation]], list[PlayerObservation]]:
     if not tracks or not observations:
         return [], observations
@@ -503,8 +531,51 @@ def assign_group(
                 row.append(config.unmatched_cost)
                 continue
             distance_m = metric_distance(track.last_position, observation.position)
-            row.append(distance_m if distance_m <= maximum_distance_m(track, observation, config) else config.unmatched_cost)
+            reachable = distance_m <= maximum_distance_m(track, observation, config)
+            if authenticated_identities_conflict(track, observation) and reachable:
+                row.append(config.unmatched_cost)
+                if association_diagnostics is not None:
+                    association_diagnostics.append(
+                        {
+                            "reason_code": "IDENTITY_CONFLICT",
+                            "track_id": track.tracking_id,
+                            "track_identity": track_identity(track),
+                            "observation_id": observation.observation_id,
+                            "observation_identity": observation_identity(observation),
+                            "source_event_id": observation.source_event_id,
+                            "source_index": observation.source_index,
+                            "model_time": observation.timestamp,
+                        }
+                    )
+                continue
+            row.append(distance_m if reachable else config.unmatched_cost)
         matrix.append(row)
+
+    # An exactly tied spatial fallback has no evidence-based winner. Leave the
+    # observation unmatched so a deterministic new track is created instead of
+    # silently choosing an identity/history.
+    for col, observation in enumerate(observations):
+        viable = [(matrix[row][col], tracks[row]) for row in range(len(tracks)) if matrix[row][col] < config.unmatched_cost]
+        if len(viable) < 2:
+            continue
+        minimum = min(cost for cost, _ in viable)
+        tied = sorted(track.tracking_id for cost, track in viable if abs(cost - minimum) <= 1e-9)
+        if len(tied) < 2:
+            continue
+        for row in range(len(tracks)):
+            matrix[row][col] = config.unmatched_cost
+        if association_diagnostics is not None:
+            association_diagnostics.append(
+                {
+                    "reason_code": "ASSOCIATION_AMBIGUITY",
+                    "track_ids": tied,
+                    "observation_id": observation.observation_id,
+                    "observation_identity": observation_identity(observation),
+                    "source_event_id": observation.source_event_id,
+                    "source_index": observation.source_index,
+                    "model_time": observation.timestamp,
+                }
+            )
 
     rows, cols = linear_sum_assignment(matrix)
     matches: list[tuple[PlayerTrack, PlayerObservation]] = []
@@ -553,6 +624,17 @@ def create_track(observation: PlayerObservation, sequence: int) -> PlayerTrack:
 
 
 def update_track(track: PlayerTrack, observation: PlayerObservation) -> None:
+    if authenticated_identities_conflict(track, observation):
+        raise TrackingValidationError(
+            "authenticated player identity conflict",
+            {
+                "code": "IDENTITY_CONFLICT",
+                "track_id": track.tracking_id,
+                "track_identity": track_identity(track),
+                "observation_id": observation.observation_id,
+                "observation_identity": observation_identity(observation),
+            },
+        )
     track.previous_position = track.last_position
     track.previous_timestamp = track.last_timestamp
     track.last_position = observation.position
@@ -624,6 +706,7 @@ def frame_player_from_track(track: PlayerTrack) -> FramePlayerState:
         player_id=track.player_id if track.identity_observed else None,
         player_name=track.player_name if track.identity_observed else None,
         alpha=1.0 if observed else max(0.28, min(0.72, confidence)),
+        last_observed_timestamp=track.last_observed_timestamp,
     )
 
 
@@ -729,12 +812,14 @@ def build_frame_states(
     frames_over_11 = 0
     max_visible = {TEAM_ATTACK: 0, TEAM_DEFENSE: 0}
     created_by_team = {TEAM_ATTACK: 0, TEAM_DEFENSE: 0}
+    invalid_source_positions: list[dict[str, Any]] = []
+    association_diagnostics: list[dict[str, Any]] = []
 
     for frame in possession["frames"]:
         timestamp = event_times.get(frame["event_id"], 0.0)
         event = next((item.event for item in timeline if item.event["id"] == frame["event_id"]), {})
         anchors = event_anchors_for_event(event, timestamp)
-        observations = apply_event_anchors(observations_from_frame(frame, timestamp), anchors, config)
+        observations = apply_event_anchors(observations_from_frame(frame, timestamp, invalid_source_positions), anchors, config)
         observation_groups: dict[tuple[str, bool], list[PlayerObservation]] = {}
         for observation in observations:
             observation_groups.setdefault(group_key(observation), []).append(observation)
@@ -760,7 +845,9 @@ def build_frame_states(
                 for observation in group_observations
                 if observation.observation_id in unmatched_observation_ids
             ]
-            group_matches, group_unmatched = assign_group(group_tracks, group_observations, config)
+            group_matches, group_unmatched = assign_group(
+                group_tracks, group_observations, config, association_diagnostics
+            )
             matches.extend(group_matches)
             matched_ids = {observation.observation_id for _, observation in group_matches}
             unmatched_observations = [
@@ -778,9 +865,9 @@ def build_frame_states(
 
         for track, observation in matches:
             update_track(track, observation)
-            retire_duplicate_identity_tracks(tracks, track)
             identity = observation_identity(observation)
             if identity is not None:
+                retire_duplicate_identity_tracks(tracks, track)
                 identity_track_ids[identity] = track.tracking_id
 
         for track in tracks.values():
@@ -869,8 +956,28 @@ def build_frame_states(
         "duplicate_tracking_ids": duplicate_tracking_ids,
         "identity_bridges": bridge_diagnostics,
         "team_shape": team_shape_summary,
+        "invalid_source_position_count": len(invalid_source_positions),
+        "identity_conflict_count": sum(
+            row.get("reason_code") == "IDENTITY_CONFLICT" for row in association_diagnostics
+        ),
+        "association_ambiguity_count": sum(
+            row.get("reason_code") == "ASSOCIATION_AMBIGUITY" for row in association_diagnostics
+        ),
     }
-    return states, {"frames": diagnostics, "summary": summary, "team_shape": team_shape_frames}
+    association_diagnostics.sort(
+        key=lambda row: (
+            float(row["model_time"]),
+            str(row.get("track_id") or ",".join(row.get("track_ids", []))),
+            str(row["observation_id"]),
+        )
+    )
+    return states, {
+        "frames": diagnostics,
+        "summary": summary,
+        "team_shape": team_shape_frames,
+        "invalid_source_positions": invalid_source_positions,
+        "association_conflicts": association_diagnostics,
+    }
 
 
 def player_key(player: FramePlayerState) -> tuple[str, str]:
@@ -1077,6 +1184,7 @@ def interpolated_frame_state(states: list[FrameState], t: float, event: dict[str
                     player_id=previous.player_id,
                     player_name=previous.player_name,
                     alpha=max(0.28, min(0.72, confidence)),
+                    last_observed_timestamp=previous.last_observed_timestamp,
                 )
             )
             continue
@@ -1102,6 +1210,7 @@ def interpolated_frame_state(states: list[FrameState], t: float, event: dict[str
                 player_id=player.player_id,
                 player_name=player.player_name,
                 alpha=1.0,
+                last_observed_timestamp=previous.last_observed_timestamp,
             )
         )
     represented = {player.tracking_id for player in players}
@@ -1129,19 +1238,8 @@ def interpolated_frame_state(states: list[FrameState], t: float, event: dict[str
             for left_player in left_by_id.values()
         ):
             continue
-        elapsed = max(0.0, right.timestamp - t)
-        confidence = held_interpolation_confidence(player, elapsed)
-        players.append(
-            replace(
-                player,
-                observed=False,
-                visible=True,
-                status=ObservationStatus.PREDICTED_OR_HELD,
-                confidence=confidence,
-                position_confidence=clamp(player.position_confidence - elapsed * 0.10),
-                alpha=max(0.28, min(0.72, confidence)),
-            )
-        )
+        # A future-only endpoint is not evidence for showing the player early.
+        # Keep it absent until its first supported observation.
     frame = FrameState(timestamp=t, event_id=right.event_id, players=suppress_duplicate_or_excess_players(players, TrackingConfig()))
     raise_if_invalid_frame(frame)
     return frame
@@ -1179,15 +1277,133 @@ def ball_location_for_event(item: TimelineEvent | None, t: float) -> list[float]
     return start or end
 
 
+HOLD_REASON_CODES = (
+    "HOLD_MISSING_PREVIOUS_ENDPOINT",
+    "HOLD_MISSING_NEXT_ENDPOINT",
+    "HOLD_ASSOCIATION_AMBIGUITY",
+    "HOLD_IDENTITY_CONFLICT",
+    "HOLD_SPEED_CAP_REJECTION",
+    "HOLD_LIFECYCLE_STATE",
+    "HOLD_NO_FUTURE_SUPPORTED_OBSERVATION",
+)
+
+
+def interpolation_hold_diagnostics(
+    states: list[FrameState],
+    events_by_id: dict[str, dict[str, Any]],
+    association_events: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Describe every unsupported static interpolation choice without inventing motion."""
+    if not states:
+        return []
+    rows: list[dict[str, Any]] = []
+    future_observed: dict[tuple[int, str], bool] = {}
+    for idx, state in enumerate(states):
+        later = states[idx + 1 :]
+        for player in state.players:
+            future_observed[(idx, player.tracking_id)] = any(
+                candidate.tracking_id == player.tracking_id and candidate.status == ObservationStatus.OBSERVED
+                for frame in later
+                for candidate in frame.players
+            )
+
+    def reference(player: FramePlayerState | None) -> dict[str, Any] | None:
+        if player is None:
+            return None
+        return {
+            "event_id": player.source_event_id,
+            "observation_id": player.observation_id,
+            "source_index": player.source_index,
+        }
+
+    def add(reason: str, track_id: str, left: FrameState, right: FrameState, previous: FramePlayerState | None, next_player: FramePlayerState | None) -> None:
+        source = previous or next_player
+        last_observed = source.last_observed_timestamp if source is not None else None
+        rows.append(
+            {
+                "reason_code": reason,
+                "track_id": track_id,
+                "model_time_interval": [left.timestamp, right.timestamp],
+                "evidence_age_seconds": None if last_observed is None else max(0.0, left.timestamp - last_observed),
+                "previous_observation": reference(previous),
+                "next_observation": reference(next_player),
+                "lifecycle_state": None if source is None else source.status.value,
+                "confidence": None if source is None else clamp(float(source.confidence)),
+            }
+        )
+
+    for idx, (left, right) in enumerate(zip(states, states[1:], strict=False)):
+        left_by_id = {player.tracking_id: player for player in left.players if player.visible}
+        right_by_id = {player.tracking_id: player for player in right.players if player.visible}
+        for track_id in sorted(set(left_by_id) | set(right_by_id)):
+            previous = left_by_id.get(track_id)
+            next_player = right_by_id.get(track_id)
+            if previous is None:
+                add("HOLD_MISSING_PREVIOUS_ENDPOINT", track_id, left, right, None, next_player)
+                continue
+            if next_player is None:
+                reason = (
+                    "HOLD_MISSING_NEXT_ENDPOINT"
+                    if future_observed.get((idx, track_id), False)
+                    else "HOLD_NO_FUTURE_SUPPORTED_OBSERVATION"
+                )
+                add(reason, track_id, left, right, previous, None)
+                continue
+            same_position = metric_distance(previous.position, next_player.position) <= 1e-9
+            event = events_by_id.get(str(right.event_id))
+            if interpolation_confidence(previous, next_player, max(0.001, right.timestamp - left.timestamp), event) <= 0.0:
+                add("HOLD_SPEED_CAP_REJECTION", track_id, left, right, previous, next_player)
+            elif same_position and (
+                previous.status not in {ObservationStatus.OBSERVED, ObservationStatus.INTERPOLATED}
+                or next_player.status not in {ObservationStatus.OBSERVED, ObservationStatus.INTERPOLATED}
+            ):
+                add("HOLD_LIFECYCLE_STATE", track_id, left, right, previous, next_player)
+
+    for event in association_events:
+        reason = event.get("reason_code")
+        if reason not in {"IDENTITY_CONFLICT", "ASSOCIATION_AMBIGUITY"}:
+            continue
+        time = float(event["model_time"])
+        right = next((state for state in states if state.timestamp >= time), states[-1])
+        left = max((state for state in states if state.timestamp <= time), key=lambda state: state.timestamp, default=states[0])
+        track_ids = [event["track_id"]] if event.get("track_id") else list(event.get("track_ids") or [])
+        for track_id in sorted(track_ids):
+            previous = next((player for player in left.players if player.tracking_id == track_id), None)
+            next_player = next((player for player in right.players if player.tracking_id == track_id), None)
+            add(f"HOLD_{reason}", track_id, left, right, previous, next_player)
+
+    return sorted(
+        rows,
+        key=lambda row: (
+            float(row["model_time_interval"][0]),
+            float(row["model_time_interval"][1]),
+            str(row["track_id"]),
+            str(row["reason_code"]),
+        ),
+    )
+
+
 def build_animation_model(possession: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
     timeline = build_event_timeline(possession, config)
-    frame_states, diagnostics = build_frame_states(possession, timeline, tracking_config(config))
+    resolved_tracking_config = tracking_config(config)
+    frame_states, diagnostics = build_frame_states(possession, timeline, resolved_tracking_config)
+    diagnostics["interpolation_holds"] = interpolation_hold_diagnostics(
+        frame_states,
+        {str(event.get("id")): event for event in possession.get("events", [])},
+        diagnostics.get("association_conflicts", []),
+    )
+    diagnostics["hold_reason_codes"] = list(HOLD_REASON_CODES)
     model = {
         "possession": possession,
         "timeline": timeline,
         "frame_states": frame_states,
         "tracking_diagnostics": diagnostics,
-        "team_shape_metrics": {"summary": {"enabled": tracking_config(config).enable_team_shape_propagation}, "segments": []},
+        "team_shape_metrics": {"summary": {"enabled": resolved_tracking_config.enable_team_shape_propagation}, "segments": []},
+        "presentation_policy": {
+            "stale_fade_start_seconds": resolved_tracking_config.stale_fade_start_seconds,
+            "stale_omit_seconds": resolved_tracking_config.stale_omit_seconds,
+            "stale_visibility_hysteresis_seconds": resolved_tracking_config.stale_visibility_hysteresis_seconds,
+        },
         "duration": total_animation_seconds(timeline, config),
         "tracking_architecture": {
             "event_freeze_frame": "tactical geometry source of truth",
@@ -1294,6 +1510,12 @@ def state_at(model: dict[str, Any], t: float) -> dict[str, Any]:
     selection = model.get("relevant_player_selection") or {}
     selected_track_ids = set(selection.get("selected_track_ids") or [])
     mandatory_track_ids = set(selection.get("mandatory_track_ids") or [])
+    context_track_ids = set(selection.get("context_track_ids") or [])
+    optional_track_ids = set(selection.get("optional_track_ids") or [])
+    policy = model.get("presentation_policy") or {}
+    fade_start = max(0.0, float(policy.get("stale_fade_start_seconds", 0.75)))
+    omit_at = max(fade_start + 0.001, float(policy.get("stale_omit_seconds", 2.0)))
+    hysteresis = max(0.0, float(policy.get("stale_visibility_hysteresis_seconds", 0.25)))
     players = []
     for player in frame_state.players if frame_state else []:
         if selected_track_ids and player.tracking_id not in selected_track_ids:
@@ -1302,7 +1524,48 @@ def state_at(model: dict[str, Any], t: float) -> dict[str, Any]:
             continue
         if not player.visible and player.tracking_id in mandatory_track_ids:
             player = replace(player, visible=True, alpha=max(0.28, min(0.72, float(player.confidence))))
-        players.append(player_state_to_dict(player))
+        last_observed = player.last_observed_timestamp
+        evidence_age = max(0.0, t - last_observed) if last_observed is not None else float("inf")
+        mandatory = player.tracking_id in mandatory_track_ids
+        role = "mandatory" if mandatory else "context" if player.tracking_id in context_track_ids else "optional"
+
+        lifecycle_alpha = {
+            ObservationStatus.OBSERVED: 1.0,
+            ObservationStatus.INTERPOLATED: 0.78,
+            ObservationStatus.PREDICTED_OR_HELD: 0.52,
+            ObservationStatus.MISSING_BUT_ALIVE: 0.24,
+            ObservationStatus.UNKNOWN: 0.16,
+        }[player.status]
+        lifecycle_alpha *= clamp(float(player.confidence))
+        if player.status == ObservationStatus.OBSERVED:
+            lifecycle_alpha = 1.0
+
+        freshness_alpha = 1.0
+        if evidence_age > fade_start:
+            fade_progress = clamp((evidence_age - fade_start) / (omit_at - fade_start))
+            freshness_alpha = 1.0 - 0.88 * fade_progress
+        if evidence_age > omit_at:
+            freshness_alpha = 0.0 if hysteresis <= 0.0 else 0.12 * clamp(
+                1.0 - (evidence_age - omit_at) / hysteresis
+            )
+        if not mandatory and evidence_age >= omit_at + hysteresis:
+            continue
+        # Mandatory action participants remain locatable, but never masquerade as observed.
+        minimum_uncertain_alpha = 0.20 if mandatory and player.status != ObservationStatus.OBSERVED else 0.0
+        render_alpha = max(minimum_uncertain_alpha, lifecycle_alpha * freshness_alpha)
+        if not mandatory and render_alpha <= 0.01:
+            continue
+        player = replace(player, alpha=render_alpha)
+        payload = player_state_to_dict(player)
+        payload.update(
+            {
+                "evidence_age_seconds": None if not isfinite(evidence_age) else evidence_age,
+                "relevance_role": role,
+                "presentation_eligible": True,
+                "visibility_transition_seconds": hysteresis,
+            }
+        )
+        players.append(payload)
 
     return {
         "time": t,

@@ -1,0 +1,567 @@
+{
+  "artifact_hashes": {
+    "action_graph": "5c03872f1a5368bcc5494a00b39927daa7afb7c32b87d8f5c57eb727b99192ac",
+    "graph_backed_episodes": "d0ab7a42555530ae56a202a61a22546364a1a5e9f1c4cbca0476e637cede1956",
+    "recognition": "6de3494093b4aa3392159015fa65fe8058713f832d4b88c6ebaa420452804109"
+  },
+  "candidate_count": 7,
+  "classification_counts": {
+    "CORE_CAUSAL": 4,
+    "DUPLICATIVE_FOR_STORYTELLING": 0,
+    "SUPPORTING_CONTEXT": 1,
+    "TACTICALLY_VALID_BUT_NARRATIVELY_SECONDARY": 2,
+    "UNRELATED_TO_DECISIVE_ATTACK": 0
+  },
+  "contract_version": "0.1.0",
+  "episodes": [
+    {
+      "actors": [
+        "player:statsbomb:3311",
+        "player:statsbomb:2988"
+      ],
+      "appeared_in_graph_semantic_scene_plan": true,
+      "audit_narrative_classification": "SUPPORTING_CONTEXT",
+      "authenticated_path_to_finish": [
+        "action_edge:13e3fc9ce67fce1e4aaaa5a75b7b9181ad2ea4ce8475d6af6678b7c3e19cb408",
+        "action_edge:1da79ac30709670f43a2f5358a5e7bb9b3e787e575274e83262356efe0fba8e6",
+        "action_edge:6e312f935944c0c43d589f6e31bb02623bb00b7bdd81d5206585d45aeafa74c7",
+        "action_edge:92fd2565b5fe97999fbad37c3f90d68ca089a368d070e287b40cbe1179263556",
+        "action_edge:452670315d9ca0576e149aa0450bd2a1db3fbee21e51ee4ccfb0807142b499e0",
+        "action_edge:ec4816999543f1206a73ba490b49964d32a57a4c5abc0c8d53b05a522d3b1485",
+        "action_edge:273b524b8ed4839a8798a5768d583e003bbc84a06e72cb573840faae937622bd",
+        "action_edge:01535b35aed30844ce3872d43bd9fa71cbfea1f5600e045f604a975710741b64",
+        "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+      ],
+      "authenticated_provenance": {
+        "action_node_ids": [
+          "action_node:6239b709faf5554126f328582a6317f1512e5986d0cbf68e24d0ab4718a79cea",
+          "action_node:048070fccf20056c5f380f64e85ed57cc9c2a7f104fd3d1abfcb475063505d3a",
+          "action_node:5a71370fe9bf4192a2a5589ddc6abbb5547e2db48af3f078961851b86750abf0"
+        ],
+        "perception_feature_ids": [
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:absolute_position:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:absolute_position:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:absolute_position:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:absolute_position:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:connection_distance:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:pass_end_position:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5",
+          "feature:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:pass_start_position:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5"
+        ],
+        "recognition_ids": [
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:defensive_line_state:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6:and:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8:and:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:source_declared_pass:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:b4491768-f744-4de3-87b0-ccd4ef7be5a2:source_declared_ball_receipt:event:statsbomb:b4491768-f744-4de3-87b0-ccd4ef7be5a2",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:33afe8ec-1aea-40be-a7cc-97610032e3b5:pass_crosses_defensive_line:player:statsbomb:3311:and:player:statsbomb:2988:and:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:6:and:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:8:and:player:observation_scoped:event:statsbomb:33afe8ec-1aea-40be-a7cc-97610032e3b5:freeze_frame:statsbomb360:observation:9"
+        ],
+        "relation_ids": [
+          "action_edge:8426ff491b594641b5074e3774d37ba2e8c4723359fde5ed3495a05c5ea8bec1",
+          "action_edge:9d72c16dbfec5d09e6b4ad4fe929c94660ee3797958e78bc531a544da4788d0d"
+        ]
+      },
+      "causal_relation_to_finish": "ENABLING_CONTRIBUTION",
+      "confidence": 1.0,
+      "current_ranking_score": null,
+      "current_relevance_classification": "PLAYER_VISIBILITY_ONLY; NO EPISODE_CAUSAL_RELEVANCE_CLASSIFIER",
+      "current_selection_priority": "CANONICAL_EPISODE_ORDER; CONFIDENCE_NOT_USED_FOR_COMPARATIVE_RANKING",
+      "end_timestamp": 559.662,
+      "episode_id": "graph_episode:830f6162bf77dfba0ab8442c3d3ce57a9471dda742c003c9dc4b8be1076fcbc3",
+      "episode_type": "LINE_BREAK",
+      "explicitly_appeared_in_previous_scene_plan": true,
+      "graph_relations": [
+        "action_edge:8426ff491b594641b5074e3774d37ba2e8c4723359fde5ed3495a05c5ea8bec1",
+        "action_edge:9d72c16dbfec5d09e6b4ad4fe929c94660ee3797958e78bc531a544da4788d0d"
+      ],
+      "graph_semantic_planned_duration": 3.1,
+      "graph_semantic_scene_ids": [
+        "scene_1",
+        "scene_2"
+      ],
+      "mandatory_status": "AUTHENTICATED_CANDIDATE_RETAINED",
+      "narrative_purpose": "setup and attack entry",
+      "previous_rendered_duration_as_episode": 0.0,
+      "selected_by_graph_semantic_route": true,
+      "selected_by_previous_storytelling_route": false,
+      "source_event_ids": [
+        "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+        "b4491768-f744-4de3-87b0-ccd4ef7be5a2"
+      ],
+      "start_timestamp": 557.943,
+      "storytelling_note": "Retain as an explicit narrative beat.",
+      "unique_narrative_purpose": true
+    },
+    {
+      "actors": [
+        "player:statsbomb:6994",
+        "player:statsbomb:4318"
+      ],
+      "appeared_in_graph_semantic_scene_plan": true,
+      "audit_narrative_classification": "TACTICALLY_VALID_BUT_NARRATIVELY_SECONDARY",
+      "authenticated_path_to_finish": [
+        "action_edge:92fd2565b5fe97999fbad37c3f90d68ca089a368d070e287b40cbe1179263556",
+        "action_edge:452670315d9ca0576e149aa0450bd2a1db3fbee21e51ee4ccfb0807142b499e0",
+        "action_edge:ec4816999543f1206a73ba490b49964d32a57a4c5abc0c8d53b05a522d3b1485",
+        "action_edge:273b524b8ed4839a8798a5768d583e003bbc84a06e72cb573840faae937622bd",
+        "action_edge:01535b35aed30844ce3872d43bd9fa71cbfea1f5600e045f604a975710741b64",
+        "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+      ],
+      "authenticated_provenance": {
+        "action_node_ids": [
+          "action_node:48b03f49176f6610c1578baed3480b0f0add708a929f9594e8bdde46af09f6a4",
+          "action_node:5f415f0ffe410ddde995b7b5e5f4fc0f41f01aa3a33cfe75617d07fa3b09b74c",
+          "action_node:a4a53fb9d10cb2f7fb340d2fc875e88e30d153384fdd8b58079979f18dea9d2e"
+        ],
+        "perception_feature_ids": [
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:absolute_position:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:absolute_position:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:absolute_position:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:connection_distance:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:connection_distance:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:connection_distance:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:connection_distance:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:connection_distance:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:connection_distance:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:pass_end_position:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077",
+          "feature:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:pass_start_position:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077"
+        ],
+        "recognition_ids": [
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:defensive_line_state:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:7",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:source_declared_pass:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:fbb669e7-25a0-4046-a0d5-07f25d313b72:source_declared_ball_receipt:event:statsbomb:fbb669e7-25a0-4046-a0d5-07f25d313b72",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:ac15aa15-db77-464e-89c6-e0ab2dce8077:pass_crosses_defensive_line:player:statsbomb:6994:and:player:statsbomb:4318:and:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:ac15aa15-db77-464e-89c6-e0ab2dce8077:freeze_frame:statsbomb360:observation:7"
+        ],
+        "relation_ids": [
+          "action_edge:bbbaf45e62142d37a4e21c6378c3ae357096da217faa2db1f09e8253f9cfa0e1",
+          "action_edge:ca809356353f783fa89f16c0ff48ffd62d1c39f20bb8d283e673b3ef962d2e29"
+        ]
+      },
+      "causal_relation_to_finish": "ENABLING_CONTRIBUTION",
+      "confidence": 1.0,
+      "current_ranking_score": null,
+      "current_relevance_classification": "PLAYER_VISIBILITY_ONLY; NO EPISODE_CAUSAL_RELEVANCE_CLASSIFIER",
+      "current_selection_priority": "CANONICAL_EPISODE_ORDER; CONFIDENCE_NOT_USED_FOR_COMPARATIVE_RANKING",
+      "end_timestamp": 562.03,
+      "episode_id": "graph_episode:0829d67dbdabaf8956b53f12263e1c7838a648672f3b0a841fa6cd9608f9ba58",
+      "episode_type": "LINE_BREAK",
+      "explicitly_appeared_in_previous_scene_plan": false,
+      "graph_relations": [
+        "action_edge:bbbaf45e62142d37a4e21c6378c3ae357096da217faa2db1f09e8253f9cfa0e1",
+        "action_edge:ca809356353f783fa89f16c0ff48ffd62d1c39f20bb8d283e673b3ef962d2e29"
+      ],
+      "graph_semantic_planned_duration": 3.1,
+      "graph_semantic_scene_ids": [
+        "scene_3",
+        "scene_4"
+      ],
+      "mandatory_status": "AUTHENTICATED_CANDIDATE_RETAINED",
+      "narrative_purpose": "sustained progression",
+      "previous_rendered_duration_as_episode": 0.0,
+      "selected_by_graph_semantic_route": true,
+      "selected_by_previous_storytelling_route": false,
+      "source_event_ids": [
+        "ac15aa15-db77-464e-89c6-e0ab2dce8077",
+        "fbb669e7-25a0-4046-a0d5-07f25d313b72"
+      ],
+      "start_timestamp": 561.04,
+      "storytelling_note": "Semantically distinct and analytically useful, but suitable for grouping as sustained progression when it lacks a unique setup, decisive, or finish role.",
+      "unique_narrative_purpose": false
+    },
+    {
+      "actors": [
+        "player:statsbomb:4318",
+        "player:statsbomb:2988"
+      ],
+      "appeared_in_graph_semantic_scene_plan": true,
+      "audit_narrative_classification": "TACTICALLY_VALID_BUT_NARRATIVELY_SECONDARY",
+      "authenticated_path_to_finish": [
+        "action_edge:452670315d9ca0576e149aa0450bd2a1db3fbee21e51ee4ccfb0807142b499e0",
+        "action_edge:ec4816999543f1206a73ba490b49964d32a57a4c5abc0c8d53b05a522d3b1485",
+        "action_edge:273b524b8ed4839a8798a5768d583e003bbc84a06e72cb573840faae937622bd",
+        "action_edge:01535b35aed30844ce3872d43bd9fa71cbfea1f5600e045f604a975710741b64",
+        "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+      ],
+      "authenticated_provenance": {
+        "action_node_ids": [
+          "action_node:26bb54979384654a2885b74484f5084e7ab94cb48a92c46f463df0b1c0474a55",
+          "action_node:35826e473c963a343c3f7bff3910fdf4ef239351c63c9b9a3e4624f4f76f662d",
+          "action_node:7a4f689ed31b8e8215414a080524f933e32eaa1b968daefff95643cfa927fa3a"
+        ],
+        "perception_feature_ids": [
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:absolute_position:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:absolute_position:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:absolute_position:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:absolute_position:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:connection_distance:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:pass_end_position:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+          "feature:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:pass_start_position:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b"
+        ],
+        "recognition_ids": [
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:defensive_line_state:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12:and:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7:and:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8:and:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:source_declared_pass:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:541e8c54-a938-4d39-bb18-e3db49e71c72:source_declared_ball_receipt:event:statsbomb:541e8c54-a938-4d39-bb18-e3db49e71c72",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:8d6e145c-7e04-420d-b346-3514e3fbfb9b:pass_crosses_defensive_line:player:statsbomb:4318:and:player:statsbomb:2988:and:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:12:and:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:7:and:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:8:and:player:observation_scoped:event:statsbomb:8d6e145c-7e04-420d-b346-3514e3fbfb9b:freeze_frame:statsbomb360:observation:9"
+        ],
+        "relation_ids": [
+          "action_edge:72d3e2cdbfe38ace2d60f0323fcfcaee57f6c712c419892ca9a2ce8fb0ec4381",
+          "action_edge:aacc58f5e52ff72d63a9a679a1db817abdef74353949e66e23f1f538c9e84965"
+        ]
+      },
+      "causal_relation_to_finish": "ENABLING_CONTRIBUTION",
+      "confidence": 1.0,
+      "current_ranking_score": null,
+      "current_relevance_classification": "PLAYER_VISIBILITY_ONLY; NO EPISODE_CAUSAL_RELEVANCE_CLASSIFIER",
+      "current_selection_priority": "CANONICAL_EPISODE_ORDER; CONFIDENCE_NOT_USED_FOR_COMPARATIVE_RANKING",
+      "end_timestamp": 562.907,
+      "episode_id": "graph_episode:e35a3d8ecb1f00fa82fb6e699af96364c41b6776dcaa18247c5cc863953756ee",
+      "episode_type": "LINE_BREAK",
+      "explicitly_appeared_in_previous_scene_plan": false,
+      "graph_relations": [
+        "action_edge:72d3e2cdbfe38ace2d60f0323fcfcaee57f6c712c419892ca9a2ce8fb0ec4381",
+        "action_edge:aacc58f5e52ff72d63a9a679a1db817abdef74353949e66e23f1f538c9e84965"
+      ],
+      "graph_semantic_planned_duration": 3.1,
+      "graph_semantic_scene_ids": [
+        "scene_5",
+        "scene_6"
+      ],
+      "mandatory_status": "AUTHENTICATED_CANDIDATE_RETAINED",
+      "narrative_purpose": "sustained progression",
+      "previous_rendered_duration_as_episode": 0.0,
+      "selected_by_graph_semantic_route": true,
+      "selected_by_previous_storytelling_route": false,
+      "source_event_ids": [
+        "8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+        "541e8c54-a938-4d39-bb18-e3db49e71c72"
+      ],
+      "start_timestamp": 562.03,
+      "storytelling_note": "Semantically distinct and analytically useful, but suitable for grouping as sustained progression when it lacks a unique setup, decisive, or finish role.",
+      "unique_narrative_purpose": false
+    },
+    {
+      "actors": [
+        "player:statsbomb:2988",
+        "player:statsbomb:20750"
+      ],
+      "appeared_in_graph_semantic_scene_plan": true,
+      "audit_narrative_classification": "CORE_CAUSAL",
+      "authenticated_path_to_finish": [
+        "action_edge:ec4816999543f1206a73ba490b49964d32a57a4c5abc0c8d53b05a522d3b1485",
+        "action_edge:273b524b8ed4839a8798a5768d583e003bbc84a06e72cb573840faae937622bd",
+        "action_edge:01535b35aed30844ce3872d43bd9fa71cbfea1f5600e045f604a975710741b64",
+        "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+      ],
+      "authenticated_provenance": {
+        "action_node_ids": [
+          "action_node:369cf4776ab2cd921589a97650d63bfd86c301fd469cf507e8268e6248cf53ea",
+          "action_node:8adf595c1bcf7aeaac794edfeae1a374d5ae95fd47972a2ab1ac04206c82083c",
+          "action_node:d850427ef612fe5504f6c389576cc38152823375e0fc6acb208f2cb7dcf1e2d6"
+        ],
+        "perception_feature_ids": [
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:absolute_position:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:absolute_position:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:absolute_position:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:absolute_position:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:connection_distance:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:pass_end_position:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3",
+          "feature:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:pass_start_position:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3"
+        ],
+        "recognition_ids": [
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:defensive_line_state:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7:and:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:source_declared_pass:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:37ed1aa4-d393-4e6d-9b3a-42ee3eb52716:source_declared_ball_receipt:event:statsbomb:37ed1aa4-d393-4e6d-9b3a-42ee3eb52716",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:d3264b17-4393-4e4d-8970-51128f9d9bf3:pass_crosses_defensive_line:player:statsbomb:2988:and:player:statsbomb:20750:and:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:7:and:player:observation_scoped:event:statsbomb:d3264b17-4393-4e4d-8970-51128f9d9bf3:freeze_frame:statsbomb360:observation:8"
+        ],
+        "relation_ids": [
+          "action_edge:cdcbc009280a78762375a44fcfc7399374b2afa0c4b2e26570db6c9abe0cebed",
+          "action_edge:e8c95a05a156a397487c964b7e2d1b2c57306127313e287c004d6b42e7b1879b"
+        ]
+      },
+      "causal_relation_to_finish": "DIRECT_OR_IMMEDIATE_ENABLING_CONTRIBUTION",
+      "confidence": 1.0,
+      "current_ranking_score": null,
+      "current_relevance_classification": "PLAYER_VISIBILITY_ONLY; NO EPISODE_CAUSAL_RELEVANCE_CLASSIFIER",
+      "current_selection_priority": "CANONICAL_EPISODE_ORDER; CONFIDENCE_NOT_USED_FOR_COMPARATIVE_RANKING",
+      "end_timestamp": 563.895,
+      "episode_id": "graph_episode:36cde98980db66fbad996b5e7d4b7f4aed1ab61216e96e96b771eecbf166a087",
+      "episode_type": "LINE_BREAK",
+      "explicitly_appeared_in_previous_scene_plan": false,
+      "graph_relations": [
+        "action_edge:cdcbc009280a78762375a44fcfc7399374b2afa0c4b2e26570db6c9abe0cebed",
+        "action_edge:e8c95a05a156a397487c964b7e2d1b2c57306127313e287c004d6b42e7b1879b"
+      ],
+      "graph_semantic_planned_duration": 3.1,
+      "graph_semantic_scene_ids": [
+        "scene_7",
+        "scene_8"
+      ],
+      "mandatory_status": "AUTHENTICATED_CANDIDATE_RETAINED",
+      "narrative_purpose": "decisive mechanism",
+      "previous_rendered_duration_as_episode": 0.0,
+      "selected_by_graph_semantic_route": true,
+      "selected_by_previous_storytelling_route": false,
+      "source_event_ids": [
+        "d3264b17-4393-4e4d-8970-51128f9d9bf3",
+        "37ed1aa4-d393-4e6d-9b3a-42ee3eb52716"
+      ],
+      "start_timestamp": 562.907,
+      "storytelling_note": "Retain as an explicit narrative beat.",
+      "unique_narrative_purpose": true
+    },
+    {
+      "actors": [
+        "player:statsbomb:20750",
+        "player:statsbomb:8125"
+      ],
+      "appeared_in_graph_semantic_scene_plan": true,
+      "audit_narrative_classification": "CORE_CAUSAL",
+      "authenticated_path_to_finish": [
+        "action_edge:01535b35aed30844ce3872d43bd9fa71cbfea1f5600e045f604a975710741b64",
+        "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+      ],
+      "authenticated_provenance": {
+        "action_node_ids": [
+          "action_node:c04f868b3a6885d36155df34d2f7ca40bde4354dff7e8012ea3cdcb6a7613044",
+          "action_node:91bee89bccda72d873c6b695590c35f57f0259f4aa395e799007ea2ec2266008",
+          "action_node:a6d9d375a56b0a7e6e76ab03dafcbd4c8b6617123b2846603ba5b916ab7010d3"
+        ],
+        "perception_feature_ids": [
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:absolute_position:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:absolute_position:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:absolute_position:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:absolute_position:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:absolute_position:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:connection_distance:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9:to:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:pass_end_position:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+          "feature:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:pass_start_position:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7"
+        ],
+        "recognition_ids": [
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:defensive_line_state:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:source_declared_pass:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:cd4dc2d3-79fe-448a-a970-607196d54290:source_declared_ball_receipt:event:statsbomb:cd4dc2d3-79fe-448a-a970-607196d54290",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:pass_crosses_defensive_line:player:statsbomb:20750:and:player:statsbomb:8125:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:12:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:5:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:6:and:player:observation_scoped:event:statsbomb:fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7:freeze_frame:statsbomb360:observation:9"
+        ],
+        "relation_ids": [
+          "action_edge:39bc0fc9a0e78d70fe03385d6068b469feba4ca16a37d1005cff710df01c6e89",
+          "action_edge:a15dca4b3c55347bf1f327d1af1be978b0aff0a6f742e45b510cea380f6c6afa"
+        ]
+      },
+      "causal_relation_to_finish": "DIRECT_OR_IMMEDIATE_ENABLING_CONTRIBUTION",
+      "confidence": 1.0,
+      "current_ranking_score": null,
+      "current_relevance_classification": "PLAYER_VISIBILITY_ONLY; NO EPISODE_CAUSAL_RELEVANCE_CLASSIFIER",
+      "current_selection_priority": "CANONICAL_EPISODE_ORDER; CONFIDENCE_NOT_USED_FOR_COMPARATIVE_RANKING",
+      "end_timestamp": 570.22,
+      "episode_id": "graph_episode:1acd3b3a729a628cf72f65160f5d2e74fe869ac0dab1877bf118178eb4d6889c",
+      "episode_type": "LINE_BREAK",
+      "explicitly_appeared_in_previous_scene_plan": false,
+      "graph_relations": [
+        "action_edge:39bc0fc9a0e78d70fe03385d6068b469feba4ca16a37d1005cff710df01c6e89",
+        "action_edge:a15dca4b3c55347bf1f327d1af1be978b0aff0a6f742e45b510cea380f6c6afa"
+      ],
+      "graph_semantic_planned_duration": 3.1,
+      "graph_semantic_scene_ids": [
+        "scene_9",
+        "scene_10"
+      ],
+      "mandatory_status": "AUTHENTICATED_CANDIDATE_RETAINED",
+      "narrative_purpose": "decisive mechanism",
+      "previous_rendered_duration_as_episode": 0.0,
+      "selected_by_graph_semantic_route": true,
+      "selected_by_previous_storytelling_route": false,
+      "source_event_ids": [
+        "fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+        "cd4dc2d3-79fe-448a-a970-607196d54290"
+      ],
+      "start_timestamp": 567.486,
+      "storytelling_note": "Retain as an explicit narrative beat.",
+      "unique_narrative_purpose": true
+    },
+    {
+      "actors": [
+        "player:statsbomb:8125",
+        "player:statsbomb:2988"
+      ],
+      "appeared_in_graph_semantic_scene_plan": true,
+      "audit_narrative_classification": "CORE_CAUSAL",
+      "authenticated_path_to_finish": [
+        "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+      ],
+      "authenticated_provenance": {
+        "action_node_ids": [
+          "action_node:c55adbec3a61f44980a9f49ab9f403d412bd4086213fbbac687472ef7ecb6cd3",
+          "action_node:455b1a64e5f93eda1bc57a98e1cdd7b77a6e4c9c41ad39105261fd55daf11e59",
+          "action_node:b2affe71f283f831af72da33bbc862fdf691e0edf2d7ea6131bc87973c57a840"
+        ],
+        "perception_feature_ids": [
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:absolute_position:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:absolute_position:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:absolute_position:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:absolute_position:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:absolute_position:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:connection_distance:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8:to:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:pass_end_position:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+          "feature:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:pass_start_position:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753"
+        ],
+        "recognition_ids": [
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:defensive_line_state:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:source_declared_pass:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:7aa42ebe-62ce-4dcb-a700-296e34d9b6c5:source_declared_ball_receipt:event:statsbomb:7aa42ebe-62ce-4dcb-a700-296e34d9b6c5",
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:f13d1fcc-d78b-4932-a6ae-f24f0e153753:pass_crosses_defensive_line:player:statsbomb:8125:and:player:statsbomb:2988:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:10:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:11:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:4:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:5:and:player:observation_scoped:event:statsbomb:f13d1fcc-d78b-4932-a6ae-f24f0e153753:freeze_frame:statsbomb360:observation:8"
+        ],
+        "relation_ids": [
+          "action_edge:c5145e1e1d840ef18b39c7d9c4b190ada115d8cc44219b00b68e104e987d7389",
+          "action_edge:d3993403a151080e4ff75bc4b62f0657f6dcdc5cc51bc4bdb89ac095b4f22553"
+        ]
+      },
+      "causal_relation_to_finish": "DIRECT_OR_IMMEDIATE_ENABLING_CONTRIBUTION",
+      "confidence": 1.0,
+      "current_ranking_score": null,
+      "current_relevance_classification": "PLAYER_VISIBILITY_ONLY; NO EPISODE_CAUSAL_RELEVANCE_CLASSIFIER",
+      "current_selection_priority": "CANONICAL_EPISODE_ORDER; CONFIDENCE_NOT_USED_FOR_COMPARATIVE_RANKING",
+      "end_timestamp": 571.356,
+      "episode_id": "graph_episode:27e526bf11a60f80ad0b6d064c8a6424d229dad8c40845709efd32025118c6a7",
+      "episode_type": "LINE_BREAK",
+      "explicitly_appeared_in_previous_scene_plan": false,
+      "graph_relations": [
+        "action_edge:c5145e1e1d840ef18b39c7d9c4b190ada115d8cc44219b00b68e104e987d7389",
+        "action_edge:d3993403a151080e4ff75bc4b62f0657f6dcdc5cc51bc4bdb89ac095b4f22553"
+      ],
+      "graph_semantic_planned_duration": 3.1,
+      "graph_semantic_scene_ids": [
+        "scene_11",
+        "scene_12"
+      ],
+      "mandatory_status": "AUTHENTICATED_CANDIDATE_RETAINED",
+      "narrative_purpose": "decisive mechanism",
+      "previous_rendered_duration_as_episode": 0.0,
+      "selected_by_graph_semantic_route": true,
+      "selected_by_previous_storytelling_route": false,
+      "source_event_ids": [
+        "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+        "7aa42ebe-62ce-4dcb-a700-296e34d9b6c5"
+      ],
+      "start_timestamp": 570.22,
+      "storytelling_note": "Retain as an explicit narrative beat.",
+      "unique_narrative_purpose": true
+    },
+    {
+      "actors": [
+        "player:statsbomb:2988"
+      ],
+      "appeared_in_graph_semantic_scene_plan": true,
+      "audit_narrative_classification": "CORE_CAUSAL",
+      "authenticated_path_to_finish": [],
+      "authenticated_provenance": {
+        "action_node_ids": [
+          "action_node:0af8bff2f2b63d068f32f8aa582afe3097970d882c4eba524d79f6a84a62099c"
+        ],
+        "perception_feature_ids": [],
+        "recognition_ids": [
+          "recognition:perception_frame:world_state:match:statsbomb:3869117:20:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:source_declared_shot:event:statsbomb:05907c05-0a6c-4aa7-a62a-1f1a70bebba7"
+        ],
+        "relation_ids": [
+          "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+        ]
+      },
+      "causal_relation_to_finish": "DIRECT_CAUSAL_CONTRIBUTION",
+      "confidence": 1.0,
+      "current_ranking_score": null,
+      "current_relevance_classification": "PLAYER_VISIBILITY_ONLY; NO EPISODE_CAUSAL_RELEVANCE_CLASSIFIER",
+      "current_selection_priority": "CANONICAL_EPISODE_ORDER; CONFIDENCE_NOT_USED_FOR_COMPARATIVE_RANKING",
+      "end_timestamp": 571.453,
+      "episode_id": "graph_episode:3474623a49c9c5ea9e9e838ea6ed851be8bf0e28fbe87174c66608363a808e32",
+      "episode_type": "FINISH",
+      "explicitly_appeared_in_previous_scene_plan": true,
+      "graph_relations": [
+        "action_edge:60d23e71fe2b76a361350f55fb2be8be8ca1c40bf6b1de9115ecab6dd5dba6ca"
+      ],
+      "graph_semantic_planned_duration": 4.1,
+      "graph_semantic_scene_ids": [
+        "scene_13",
+        "scene_14"
+      ],
+      "mandatory_status": "FINISH_ALWAYS_RETAINED",
+      "narrative_purpose": "finish",
+      "previous_rendered_duration_as_episode": 0.0,
+      "selected_by_graph_semantic_route": true,
+      "selected_by_previous_storytelling_route": false,
+      "source_event_ids": [
+        "05907c05-0a6c-4aa7-a62a-1f1a70bebba7"
+      ],
+      "start_timestamp": 571.453,
+      "storytelling_note": "Retain as an explicit narrative beat.",
+      "unique_narrative_purpose": true
+    }
+  ],
+  "schema_id": "tip.depay_storytelling_episode_inventory"
+}

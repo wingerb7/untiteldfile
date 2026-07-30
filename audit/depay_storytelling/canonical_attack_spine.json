@@ -1,0 +1,195 @@
+{
+  "actions": [
+    {
+      "actor": "player:statsbomb:3311",
+      "event_id": "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+      "event_type": "Pass",
+      "line_break_episode_id": "graph_episode:830f6162bf77dfba0ab8442c3d3ce57a9471dda742c003c9dc4b8be1076fcbc3",
+      "possession_relative_index": 42,
+      "receiver": "player:statsbomb:2988",
+      "spine_role": "FIRST_CAUSALLY_RELEVANT_ACTION_AND_LINE_BREAK",
+      "timestamp_seconds": 557.943
+    },
+    {
+      "actor": "player:statsbomb:2988",
+      "event_id": "b4491768-f744-4de3-87b0-ccd4ef7be5a2",
+      "event_type": "Ball Receipt*",
+      "line_break_episode_id": null,
+      "possession_relative_index": 43,
+      "receiver": null,
+      "spine_role": "AUTHENTICATED_RECEIVER_CONTROL",
+      "timestamp_seconds": 559.662
+    },
+    {
+      "actor": "player:statsbomb:2988",
+      "event_id": "6aa97dbd-fd3d-47d5-bb43-7217223a2377",
+      "event_type": "Carry",
+      "line_break_episode_id": null,
+      "possession_relative_index": 44,
+      "receiver": null,
+      "spine_role": "PROGRESSION_ACTION",
+      "timestamp_seconds": 559.662
+    },
+    {
+      "actor": "player:statsbomb:2988",
+      "event_id": "788a800f-e752-4193-a241-c7d26b568a0b",
+      "event_type": "Pass",
+      "line_break_episode_id": null,
+      "possession_relative_index": 45,
+      "receiver": "player:statsbomb:6994",
+      "spine_role": "PROGRESSION_ACTION",
+      "timestamp_seconds": 559.797
+    },
+    {
+      "actor": "player:statsbomb:6994",
+      "event_id": "69e4ed64-2769-43d3-83f7-ee49148abea3",
+      "event_type": "Ball Receipt*",
+      "line_break_episode_id": null,
+      "possession_relative_index": 46,
+      "receiver": null,
+      "spine_role": "AUTHENTICATED_RECEIVER_CONTROL",
+      "timestamp_seconds": 561.04
+    },
+    {
+      "actor": "player:statsbomb:6994",
+      "event_id": "ac15aa15-db77-464e-89c6-e0ab2dce8077",
+      "event_type": "Pass",
+      "line_break_episode_id": "graph_episode:0829d67dbdabaf8956b53f12263e1c7838a648672f3b0a841fa6cd9608f9ba58",
+      "possession_relative_index": 47,
+      "receiver": "player:statsbomb:4318",
+      "spine_role": "LINE_BREAKING_PROGRESSION",
+      "timestamp_seconds": 561.04
+    },
+    {
+      "actor": "player:statsbomb:4318",
+      "event_id": "fbb669e7-25a0-4046-a0d5-07f25d313b72",
+      "event_type": "Ball Receipt*",
+      "line_break_episode_id": null,
+      "possession_relative_index": 48,
+      "receiver": null,
+      "spine_role": "AUTHENTICATED_RECEIVER_CONTROL",
+      "timestamp_seconds": 562.03
+    },
+    {
+      "actor": "player:statsbomb:4318",
+      "event_id": "8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+      "event_type": "Pass",
+      "line_break_episode_id": "graph_episode:e35a3d8ecb1f00fa82fb6e699af96364c41b6776dcaa18247c5cc863953756ee",
+      "possession_relative_index": 49,
+      "receiver": "player:statsbomb:2988",
+      "spine_role": "LINE_BREAKING_PROGRESSION",
+      "timestamp_seconds": 562.03
+    },
+    {
+      "actor": "player:statsbomb:2988",
+      "event_id": "541e8c54-a938-4d39-bb18-e3db49e71c72",
+      "event_type": "Ball Receipt*",
+      "line_break_episode_id": null,
+      "possession_relative_index": 50,
+      "receiver": null,
+      "spine_role": "AUTHENTICATED_RECEIVER_CONTROL",
+      "timestamp_seconds": 562.907
+    },
+    {
+      "actor": "player:statsbomb:2988",
+      "event_id": "d3264b17-4393-4e4d-8970-51128f9d9bf3",
+      "event_type": "Pass",
+      "line_break_episode_id": "graph_episode:36cde98980db66fbad996b5e7d4b7f4aed1ab61216e96e96b771eecbf166a087",
+      "possession_relative_index": 51,
+      "receiver": "player:statsbomb:20750",
+      "spine_role": "LINE_BREAKING_PROGRESSION",
+      "timestamp_seconds": 562.907
+    },
+    {
+      "actor": "player:statsbomb:20750",
+      "event_id": "37ed1aa4-d393-4e6d-9b3a-42ee3eb52716",
+      "event_type": "Ball Receipt*",
+      "line_break_episode_id": null,
+      "possession_relative_index": 52,
+      "receiver": null,
+      "spine_role": "AUTHENTICATED_RECEIVER_CONTROL",
+      "timestamp_seconds": 563.895
+    },
+    {
+      "actor": "player:statsbomb:20750",
+      "event_id": "51616ac2-e9c6-44b2-95b1-647995956765",
+      "event_type": "Carry",
+      "line_break_episode_id": null,
+      "possession_relative_index": 53,
+      "receiver": null,
+      "spine_role": "PROGRESSION_ACTION",
+      "timestamp_seconds": 563.895
+    },
+    {
+      "actor": "player:statsbomb:20750",
+      "event_id": "fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+      "event_type": "Pass",
+      "line_break_episode_id": "graph_episode:1acd3b3a729a628cf72f65160f5d2e74fe869ac0dab1877bf118178eb4d6889c",
+      "possession_relative_index": 54,
+      "receiver": "player:statsbomb:8125",
+      "spine_role": "LINE_BREAKING_PROGRESSION",
+      "timestamp_seconds": 567.486
+    },
+    {
+      "actor": "player:statsbomb:8125",
+      "event_id": "cd4dc2d3-79fe-448a-a970-607196d54290",
+      "event_type": "Ball Receipt*",
+      "line_break_episode_id": null,
+      "possession_relative_index": 55,
+      "receiver": null,
+      "spine_role": "AUTHENTICATED_RECEIVER_CONTROL",
+      "timestamp_seconds": 570.22
+    },
+    {
+      "actor": "player:statsbomb:8125",
+      "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+      "event_type": "Pass",
+      "line_break_episode_id": "graph_episode:27e526bf11a60f80ad0b6d064c8a6424d229dad8c40845709efd32025118c6a7",
+      "possession_relative_index": 56,
+      "receiver": "player:statsbomb:2988",
+      "spine_role": "FINAL_ACTION_AND_LINE_BREAK",
+      "timestamp_seconds": 570.22
+    },
+    {
+      "actor": "player:statsbomb:2988",
+      "event_id": "7aa42ebe-62ce-4dcb-a700-296e34d9b6c5",
+      "event_type": "Ball Receipt*",
+      "line_break_episode_id": null,
+      "possession_relative_index": 57,
+      "receiver": null,
+      "spine_role": "AUTHENTICATED_RECEIVER_CONTROL",
+      "timestamp_seconds": 571.356
+    },
+    {
+      "actor": "player:statsbomb:2988",
+      "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+      "event_type": "Shot",
+      "line_break_episode_id": null,
+      "possession_relative_index": 58,
+      "receiver": null,
+      "spine_role": "FINISH",
+      "timestamp_seconds": 571.453
+    }
+  ],
+  "box_entry_limitation": "No authenticated graph-backed BOX_ENTRY or FINAL_THIRD_ARRIVAL concept is available.",
+  "causal_basis": "The spine starts at the earliest authenticated LINE_BREAK retained by the decisive sequence and follows authenticated source actions, crossing relations, related receipts, temporal succession, and the terminal shot.",
+  "contract_version": "0.1.0",
+  "excluded_earlier_event_count": 42,
+  "excluded_earlier_events_reason": "Earlier events are authenticated possession circulation but have no graph-backed tactical episode or causal mechanism needed to explain the final attacking sequence.",
+  "final_action": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+  "finish": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+  "first_causally_relevant_action": "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+  "match_id": 3869117,
+  "possession_end": {
+    "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+    "timestamp_seconds": 571.453
+  },
+  "possession_id": 20,
+  "possession_start": {
+    "classification": "STRUCTURAL_CONTEXT_NOT_DECISIVE_ATTACK",
+    "event_id": "df062304-317d-4ecc-940e-848563aa6140",
+    "timestamp_seconds": 508.54
+  },
+  "schema_id": "tip.depay_canonical_attack_spine",
+  "supported_box_entry_or_final_third_arrival": null
+}

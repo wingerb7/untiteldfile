@@ -1,0 +1,16 @@
+# Per-possession narrative content for the Netherlands vs United States (Depay) possession.
+# This file is the ONLY source for this possession's hook text, hook freeze-frame time,
+# and annotation overlay file. It is never inherited from the shared config.yaml.
+#
+# No hook copy or overlay annotations have been authored for this possession yet.
+# Leaving hook_text empty and annotations_file unset renders cleanly with no hook
+# screen and no overlays, rather than silently falling back to another match's.
+match:
+  match_id: 3869117
+  possession_id: 20
+  label: "Netherlands 3-1 United States, FIFA World Cup 2022 (Memphis Depay goal)"
+
+animation:
+  hook_text: ""
+  hook_model_time: 0.0
+  annotations_file: null

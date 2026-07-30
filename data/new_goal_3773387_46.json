@@ -1,0 +1,7578 @@
+{
+  "coordinate_system": {
+    "length": 120,
+    "origin": "top-left",
+    "width": 80
+  },
+  "events": [
+    {
+      "carry_end_location": [
+        5.9,
+        27.2
+      ],
+      "duration": 0.981721,
+      "freeze_frame": [
+        {
+          "actor": true,
+          "keeper": true,
+          "location": [
+            4.400000095367432,
+            30.200000762939453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            9.018063114834746,
+            32.25524855042023
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            13.124358237194201,
+            34.77709407184118
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.709991820860097,
+            24.73397192568097
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            19.893956330447168,
+            52.08235317880609
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.845196656569286,
+            51.04172212010794
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.64050629520024,
+            25.767249844409235
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.828675548741444,
+            36.31734408907746
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.396887747866387,
+            36.675832117926774
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            29.39790101344694,
+            40.175217819498634
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            35.37809840522465,
+            18.202994338357733
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        }
+      ],
+      "id": "baf34097-ea6b-478d-9a4d-9559fc8598ea",
+      "index": 1153,
+      "location": [
+        4.4,
+        30.2
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Marc-Andr\u00e9 ter Stegen",
+      "player_id": 20055,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 15,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:15.792",
+      "type": "Carry",
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        27.504612013890878,
+        18.948608396990462,
+        3.393617258108042,
+        38.630489377722654,
+        15.759340819979663,
+        16.736864710220964,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 1.970623,
+      "freeze_frame": [
+        {
+          "actor": true,
+          "keeper": true,
+          "location": [
+            5.900000095367432,
+            27.200000762939453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            7.572797764662255,
+            31.143971274489104
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            11.943309433507721,
+            33.655243490334186
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            15.828364441095289,
+            20.256290154707393
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            18.543026988608602,
+            52.30245711616767
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.341941987645328,
+            51.74167666170578
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            24.02600733152704,
+            25.53546295241148
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.44215438088051,
+            36.178634994717314
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            26.55791937967635,
+            36.543570424051865
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            33.654250477058454,
+            15.462712716638407
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        }
+      ],
+      "id": "bf97a80d-bbd9-4e49-a393-1f9805658fff",
+      "index": 1154,
+      "location": [
+        5.9,
+        27.2
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        34.0,
+        13.4
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Jordi Alba Ramos",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Marc-Andr\u00e9 ter Stegen",
+      "player_id": 20055,
+      "possession_team": "Barcelona",
+      "recipient_id": 5211,
+      "second": 16,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:16.774",
+      "type": "Pass",
+      "visible_area": [
+        0.0,
+        80.0,
+        0.0,
+        26.526522575575466,
+        20.096581580771065,
+        1.290078611363789,
+        40.00308924503541,
+        13.713969486834568,
+        18.03313035401917,
+        80.0,
+        0.0,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [],
+      "id": "832b72f9-6103-4319-ac87-aea4b11046cd",
+      "index": 1155,
+      "location": [
+        34.0,
+        13.4
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Jordi Alba Ramos",
+      "player_id": 5211,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 18,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:18.744",
+      "type": "Ball Receipt*",
+      "visible_area": null
+    },
+    {
+      "carry_end_location": [
+        42.9,
+        12.1
+      ],
+      "duration": 3.936481,
+      "freeze_frame": [],
+      "id": "d57ffaca-5fe4-47a2-888a-3e7e892e20d7",
+      "index": 1156,
+      "location": [
+        34.0,
+        13.4
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Jordi Alba Ramos",
+      "player_id": 5211,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 18,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:18.744",
+      "type": "Carry",
+      "visible_area": null
+    },
+    {
+      "carry_end_location": null,
+      "duration": 1.817865,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            27.598094892096384,
+            46.615344386290474
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.31401286189043,
+            3.4436760386427068
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            42.900001525878906,
+            12.100000381469727
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            43.29299312403545,
+            27.926649445600127
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            44.801901030096175,
+            23.761958152159366
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.73811922134098,
+            35.74017057019307
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.24405216638023,
+            17.737744097162647
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.6857217470866,
+            20.69189981170817
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.19685634862675,
+            29.311573106671922
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.49597343438659,
+            38.5653010872668
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.37981413627944,
+            29.48734630265922
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.53034426671414,
+            12.332782136577428
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.07550955531269,
+            64.26161342903642
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.47352587650097,
+            34.015725263490566
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.72729118863052,
+            22.994738441847566
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.13056608639354,
+            20.333080819528504
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.02127279830032,
+            50.45376055825397
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "d04df365-858a-4644-922f-e47ba12ad8f9",
+      "index": 1157,
+      "location": [
+        42.9,
+        12.1
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        49.2,
+        6.9
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Jordi Alba Ramos",
+      "player_id": 5211,
+      "possession_team": "Barcelona",
+      "recipient_id": 30486,
+      "second": 22,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:22.681",
+      "type": "Pass",
+      "visible_area": [
+        7.982711270524082,
+        80.0,
+        40.33297716287983,
+        0.0,
+        69.16492481618975,
+        0.0,
+        81.06073475851568,
+        80.0,
+        7.982711270524082,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.93403306702848,
+            53.40032471789062
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.454873115893875,
+            31.70602335995217
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.73056667295084,
+            14.946159078994924
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            49.20000076293945,
+            6.900000095367432
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            49.64386229732409,
+            26.960464967987036
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            52.57052853955737,
+            37.89600799309671
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.3439911539693,
+            17.684292222583466
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.02658556739615,
+            19.212843877227485
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.5211043451875,
+            33.00216257754891
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.84614481447009,
+            42.64658468945348
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.81238381385637,
+            34.84410986139565
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.65443146080018,
+            14.455713388770263
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.48517854588569,
+            69.54570730990827
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.52264261338591,
+            22.185561305946834
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.30099895834029,
+            24.450206854195542
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.56841281102957,
+            36.50171112224037
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.02124118193791,
+            55.26658149840527
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "45b27541-4e21-4032-b873-24d00fbd8571",
+      "index": 1158,
+      "location": [
+        49.2,
+        6.9
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 24,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:24.499",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        18.879716634847842,
+        80.0,
+        45.13418511289254,
+        0.0,
+        71.28193001635768,
+        0.0,
+        90.06096358537368,
+        80.0,
+        18.879716634847842,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        54.2,
+        9.8
+      ],
+      "duration": 2.062277,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            30.93403306702848,
+            53.40032471789062
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.454873115893875,
+            31.70602335995217
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.73056667295084,
+            14.946159078994924
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            49.20000076293945,
+            6.900000095367432
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            49.64386229732409,
+            26.960464967987036
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            52.57052853955737,
+            37.89600799309671
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.3439911539693,
+            17.684292222583466
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            57.02658556739615,
+            19.212843877227485
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.5211043451875,
+            33.00216257754891
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.84614481447009,
+            42.64658468945348
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.81238381385637,
+            34.84410986139565
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.65443146080018,
+            14.455713388770263
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.48517854588569,
+            69.54570730990827
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.52264261338591,
+            22.185561305946834
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.30099895834029,
+            24.450206854195542
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.56841281102957,
+            36.50171112224037
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.02124118193791,
+            55.26658149840527
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "993487fa-889a-40cb-b041-9545800e0b80",
+      "index": 1159,
+      "location": [
+        49.2,
+        6.9
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 24,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:24.499",
+      "type": "Carry",
+      "visible_area": [
+        18.879716634847842,
+        80.0,
+        45.13418511289254,
+        0.0,
+        71.28193001635768,
+        0.0,
+        90.06096358537368,
+        80.0,
+        18.879716634847842,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 0.789976,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            34.115042734922966,
+            57.96798102941419
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            45.4847033500174,
+            31.842336203354265
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            47.1456407961343,
+            15.188986861977739
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            51.11256988596408,
+            27.523046336669267
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            54.20000076293945,
+            9.800000190734863
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            54.771740116856634,
+            37.63608470151446
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            58.169606376946945,
+            13.195818120442652
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.64075394675476,
+            44.84504962658481
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.901960702414854,
+            12.447677632392384
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.97822519997704,
+            32.172851486215535
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.27561656743477,
+            21.145355713794636
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            61.55852884191732,
+            37.62614914006957
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.37534471263255,
+            21.436107284589383
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.8382128378207,
+            74.66288115778448
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.06602621114286,
+            14.263345709516372
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.146851113709,
+            37.1075317707225
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.3861349931273,
+            57.608668566965335
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "3db101e0-ccdc-4d77-a415-bff320cc93d2",
+      "index": 1160,
+      "location": [
+        54.2,
+        9.8
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        62.9,
+        18.6
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Lionel Andr\u00e9s Messi Cuccittini",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": 5503,
+      "second": 26,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:26.561",
+      "type": "Pass",
+      "visible_area": [
+        28.650115387301838,
+        80.0,
+        46.71866652319797,
+        0.0,
+        70.9687817088933,
+        0.0,
+        97.18361846530559,
+        80.0,
+        28.650115387301838,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.616425503028765,
+            57.106718781489775
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.19315953085834,
+            32.49588285533859
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            52.22356864924676,
+            13.706096615503661
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.232166046109896,
+            25.98004473606469
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.39985406704382,
+            9.753270688297825
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.876920564071575,
+            36.45653699054858
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.317237011830926,
+            12.691783669271466
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            62.900001525878906,
+            18.600000381469727
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.13224622631577,
+            44.06873485826722
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.75114281425267,
+            31.99768771642308
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.16260503817678,
+            37.6684352621215
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.28314487170282,
+            20.877239226967525
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.83568232628453,
+            9.069293404569528
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.43242393567714,
+            75.3694850892359
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.76475890582726,
+            12.381574533248958
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.26266772760789,
+            37.316001146831596
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.84256101218061,
+            57.638870888494395
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "a5ca7dc0-0039-415d-9a4d-2e6918f78da7",
+      "index": 1161,
+      "location": [
+        62.9,
+        18.6
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Lionel Andr\u00e9s Messi Cuccittini",
+      "player_id": 5503,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 27,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:27.351",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        34.986978113168504,
+        80.0,
+        51.03870283775849,
+        0.0,
+        75.73873070898492,
+        0.0,
+        103.5401434107138,
+        80.0,
+        34.986978113168504,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        66.6,
+        20.7
+      ],
+      "duration": 2.977762,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            40.616425503028765,
+            57.106718781489775
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            50.19315953085834,
+            32.49588285533859
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            52.22356864924676,
+            13.706096615503661
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            56.232166046109896,
+            25.98004473606469
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.39985406704382,
+            9.753270688297825
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.876920564071575,
+            36.45653699054858
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.317237011830926,
+            12.691783669271466
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            62.900001525878906,
+            18.600000381469727
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.13224622631577,
+            44.06873485826722
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.75114281425267,
+            31.99768771642308
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.16260503817678,
+            37.6684352621215
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.28314487170282,
+            20.877239226967525
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.83568232628453,
+            9.069293404569528
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.43242393567714,
+            75.3694850892359
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.76475890582726,
+            12.381574533248958
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.26266772760789,
+            37.316001146831596
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.84256101218061,
+            57.638870888494395
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "4d8913fa-4728-4fbe-a06a-8d31399a766b",
+      "index": 1162,
+      "location": [
+        62.9,
+        18.6
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Lionel Andr\u00e9s Messi Cuccittini",
+      "player_id": 5503,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 27,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:27.351",
+      "type": "Carry",
+      "visible_area": [
+        34.986978113168504,
+        80.0,
+        51.03870283775849,
+        0.0,
+        75.73873070898492,
+        0.0,
+        103.5401434107138,
+        80.0,
+        34.986978113168504,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 0.885078,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            51.37864193525411,
+            59.46302180186001
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.966501456415756,
+            30.7555924927794
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.97260625845478,
+            11.327800423343263
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            66.5999984741211,
+            20.700000762939453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.6546105998001,
+            34.43097816270933
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.95717367053747,
+            22.373067519538104
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.60941057717197,
+            17.45100958478541
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.17177933555438,
+            45.487378531781665
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.2645931419427,
+            6.195042124149907
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            72.13892615784566,
+            30.172892486637508
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            72.62844562220253,
+            37.04082050910845
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.53325849209035,
+            73.63909702117203
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            77.06604192784548,
+            22.628200190020216
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            77.942333882049,
+            19.38831323556588
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.61707227063074,
+            35.07950618168768
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.91705841765557,
+            17.994043073345146
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.48499524188954,
+            56.0958254057753
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "ac2802a9-1462-4150-a381-0dfb412cca5b",
+      "index": 1164,
+      "location": [
+        66.6,
+        20.7
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        75.0,
+        20.7
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Antoine Griezmann",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Lionel Andr\u00e9s Messi Cuccittini",
+      "player_id": 5503,
+      "possession_team": "Barcelona",
+      "recipient_id": 5487,
+      "second": 30,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:30.329",
+      "type": "Pass",
+      "visible_area": [
+        44.22470579359162,
+        80.0,
+        55.4370957407063,
+        0.0,
+        82.71265924458936,
+        0.0,
+        118.46606856252728,
+        80.0,
+        44.22470579359162,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.54602346593795,
+            32.2734843862332
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.478218986722,
+            11.409536369491661
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.3010442090911,
+            34.999433365772035
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.97730675470356,
+            45.866579581148684
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.11441048144508,
+            22.03092489770252
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.0539557860666,
+            22.189611880958864
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.42636811200637,
+            20.10487647417237
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.5354357775071,
+            7.225453804393155
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            72.19572292994224,
+            37.937679642068154
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.44156959420964,
+            30.895004185681728
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            75.0,
+            20.700000762939453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.19747341403234,
+            74.69911762672102
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.55977170047451,
+            24.213623919822453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.00714741514793,
+            56.47615251655444
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.21140158240794,
+            18.424979923410902
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.40769107349436,
+            36.44660290030493
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "cc3c94ad-e7f3-464d-bf5f-9e397c153a82",
+      "index": 1165,
+      "location": [
+        75.0,
+        20.7
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Antoine Griezmann",
+      "player_id": 5487,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 31,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:31.214",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        50.86008033843123,
+        80.0,
+        56.59662069468612,
+        0.0,
+        84.44737294631955,
+        0.0,
+        120.0,
+        69.77261440163973,
+        120.0,
+        80.0,
+        50.86008033843123,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 1.095101,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            55.74602041418014,
+            32.2734843862332
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            60.678215934964186,
+            11.409536369491661
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.50104115733329,
+            34.999433365772035
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.17730370294575,
+            45.866579581148684
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.31440742968726,
+            22.03092489770252
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.25395273430878,
+            22.189611880958864
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.62636506024856,
+            20.10487647417237
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.73543272574929,
+            7.225453804393155
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            72.39571987818442,
+            37.937679642068154
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.64156654245183,
+            30.895004185681728
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            75.19999694824219,
+            20.700000762939453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.39747036227453,
+            74.69911762672102
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.7597686487167,
+            24.213623919822453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.20714436339011,
+            56.47615251655444
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.41139853065013,
+            18.424979923410902
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.60768802173655,
+            36.44660290030493
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "cc03811e-38a5-403f-a19e-c14fef18cc7d",
+      "index": 1166,
+      "location": [
+        75.2,
+        20.7
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        78.4,
+        7.0
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Antoine Griezmann",
+      "player_id": 5487,
+      "possession_team": "Barcelona",
+      "recipient_id": 30486,
+      "second": 31,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:31.214",
+      "type": "Pass",
+      "visible_area": [
+        51.060077286673426,
+        80.0,
+        56.79661764292831,
+        0.0,
+        84.64736989456173,
+        0.0,
+        120.0,
+        69.3801171065696,
+        120.0,
+        80.0,
+        51.060077286673426,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.101358809375604,
+            3.3640057078279852
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.34814262624634,
+            11.726384792492198
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.05216477106431,
+            36.680257729038914
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.73007529801352,
+            47.86386197018237
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.12791037632074,
+            22.88891065954489
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.83866755680141,
+            41.049919553052796
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.12649822234228,
+            26.134459141680146
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.41834708651261,
+            76.6984415319849
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.71393060202199,
+            22.559926098178302
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.01664242830384,
+            31.516833540209696
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.21440779420723,
+            23.265506155263594
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            78.4000015258789,
+            7.0
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.11714318802665,
+            57.86508978047469
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.42051656891711,
+            14.794467172773409
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.16069384335215,
+            25.9280884272368
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.38078637662305,
+            38.75287466051493
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "c45460f0-3dff-48a0-9192-ac7fb3e3d244",
+      "index": 1167,
+      "location": [
+        78.4,
+        7.0
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 32,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:32.309",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        63.50867802846184,
+        80.0,
+        62.195131333777894,
+        3.666392990855316,
+        72.88328081161131,
+        0.0,
+        88.31009407995779,
+        0.0,
+        120.0,
+        54.40974811214717,
+        120.0,
+        80.0,
+        63.50867802846184,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        80.1,
+        14.3
+      ],
+      "duration": 5.524565,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.101358809375604,
+            3.3640057078279852
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.34814262624634,
+            11.726384792492198
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.05216477106431,
+            36.680257729038914
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.73007529801352,
+            47.86386197018237
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.12791037632074,
+            22.88891065954489
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.83866755680141,
+            41.049919553052796
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.12649822234228,
+            26.134459141680146
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.41834708651261,
+            76.6984415319849
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.71393060202199,
+            22.559926098178302
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.01664242830384,
+            31.516833540209696
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.21440779420723,
+            23.265506155263594
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            78.4000015258789,
+            7.0
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.11714318802665,
+            57.86508978047469
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.42051656891711,
+            14.794467172773409
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.16069384335215,
+            25.9280884272368
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.38078637662305,
+            38.75287466051493
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "b13a60bb-569b-43cd-8cb2-72463c7c0516",
+      "index": 1168,
+      "location": [
+        78.4,
+        7.0
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 32,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:32.309",
+      "type": "Carry",
+      "visible_area": [
+        63.50867802846184,
+        80.0,
+        62.195131333777894,
+        3.666392990855316,
+        72.88328081161131,
+        0.0,
+        88.31009407995779,
+        0.0,
+        120.0,
+        54.40974811214717,
+        120.0,
+        80.0,
+        63.50867802846184,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 0.79032,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            69.23290533007673,
+            19.743351308181722
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.49781773206563,
+            24.155935526735234
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.91049636184253,
+            3.260593822487948
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.22668839225116,
+            14.063213779119792
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.26695461540415,
+            20.49033538007093
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            80.0999984741211,
+            14.300000190734863
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.7373460894568,
+            34.878933798731374
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.1282719915182,
+            34.88968165758182
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.28459360772766,
+            17.008028986661735
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.85898815290388,
+            74.39514108437822
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.87617870318512,
+            24.0737485730437
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.31722741930629,
+            4.873287586171784
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.83366373472575,
+            19.359336188721016
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.1264924526403,
+            53.76203855422364
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.23818023001132,
+            10.838318415888267
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.71560242661498,
+            35.03646672559328
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.04798175409253,
+            18.862167633689324
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "bcb2a9f3-e23a-4e17-b767-184791457b8e",
+      "index": 1169,
+      "location": [
+        80.1,
+        14.3
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        85.8,
+        4.6
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Antoine Griezmann",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": 5487,
+      "second": 37,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:37.833",
+      "type": "Pass",
+      "visible_area": [
+        66.38741843860826,
+        80.0,
+        62.597186391874814,
+        3.623112869170883,
+        72.08551517770886,
+        0.0,
+        89.33829578162754,
+        0.0,
+        120.0,
+        49.452773246933866,
+        120.0,
+        80.0,
+        66.38741843860826,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.01050765571156,
+            19.118080128113654
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.46178457943486,
+            23.847593430978904
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.69685357041963,
+            3.034639776524301
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.99320496353505,
+            20.56419887517582
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.95497828332871,
+            13.771368744309882
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.07152735833996,
+            15.494479441247464
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.78584669712384,
+            32.10586672564162
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.35410223702358,
+            34.47569922505947
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.36089035605579,
+            76.80951985595907
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.64130225438967,
+            15.359091475908855
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            85.80000305175781,
+            4.599999904632568
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.55376696892849,
+            23.841410083042398
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.1306991704089,
+            19.708039738614204
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.25539960559034,
+            19.43511795829859
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.35203830804461,
+            8.667245169761628
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.73383392672228,
+            53.263152373171316
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.82571385257502,
+            33.888545200656765
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": true,
+          "location": [
+            113.72518943755101,
+            37.46563295120917
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "9afd41c1-d0e9-4cc8-8f26-e7c6fcc7ce71",
+      "index": 1170,
+      "location": [
+        85.8,
+        4.6
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Antoine Griezmann",
+      "player_id": 5487,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 38,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:38.624",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        72.87047809084702,
+        80.0,
+        65.5338161192106,
+        3.033849501877103,
+        72.51182247914804,
+        0.0,
+        92.82195041391041,
+        0.0,
+        120.0,
+        40.79458973741192,
+        120.0,
+        80.0,
+        72.87047809084702,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        77.4,
+        5.6
+      ],
+      "duration": 1.94099,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.01050765571156,
+            19.118080128113654
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.46178457943486,
+            23.847593430978904
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.69685357041963,
+            3.034639776524301
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.99320496353505,
+            20.56419887517582
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.95497828332871,
+            13.771368744309882
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.07152735833996,
+            15.494479441247464
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.78584669712384,
+            32.10586672564162
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.35410223702358,
+            34.47569922505947
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.36089035605579,
+            76.80951985595907
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.64130225438967,
+            15.359091475908855
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            85.80000305175781,
+            4.599999904632568
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.55376696892849,
+            23.841410083042398
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.1306991704089,
+            19.708039738614204
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.25539960559034,
+            19.43511795829859
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.35203830804461,
+            8.667245169761628
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.73383392672228,
+            53.263152373171316
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.82571385257502,
+            33.888545200656765
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": true,
+          "location": [
+            113.72518943755101,
+            37.46563295120917
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "165181d4-8438-4832-990c-13d73063181a",
+      "index": 1171,
+      "location": [
+        85.8,
+        4.6
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Antoine Griezmann",
+      "player_id": 5487,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 38,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:38.624",
+      "type": "Carry",
+      "visible_area": [
+        72.87047809084702,
+        80.0,
+        65.5338161192106,
+        3.033849501877103,
+        72.51182247914804,
+        0.0,
+        92.82195041391041,
+        0.0,
+        120.0,
+        40.79458973741192,
+        120.0,
+        80.0,
+        72.87047809084702,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 2.089515,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.23915727481432,
+            56.32788876884027
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.38176531604083,
+            19.24864732791957
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.19592925482527,
+            20.249516374137826
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            72.73518820019146,
+            2.4593830912336614
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.94067553067524,
+            17.99164500250552
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            77.4000015258789,
+            5.599999904632568
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.41758277597853,
+            13.290349094927052
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.57730980099464,
+            9.780096862331533
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.66520497681998,
+            71.88717490410968
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.71415006726971,
+            32.51558221520292
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.45720658423016,
+            30.906754524786457
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.45842257406986,
+            15.520700142624122
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.54276397396609,
+            24.41237168933742
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.44850412370528,
+            17.546336006785396
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.3414037351667,
+            7.335358208802532
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.15655761087089,
+            51.34371700853633
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.46297457935049,
+            31.915832602161437
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.63893935480995,
+            19.057467086785586
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "bd091d03-dec8-4902-a16b-8b269bfc1ec0",
+      "index": 1172,
+      "location": [
+        77.4,
+        5.6
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        62.5,
+        46.8
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Antoine Griezmann",
+      "player_id": 5487,
+      "possession_team": "Barcelona",
+      "recipient_id": 5213,
+      "second": 40,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:40.565",
+      "type": "Pass",
+      "visible_area": [
+        62.733435064241455,
+        80.0,
+        60.7131969247593,
+        0.269722749222693,
+        61.45344250484274,
+        0.0,
+        89.26142705061471,
+        0.0,
+        120.0,
+        50.51586189987174,
+        120.0,
+        80.0,
+        62.733435064241455,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.359272951282115,
+            22.841450245930744
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            62.5,
+            46.79999923706055
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.99859804670854,
+            59.20115602538881
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.21294766615298,
+            25.58259579458187
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.53625636400591,
+            26.735373389197434
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.14448596017016,
+            23.122613451402728
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.36880451239969,
+            5.893684181480523
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.8981860114117,
+            17.89818951187827
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.07114840047765,
+            40.63779781948051
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.097606110047,
+            14.606606850644113
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.83933390344137,
+            13.540251720711822
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.74830805524843,
+            20.955730456142092
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.46792482912014,
+            33.437045696369694
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.94179964375198,
+            37.69639164903318
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.36875662106593,
+            75.14439015696449
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.85308600027665,
+            14.590813663430694
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.89841764032366,
+            22.345957867638262
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.73118906247572,
+            55.600668777164856
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.81725566626588,
+            39.272358948132066
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.96042164066932,
+            24.823481830269195
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "6fbc1c29-dc84-46c9-8472-bb1f7771f500",
+      "index": 1173,
+      "location": [
+        62.5,
+        46.8
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "player_id": 5213,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 42,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:42.654",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        52.00400935380651,
+        80.0,
+        57.31441865313075,
+        4.413408474065603,
+        75.40577338699481,
+        0.0,
+        84.23109692166844,
+        0.0,
+        120.0,
+        70.31033641041208,
+        120.0,
+        80.0,
+        52.00400935380651,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        69.5,
+        53.4
+      ],
+      "duration": 3.945333,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            59.359272951282115,
+            22.841450245930744
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            62.5,
+            46.79999923706055
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.99859804670854,
+            59.20115602538881
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.21294766615298,
+            25.58259579458187
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            71.53625636400591,
+            26.735373389197434
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.14448596017016,
+            23.122613451402728
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.36880451239969,
+            5.893684181480523
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.8981860114117,
+            17.89818951187827
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.07114840047765,
+            40.63779781948051
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.097606110047,
+            14.606606850644113
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.83933390344137,
+            13.540251720711822
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.74830805524843,
+            20.955730456142092
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.46792482912014,
+            33.437045696369694
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.94179964375198,
+            37.69639164903318
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.36875662106593,
+            75.14439015696449
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.85308600027665,
+            14.590813663430694
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.89841764032366,
+            22.345957867638262
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.73118906247572,
+            55.600668777164856
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.81725566626588,
+            39.272358948132066
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.96042164066932,
+            24.823481830269195
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "c7c43d35-279a-4d2b-8757-3eae858f365a",
+      "index": 1174,
+      "location": [
+        62.5,
+        46.8
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "player_id": 5213,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 42,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:42.654",
+      "type": "Carry",
+      "visible_area": [
+        52.00400935380651,
+        80.0,
+        57.31441865313075,
+        4.413408474065603,
+        75.40577338699481,
+        0.0,
+        84.23109692166844,
+        0.0,
+        120.0,
+        70.31033641041208,
+        120.0,
+        80.0,
+        52.00400935380651,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 1.813544,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            65.60614351467477,
+            65.86789816141318
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            69.5,
+            53.400001525878906
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            72.13023354998326,
+            33.52428272222136
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            73.29926271070134,
+            43.81820226972957
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.32113215986429,
+            40.18690296226773
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.04039042465824,
+            24.311916801711206
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.63620625471218,
+            55.274633367974744
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.0744923473013,
+            7.432286395097719
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.00656674542837,
+            46.77761180973624
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            82.67084497559772,
+            19.83815359895445
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.11995235647272,
+            33.06762334139613
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.08576436608055,
+            51.40769880127327
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.83168205927022,
+            32.23262882950908
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.64493685105332,
+            79.22245209876765
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.31452126615558,
+            28.646793927665584
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.3244997972448,
+            65.10510873969179
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.40909004936536,
+            30.043848762678763
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.81063335816673,
+            50.31921771760062
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.20788544622566,
+            34.5250770997328
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "3ec2475a-38d6-4968-bf6c-890efb03bd14",
+      "index": 1175,
+      "location": [
+        69.5,
+        53.4
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        71.4,
+        72.9
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Ronald Federico Ara\u00fajo da Silva",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "player_id": 5213,
+      "possession_team": "Barcelona",
+      "recipient_id": 32480,
+      "second": 46,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:46.599",
+      "type": "Pass",
+      "visible_area": [
+        66.14601959711872,
+        80.0,
+        60.498577054782245,
+        10.15244297092488,
+        84.3783041863722,
+        1.621725481535819,
+        120.0,
+        65.06272195816541,
+        120.0,
+        80.0,
+        66.14601959711872,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.84734160459349,
+            36.80031128137341
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.1549999218156,
+            59.04536525691437
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            71.4000015258789,
+            72.9000015258789
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.17487437583864,
+            42.0400101104035
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            77.94932788171442,
+            55.75955099418567
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.55651930154878,
+            49.395032783661634
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.44726348314623,
+            32.844907907074706
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.31544635782376,
+            66.10849531663231
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.45442486921203,
+            55.76654327918644
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.27027395410387,
+            15.6279678210864
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.80343575627279,
+            44.45839780753688
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.83677185407599,
+            27.5943175313368
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.68927033699597,
+            60.913718607514795
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.05456903634925,
+            84.79463623610702
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.78462332062492,
+            72.97758750849177
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.27435485002698,
+            38.10040279517793
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.35116313674528,
+            45.636599588971194
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.5425803213241,
+            36.912205967659794
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            93.57394260084502,
+            60.535605081870564
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            94.14790153821113,
+            44.02700440833087
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "129ad6f2-7533-4470-b7d6-3743d315b6dc",
+      "index": 1176,
+      "location": [
+        71.4,
+        72.9
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Ronald Federico Ara\u00fajo da Silva",
+      "player_id": 32480,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 48,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:48.413",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        64.45058197114713,
+        80.0,
+        61.476139967651456,
+        15.239266317308942,
+        86.25553929570468,
+        6.950292502743223,
+        120.0,
+        67.7073786179777,
+        120.0,
+        80.0,
+        64.45058197114713,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        70.8,
+        70.6
+      ],
+      "duration": 1.133607,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.84734160459349,
+            36.80031128137341
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            67.1549999218156,
+            59.04536525691437
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            71.4000015258789,
+            72.9000015258789
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.17487437583864,
+            42.0400101104035
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            77.94932788171442,
+            55.75955099418567
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.55651930154878,
+            49.395032783661634
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.44726348314623,
+            32.844907907074706
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.31544635782376,
+            66.10849531663231
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.45442486921203,
+            55.76654327918644
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.27027395410387,
+            15.6279678210864
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.80343575627279,
+            44.45839780753688
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.83677185407599,
+            27.5943175313368
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.68927033699597,
+            60.913718607514795
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.05456903634925,
+            84.79463623610702
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.78462332062492,
+            72.97758750849177
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.27435485002698,
+            38.10040279517793
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.35116313674528,
+            45.636599588971194
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.5425803213241,
+            36.912205967659794
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            93.57394260084502,
+            60.535605081870564
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            94.14790153821113,
+            44.02700440833087
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "624944e6-36fd-4a4b-93d6-5edd2f31d61c",
+      "index": 1177,
+      "location": [
+        71.4,
+        72.9
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Ronald Federico Ara\u00fajo da Silva",
+      "player_id": 32480,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 48,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:48.413",
+      "type": "Carry",
+      "visible_area": [
+        64.45058197114713,
+        80.0,
+        61.476139967651456,
+        15.239266317308942,
+        86.25553929570468,
+        6.950292502743223,
+        120.0,
+        67.7073786179777,
+        120.0,
+        80.0,
+        64.45058197114713,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 1.291224,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.32701233940915,
+            39.970404856568834
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            63.35377942147782,
+            58.7204263349834
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            70.80000305175781,
+            70.5999984741211
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.53143627464182,
+            45.61090665878252
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            77.21144761860808,
+            60.00921095467788
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            79.078175706223,
+            52.61825766962047
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.19540260254809,
+            36.4946065204138
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.34583943077831,
+            69.29361423770943
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.834973219418,
+            60.11152913125934
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.77544134060284,
+            50.11833659820592
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.6302483066726,
+            18.53046265853972
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.11617013230614,
+            64.21502858856766
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.23102387810903,
+            85.44041098984707
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.60528162054949,
+            30.75976016760079
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.55434966091632,
+            79.20382094487427
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.3717937295279,
+            41.64823988458126
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.52301764496033,
+            41.49024643066622
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.72277419249869,
+            47.77967869236425
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.77666097533806,
+            53.46789143531424
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            93.42102593353877,
+            62.85676917801388
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "29932db4-0462-44a4-b09a-35d6d847e42e",
+      "index": 1178,
+      "location": [
+        70.8,
+        70.6
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        63.6,
+        51.6
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Ronald Federico Ara\u00fajo da Silva",
+      "player_id": 32480,
+      "possession_team": "Barcelona",
+      "recipient_id": 5213,
+      "second": 49,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:49.547",
+      "type": "Pass",
+      "visible_area": [
+        63.48492664966863,
+        80.0,
+        60.57437438276531,
+        17.052659475622207,
+        85.09559769398072,
+        8.781819541733853,
+        120.0,
+        71.10162750518298,
+        120.0,
+        80.0,
+        63.48492664966863,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.852571451512866,
+            34.14923952395475
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            63.599998474121094,
+            51.599998474121094
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.36094796973013,
+            64.1316422672329
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.35288259501745,
+            39.302618536255586
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.58722739918717,
+            51.82274712836308
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.60535300485037,
+            46.07420882351687
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.1016131383531,
+            60.893998136606704
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.14552442206487,
+            31.05489255529436
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.67231470281006,
+            54.61932200887142
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.07053259385319,
+            45.33732251280164
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.14181127453664,
+            60.032507232889316
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.209171929748,
+            11.698362098951236
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.72396262019775,
+            25.061059843928895
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.36718738116848,
+            77.04732734829393
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.57772013760652,
+            71.5808600355421
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.91087331336551,
+            36.52398348054091
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.35463613222097,
+            36.04072599483042
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.18275786781065,
+            41.682681644294455
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.56290197264532,
+            48.57314776051021
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.81163761689069,
+            54.62413211413295
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "9aae7fff-332f-485a-90a0-ae21e884c659",
+      "index": 1179,
+      "location": [
+        63.6,
+        51.6
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "player_id": 5213,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 50,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:50.838",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        58.855858519127395,
+        80.0,
+        58.54048053498748,
+        7.482422087733042,
+        82.30831178912076,
+        0.0,
+        82.97833859630848,
+        0.0,
+        120.0,
+        64.84346759045542,
+        120.0,
+        80.0,
+        58.855858519127395,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        64.9,
+        49.9
+      ],
+      "duration": 0.860919,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            62.852571451512866,
+            34.14923952395475
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            63.599998474121094,
+            51.599998474121094
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.36094796973013,
+            64.1316422672329
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            74.35288259501745,
+            39.302618536255586
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.58722739918717,
+            51.82274712836308
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.60535300485037,
+            46.07420882351687
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.1016131383531,
+            60.893998136606704
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.14552442206487,
+            31.05489255529436
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.67231470281006,
+            54.61932200887142
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.07053259385319,
+            45.33732251280164
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.14181127453664,
+            60.032507232889316
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.209171929748,
+            11.698362098951236
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.72396262019775,
+            25.061059843928895
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.36718738116848,
+            77.04732734829393
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.57772013760652,
+            71.5808600355421
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.91087331336551,
+            36.52398348054091
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.35463613222097,
+            36.04072599483042
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.18275786781065,
+            41.682681644294455
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.56290197264532,
+            48.57314776051021
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.81163761689069,
+            54.62413211413295
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "0c0ec4cd-cdc5-4766-bd44-284e0a1a6809",
+      "index": 1180,
+      "location": [
+        63.6,
+        51.6
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "player_id": 5213,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 50,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:50.838",
+      "type": "Carry",
+      "visible_area": [
+        58.855858519127395,
+        80.0,
+        58.54048053498748,
+        7.482422087733042,
+        82.30831178912076,
+        0.0,
+        82.97833859630848,
+        0.0,
+        120.0,
+        64.84346759045542,
+        120.0,
+        80.0,
+        58.855858519127395,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 1.620325,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.48407710452942,
+            30.290080696101718
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            64.9000015258789,
+            49.900001525878906
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            70.50194905518089,
+            64.23920170079293
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.54701844189752,
+            37.850224104426324
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.36415029728533,
+            48.61962070909836
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.85842239040994,
+            42.88297622800812
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.1915376724888,
+            29.217223569974152
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            80.89888903949293,
+            58.9556282230925
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.7146667112998,
+            42.755833376232744
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.43084749084599,
+            52.963145933738076
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.05396151765524,
+            58.72294143451024
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.83254851392235,
+            9.342992437601275
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.61992796910097,
+            23.995228810082438
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.64387280357946,
+            75.06996275197704
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.9357224029167,
+            67.92997994269484
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.65564344061661,
+            36.904375945365324
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.78169012545963,
+            34.66435507713161
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.67833127798227,
+            51.59443831345568
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            93.25799262423223,
+            40.853129046245094
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            93.69675203313385,
+            46.94462963357666
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        }
+      ],
+      "id": "e3d985d6-c498-4c72-9ecb-86a7d7e0d1c5",
+      "index": 1181,
+      "location": [
+        64.9,
+        49.9
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        76.0,
+        28.7
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Gerard Piqu\u00e9 Bernab\u00e9u",
+      "player_id": 5213,
+      "possession_team": "Barcelona",
+      "recipient_id": 30486,
+      "second": 51,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:51.699",
+      "type": "Pass",
+      "visible_area": [
+        60.80425601199319,
+        80.0,
+        60.005341902143655,
+        5.262484958889052,
+        76.0393646178693,
+        0.0,
+        85.92944011889585,
+        0.0,
+        120.0,
+        59.050446761186095,
+        120.0,
+        80.0,
+        60.80425601199319,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.19867721644002,
+            50.867310757113835
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.0526661875492,
+            31.011618681142274
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.78550432317999,
+            68.60009361316669
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.97496860568124,
+            48.80004573732032
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            76.0,
+            28.700000762939453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.994226521857,
+            39.22732817456323
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.96338137187934,
+            46.29468338556293
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.377904747988,
+            61.70385413348346
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.54124440820921,
+            42.85613180499874
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.43954491719103,
+            54.764840094145
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.92474030797054,
+            60.00735716481944
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.89756386075587,
+            11.247179235276903
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.79788114951528,
+            26.625947961109127
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.14905525390904,
+            42.136502031353736
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.2753015154658,
+            36.237013774082754
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.58935150108994,
+            69.84213122243946
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.45171531289223,
+            51.786707240422665
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.61944768781912,
+            41.660240056616026
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.80174463794117,
+            50.42456483647003
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": true,
+          "location": [
+            113.25069979941247,
+            44.99690475324948
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "c6a05122-a65b-4dab-bb70-663e585fdcf8",
+      "index": 1182,
+      "location": [
+        76.0,
+        28.7
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 53,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:53.319",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        64.7434262514328,
+        80.0,
+        61.51575048473421,
+        9.002870348011314,
+        84.18156263884347,
+        0.0,
+        85.82328666249089,
+        0.0,
+        120.0,
+        52.84252925101894,
+        120.0,
+        80.0,
+        64.7434262514328,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": [
+        88.0,
+        20.4
+      ],
+      "duration": 2.191037,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            64.19867721644002,
+            50.867310757113835
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            66.0526661875492,
+            31.011618681142274
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            68.78550432317999,
+            68.60009361316669
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            75.97496860568124,
+            48.80004573732032
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            76.0,
+            28.700000762939453
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            76.994226521857,
+            39.22732817456323
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            78.96338137187934,
+            46.29468338556293
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            81.377904747988,
+            61.70385413348346
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.54124440820921,
+            42.85613180499874
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            84.43954491719103,
+            54.764840094145
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            85.92474030797054,
+            60.00735716481944
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.89756386075587,
+            11.247179235276903
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            87.79788114951528,
+            26.625947961109127
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.14905525390904,
+            42.136502031353736
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.2753015154658,
+            36.237013774082754
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.58935150108994,
+            69.84213122243946
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.45171531289223,
+            51.786707240422665
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.61944768781912,
+            41.660240056616026
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            92.80174463794117,
+            50.42456483647003
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": true,
+          "location": [
+            113.25069979941247,
+            44.99690475324948
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "c3ad650d-57bd-4f99-86be-f27a1a93559d",
+      "index": 1183,
+      "location": [
+        76.0,
+        28.7
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 53,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:53.319",
+      "type": "Carry",
+      "visible_area": [
+        64.7434262514328,
+        80.0,
+        61.51575048473421,
+        9.002870348011314,
+        84.18156263884347,
+        0.0,
+        85.82328666249089,
+        0.0,
+        120.0,
+        52.84252925101894,
+        120.0,
+        80.0,
+        64.7434262514328,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 1.817099,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            83.77869149230017,
+            36.13269381093368
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            86.60498779649839,
+            25.294618469901273
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            88.0,
+            20.399999618530273
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            88.14987521509443,
+            53.8787777504669
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            89.900089379561,
+            43.95478567473485
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.29458459138434,
+            54.14028158422484
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            90.55345723746049,
+            37.46444995403097
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.07073504175305,
+            26.944900648891796
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            94.27848982062818,
+            5.133378715019489
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            94.62763765280764,
+            20.084835000292294
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            95.47769192047727,
+            58.256489588252215
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            95.81935364577348,
+            75.85269406918533
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            96.18196580487985,
+            25.46466136256599
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            96.7342355792841,
+            35.34282065391915
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            97.40881800265213,
+            43.06228577224862
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            99.0640446356648,
+            41.81424406835892
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": true,
+          "location": [
+            116.31323217581712,
+            38.988489618285705
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "5f759775-20f0-4b39-b103-827758f26697",
+      "index": 1184,
+      "location": [
+        88.0,
+        20.4
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        105.9,
+        8.8
+      ],
+      "pass_outcome": null,
+      "pass_recipient": "Jordi Alba Ramos",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Pedro Gonz\u00e1lez L\u00f3pez",
+      "player_id": 30486,
+      "possession_team": "Barcelona",
+      "recipient_id": 5211,
+      "second": 55,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:55.510",
+      "type": "Pass",
+      "visible_area": [
+        91.91656795182443,
+        80.0,
+        73.60967106839479,
+        6.934639434410486,
+        85.65981673786044,
+        0.0,
+        97.98079371013264,
+        0.0,
+        120.0,
+        28.470383720289984,
+        120.0,
+        80.0,
+        91.91656795182443,
+        80.0
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [],
+      "id": "a50ca932-ce15-4147-b45f-6e160f9728ed",
+      "index": 1185,
+      "location": [
+        105.9,
+        8.8
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Jordi Alba Ramos",
+      "player_id": 5211,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 57,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:57.327",
+      "type": "Ball Receipt*",
+      "visible_area": null
+    },
+    {
+      "carry_end_location": [
+        108.8,
+        11.1
+      ],
+      "duration": 0.79623,
+      "freeze_frame": [],
+      "id": "39b41d36-f0a9-4572-bf96-eed1b2091558",
+      "index": 1186,
+      "location": [
+        105.9,
+        8.8
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Jordi Alba Ramos",
+      "player_id": 5211,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 57,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:57.327",
+      "type": "Carry",
+      "visible_area": null
+    },
+    {
+      "carry_end_location": null,
+      "duration": 0.623329,
+      "freeze_frame": [],
+      "id": "25a3d45a-b7c1-47de-987e-ab66b5975454",
+      "index": 1187,
+      "location": [
+        108.8,
+        11.1
+      ],
+      "minute": 24,
+      "pass_end_location": [
+        110.2,
+        30.6
+      ],
+      "pass_outcome": "Incomplete",
+      "pass_recipient": "Antoine Griezmann",
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Jordi Alba Ramos",
+      "player_id": 5211,
+      "possession_team": "Barcelona",
+      "recipient_id": 5487,
+      "second": 58,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:58.123",
+      "type": "Pass",
+      "visible_area": null
+    },
+    {
+      "carry_end_location": null,
+      "duration": null,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": true,
+          "location": [
+            2.6661473459166345,
+            37.28839919871665
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            9.506507119260384,
+            41.06299502246968
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            9.899999618530273,
+            49.5
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            10.242052964925229,
+            41.56435124287731
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            10.781899561525513,
+            59.1844433377893
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            10.974043411360277,
+            61.26742628097424
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            12.143065914188789,
+            35.40464281868959
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            12.669436154893653,
+            31.613213306937602
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            12.697656818576363,
+            32.26956549946275
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            17.243503238572146,
+            38.69038555176301
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            17.63398820941962,
+            33.22358164924615
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            21.16160267257139,
+            55.30633630963482
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            25.947313578603193,
+            51.2607892521689
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            27.138059182826666,
+            59.43345535511751
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "81fce2df-062e-4ecc-b983-54d166b1ba14",
+      "index": 1188,
+      "location": [
+        111.4,
+        38.8
+      ],
+      "minute": 24,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Antoine Griezmann",
+      "player_id": 5487,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 58,
+      "shot_end_location": null,
+      "shot_outcome": null,
+      "shot_statsbomb_xg": null,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:24:58.747",
+      "type": "Ball Receipt*",
+      "visible_area": [
+        18.66482242197654,
+        77.42687297327087,
+        0.0,
+        55.90220232179219,
+        0.0,
+        0.0,
+        10.326622901960182,
+        0.0,
+        37.010438401359536,
+        63.48850752747945,
+        18.66482242197654,
+        77.42687297327087
+      ]
+    },
+    {
+      "carry_end_location": null,
+      "duration": 0.603474,
+      "freeze_frame": [
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            91.28586649044954,
+            33.53828449819599
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            93.54965627373676,
+            24.42373853634072
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            94.02200058109986,
+            16.89013180536955
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            99.39833352250902,
+            21.519919232732114
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            104.05764109558973,
+            66.48819447092932
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            104.25883848062955,
+            48.61151915606399
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            105.5868258647485,
+            36.798193207570165
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": true,
+          "keeper": false,
+          "location": [
+            106.0999984741211,
+            44.79999923706055
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            109.23302009867122,
+            41.09895632341564
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            109.55749699538283,
+            25.814688654678832
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            109.90001432765608,
+            33.476053879401285
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            110.09233632019324,
+            17.394960144574355
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            110.25910903954056,
+            40.77258713812754
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            111.30991684790988,
+            13.2079835831817
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            112.9723429947467,
+            34.6314593349746
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": false,
+          "location": [
+            114.54514759478144,
+            39.11640767224199
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": true
+        },
+        {
+          "actor": false,
+          "keeper": true,
+          "location": [
+            118.3834522044267,
+            40.16255611506607
+          ],
+          "player_id": null,
+          "player_name": null,
+          "teammate": false
+        }
+      ],
+      "id": "bfaa342c-57a7-44c0-a299-4f6a3d1c0298",
+      "index": 1191,
+      "location": [
+        106.1,
+        44.8
+      ],
+      "minute": 25,
+      "pass_end_location": null,
+      "pass_outcome": null,
+      "pass_recipient": null,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": "Lionel Andr\u00e9s Messi Cuccittini",
+      "player_id": 5503,
+      "possession_team": "Barcelona",
+      "recipient_id": null,
+      "second": 0,
+      "shot_end_location": [
+        120.0,
+        43.1,
+        0.3
+      ],
+      "shot_outcome": "Goal",
+      "shot_statsbomb_xg": 0.17742667,
+      "team": "Barcelona",
+      "team_id": 217,
+      "timestamp": "00:25:00.123",
+      "type": "Shot",
+      "visible_area": [
+        103.99095857459534,
+        80.0,
+        79.21465310559985,
+        11.329984371256975,
+        95.46496136022536,
+        0.0,
+        101.17255048507495,
+        0.0,
+        120.0,
+        22.052148155491032,
+        120.0,
+        80.0,
+        103.99095857459534,
+        80.0
+      ]
+    }
+  ],
+  "match_id": 3773387,
+  "match_label": "New supported goal: match 3773387 possession 46",
+  "possession_id": 46,
+  "source": "StatsBomb Open Data authenticated production projection"
+}

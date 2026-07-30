@@ -1,0 +1,8 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /sessions/epic-wizardly-dirac/mnt/untitled folder
+collecting ... collected 10 items
+
+tests/test_production_chain.py::test_coordinate_corners_center_and_out_of_bounds_availability PASSED [ 10%]
+tests/test_production_chain.py::test_locatelli_layers_are_authenticated_and_byte_stable 

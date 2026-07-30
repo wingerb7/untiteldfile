@@ -1,0 +1,484 @@
+{
+  "contract_version": "0.1.0",
+  "duration_verdict": "Short duration is not the first semantic divergence. It results from coarse grouping and fixed compression, then reduces the time available to explain the already misframed attack.",
+  "graph_semantic_plan": {
+    "caption_hold_duration": 11.883333,
+    "episode_count": 7,
+    "hold_duration": 2.0,
+    "limitation": "It preserves the decisive events but behaves as a chronological list of equally weighted valid detections; repeated LINE_BREAK pauses are excessive for storytelling without a grouping layer.",
+    "narrative_structure": {
+      "decisive_mechanism": "six individually presented LINE_BREAK episodes",
+      "final_action": "final LINE_BREAK to Depay",
+      "finish": "FINISH episode and hold",
+      "setup": "first LINE_BREAK",
+      "tactical_problem": "observation-scoped defensive line"
+    },
+    "planned_duration_sum": 22.7,
+    "planning_basis": "GRAPH_BACKED_TACTICAL_EPISODES",
+    "play_duration": 10.699998,
+    "rendered_duration": 22.583333,
+    "scene_count": 14,
+    "scenes": [
+      {
+        "episode_id": "graph_episode:830f6162bf77dfba0ab8442c3d3ce57a9471dda742c003c9dc4b8be1076fcbc3",
+        "event_id": "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+        "instructions": [
+          {
+            "event_id": "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+            "type": "draw_pass_arrow"
+          },
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 1.3,
+        "output_start": 0.0,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_1",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "graph_episode:830f6162bf77dfba0ab8442c3d3ce57a9471dda742c003c9dc4b8be1076fcbc3",
+        "event_id": "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+        "instructions": [
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 3.083333,
+        "output_start": 1.3,
+        "planned_duration": 1.8,
+        "rendered_duration": 1.783333,
+        "scene_id": "scene_2",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "graph_episode:0829d67dbdabaf8956b53f12263e1c7838a648672f3b0a841fa6cd9608f9ba58",
+        "event_id": "ac15aa15-db77-464e-89c6-e0ab2dce8077",
+        "instructions": [
+          {
+            "event_id": "ac15aa15-db77-464e-89c6-e0ab2dce8077",
+            "type": "draw_pass_arrow"
+          },
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 4.383333,
+        "output_start": 3.083333,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_3",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "graph_episode:0829d67dbdabaf8956b53f12263e1c7838a648672f3b0a841fa6cd9608f9ba58",
+        "event_id": "ac15aa15-db77-464e-89c6-e0ab2dce8077",
+        "instructions": [
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 6.166667,
+        "output_start": 4.383333,
+        "planned_duration": 1.8,
+        "rendered_duration": 1.783333,
+        "scene_id": "scene_4",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "graph_episode:e35a3d8ecb1f00fa82fb6e699af96364c41b6776dcaa18247c5cc863953756ee",
+        "event_id": "8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+        "instructions": [
+          {
+            "event_id": "8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+            "type": "draw_pass_arrow"
+          },
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 7.466667,
+        "output_start": 6.166667,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_5",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "graph_episode:e35a3d8ecb1f00fa82fb6e699af96364c41b6776dcaa18247c5cc863953756ee",
+        "event_id": "8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+        "instructions": [
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 9.25,
+        "output_start": 7.466667,
+        "planned_duration": 1.8,
+        "rendered_duration": 1.783333,
+        "scene_id": "scene_6",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "graph_episode:36cde98980db66fbad996b5e7d4b7f4aed1ab61216e96e96b771eecbf166a087",
+        "event_id": "d3264b17-4393-4e4d-8970-51128f9d9bf3",
+        "instructions": [
+          {
+            "event_id": "d3264b17-4393-4e4d-8970-51128f9d9bf3",
+            "type": "draw_pass_arrow"
+          },
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 10.55,
+        "output_start": 9.25,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_7",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "graph_episode:36cde98980db66fbad996b5e7d4b7f4aed1ab61216e96e96b771eecbf166a087",
+        "event_id": "d3264b17-4393-4e4d-8970-51128f9d9bf3",
+        "instructions": [
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 12.333333,
+        "output_start": 10.55,
+        "planned_duration": 1.8,
+        "rendered_duration": 1.783333,
+        "scene_id": "scene_8",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "graph_episode:1acd3b3a729a628cf72f65160f5d2e74fe869ac0dab1877bf118178eb4d6889c",
+        "event_id": "fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+        "instructions": [
+          {
+            "event_id": "fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+            "type": "draw_pass_arrow"
+          },
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 13.633333,
+        "output_start": 12.333333,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_9",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "graph_episode:1acd3b3a729a628cf72f65160f5d2e74fe869ac0dab1877bf118178eb4d6889c",
+        "event_id": "fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+        "instructions": [
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 15.416667,
+        "output_start": 13.633333,
+        "planned_duration": 1.8,
+        "rendered_duration": 1.783333,
+        "scene_id": "scene_10",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "graph_episode:27e526bf11a60f80ad0b6d064c8a6424d229dad8c40845709efd32025118c6a7",
+        "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+        "instructions": [
+          {
+            "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+            "type": "draw_pass_arrow"
+          },
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 16.716667,
+        "output_start": 15.416667,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_11",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "graph_episode:27e526bf11a60f80ad0b6d064c8a6424d229dad8c40845709efd32025118c6a7",
+        "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+        "instructions": [
+          {
+            "text": "Authenticated evidence supports a pass beyond the defensive line. The receiver gains access behind the defensive block.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 18.5,
+        "output_start": 16.716667,
+        "planned_duration": 1.8,
+        "rendered_duration": 1.783333,
+        "scene_id": "scene_12",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "graph_episode:3474623a49c9c5ea9e9e838ea6ed851be8bf0e28fbe87174c66608363a808e32",
+        "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+        "instructions": [
+          {
+            "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+            "target": "passer",
+            "type": "highlight_player"
+          },
+          {
+            "text": "The supported sequence concludes with an authenticated shot. The attack is converted into an attempt on goal.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 20.583333,
+        "output_start": 18.5,
+        "planned_duration": 2.1,
+        "rendered_duration": 2.083333,
+        "scene_id": "scene_13",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "graph_episode:3474623a49c9c5ea9e9e838ea6ed851be8bf0e28fbe87174c66608363a808e32",
+        "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+        "instructions": [
+          {
+            "text": "The supported sequence concludes with an authenticated shot. The attack is converted into an attempt on goal.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 22.583333,
+        "output_start": 20.583333,
+        "planned_duration": 2.0,
+        "rendered_duration": 2.0,
+        "scene_id": "scene_14",
+        "scene_type": "hold"
+      }
+    ],
+    "tactical_pause_duration": 9.883333,
+    "transition_duration": 0.0
+  },
+  "historical_generic_render": {
+    "asset": "renders/tactical_episodes/depay/depay_consumer.mp4",
+    "diagnosis": "BUILDUP, ISOLATION, OFF_BALL_RUN, SWITCH_OF_PLAY, and CUTBACK were all sent to scenes without causal relevance ranking, so earlier possession actions dominated the explanation.",
+    "episode_types": [
+      "BUILDUP",
+      "ISOLATION",
+      "OFF_BALL_RUN",
+      "SWITCH_OF_PLAY",
+      "CUTBACK",
+      "FINISH"
+    ],
+    "rendered_duration": 23.5,
+    "scene_count": 12
+  },
+  "known_generic_duration_failure": {
+    "caption_hold_duration": 6.7,
+    "cause": "The generic builder groups the first 56 possession events into one BUILDUP episode, and the scene planner caps its play at four seconds. Fixed pause/play constants then total exactly 12.5 seconds.",
+    "episode_action_counts": [
+      56,
+      1,
+      2
+    ],
+    "episode_types": [
+      "BUILDUP",
+      "CUTBACK",
+      "FINISH"
+    ],
+    "hold_duration": 2.0,
+    "planned_duration_sum": 12.5,
+    "planning_basis": "TACTICAL_EPISODES_FROM_GENERIC_EPISODE_BUILDER",
+    "play_duration": 5.8,
+    "relationship_to_story_failure": "SYMPTOM_AND_AMPLIFIER, NOT THE FIRST CAUSE",
+    "rendered_duration": 12.5,
+    "scene_count": 6,
+    "scenes": [
+      {
+        "episode_id": "episode:724637a6ae335616",
+        "event_id": "df062304-317d-4ecc-940e-848563aa6140",
+        "instructions": [
+          {
+            "event_id": "df062304-317d-4ecc-940e-848563aa6140",
+            "target": "passer",
+            "type": "highlight_player"
+          },
+          {
+            "text": "Patient circulation probes the opponent's shape without yet breaking it. Sets the platform for the sequence that follows.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 1.3,
+        "output_start": 0.0,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_1",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "episode:724637a6ae335616",
+        "event_id": "df062304-317d-4ecc-940e-848563aa6140",
+        "instructions": [
+          {
+            "text": "Patient circulation probes the opponent's shape without yet breaking it. Sets the platform for the sequence that follows.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 5.3,
+        "output_start": 1.3,
+        "planned_duration": 4.0,
+        "rendered_duration": 4.0,
+        "scene_id": "scene_2",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "episode:ad2269312c236a07",
+        "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+        "instructions": [
+          {
+            "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+            "type": "draw_pass_arrow"
+          },
+          {
+            "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+            "target": "receiver",
+            "type": "highlight_player"
+          },
+          {
+            "text": "The ball is played backward from a wide advanced position into a central area. Creates a more central, lower-angle opportunity than continuing forward.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 7.4,
+        "output_start": 5.3,
+        "planned_duration": 2.1,
+        "rendered_duration": 2.1,
+        "scene_id": "scene_3",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "episode:24522c5770a48f8e",
+        "event_id": "7aa42ebe-62ce-4dcb-a700-296e34d9b6c5",
+        "instructions": [
+          {
+            "event_id": "7aa42ebe-62ce-4dcb-a700-296e34d9b6c5",
+            "target": "passer",
+            "type": "highlight_player"
+          },
+          {
+            "text": "The build-up concludes with a shot. Converts the created space and time into an attempt on goal.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 8.7,
+        "output_start": 7.4,
+        "planned_duration": 1.3,
+        "rendered_duration": 1.3,
+        "scene_id": "scene_4",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "episode_id": "episode:24522c5770a48f8e",
+        "event_id": "7aa42ebe-62ce-4dcb-a700-296e34d9b6c5",
+        "instructions": [
+          {
+            "text": "The build-up concludes with a shot. Converts the created space and time into an attempt on goal.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 10.5,
+        "output_start": 8.7,
+        "planned_duration": 1.8,
+        "rendered_duration": 1.8,
+        "scene_id": "scene_5",
+        "scene_type": "play"
+      },
+      {
+        "episode_id": "episode:24522c5770a48f8e",
+        "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+        "instructions": [
+          {
+            "text": "The build-up concludes with a shot. Converts the created space and time into an attempt on goal.",
+            "type": "show_caption"
+          }
+        ],
+        "output_end": 12.5,
+        "output_start": 10.5,
+        "planned_duration": 2.0,
+        "rendered_duration": 2.0,
+        "scene_id": "scene_6",
+        "scene_type": "hold"
+      }
+    ],
+    "tactical_pause_duration": 4.7,
+    "transition_duration": 0.0
+  },
+  "previous_storytelling_render": {
+    "narrative_structure": {
+      "decisive_mechanism": "compressed into undifferentiated play",
+      "final_action": "not separately explained",
+      "finish": "shot hold",
+      "setup": "Depay receives the ball",
+      "tactical_problem": null
+    },
+    "planned_duration": 8.95,
+    "planning_basis": "ONE_EPISODE_FROM_AUTHENTICATED_PLAYER_ACTION_CONTINUATION",
+    "rendered_duration": 8.95,
+    "scene_count": 3,
+    "scene_plan_matches_render": true,
+    "scenes": [
+      {
+        "caption": "Memphis Depay becomes involved again.",
+        "event_id": "b4491768-f744-4de3-87b0-ccd4ef7be5a2",
+        "output_end": 0.75,
+        "output_start": 0.0,
+        "rendered_duration": 0.75,
+        "scene_id": "scene_1",
+        "scene_type": "tactical_pause"
+      },
+      {
+        "caption": "Memphis Depay becomes involved again.",
+        "event_id": "b4491768-f744-4de3-87b0-ccd4ef7be5a2",
+        "output_end": 6.75,
+        "output_start": 0.75,
+        "rendered_duration": 6.0,
+        "scene_id": "scene_2",
+        "scene_type": "play"
+      },
+      {
+        "caption": "The sequence reaches Memphis Depay's shot.",
+        "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+        "output_end": 8.95,
+        "output_start": 6.75,
+        "rendered_duration": 2.2,
+        "scene_id": "scene_3",
+        "scene_type": "hold"
+      }
+    ]
+  },
+  "renderer_verdict": "NOT_AT_FAULT; EXISTING TRACE EXECUTES THE SUPPLIED SCENE PLAN",
+  "schema_id": "tip.depay_storytelling_scene_plan_trace",
+  "visual_validation": {
+    "asset": "renders/storytelling/depay/depay_storytelling.mp4",
+    "container_duration_seconds": 8.92,
+    "inspection_method": "three-frame contact sheet sampled after semantic tracing",
+    "result": "The opening and middle frames repeat the planned Depay-continuation caption; the terminal frame shows the planned shot caption. No extra tactical story was introduced by rendering."
+  }
+}

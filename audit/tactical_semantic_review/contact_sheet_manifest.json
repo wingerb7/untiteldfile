@@ -1,0 +1,98 @@
+[
+  {
+    "fixture": "depay",
+    "scene_ordinal": 1,
+    "episode_type": "BUILDUP",
+    "episode_id": "episode:874d063e70100624",
+    "approx_video_time_seconds": 1.38,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/depay_01_BUILDUP.png"
+  },
+  {
+    "fixture": "depay",
+    "scene_ordinal": 2,
+    "episode_type": "ISOLATION",
+    "episode_id": "episode:283efcb45602010a",
+    "approx_video_time_seconds": 1.39,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/depay_02_ISOLATION.png"
+  },
+  {
+    "fixture": "depay",
+    "scene_ordinal": 3,
+    "episode_type": "OFF_BALL_RUN",
+    "episode_id": "episode:9ab6fb5db66ef047",
+    "approx_video_time_seconds": 4.7,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/depay_03_OFF_BALL_RUN.png"
+  },
+  {
+    "fixture": "depay",
+    "scene_ordinal": 4,
+    "episode_type": "SWITCH_OF_PLAY",
+    "episode_id": "episode:f3ac99e003eee69e",
+    "approx_video_time_seconds": 6.09,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/depay_04_SWITCH_OF_PLAY.png"
+  },
+  {
+    "fixture": "depay",
+    "scene_ordinal": 5,
+    "episode_type": "CUTBACK",
+    "episode_id": "episode:e869ff80d404c7d9",
+    "approx_video_time_seconds": 8.55,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/depay_05_CUTBACK.png"
+  },
+  {
+    "fixture": "depay",
+    "scene_ordinal": 6,
+    "episode_type": "FINISH",
+    "episode_id": "episode:2785afffc30cf649",
+    "approx_video_time_seconds": 22.79,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/depay_06_FINISH.png"
+  },
+  {
+    "fixture": "locatelli",
+    "scene_ordinal": 1,
+    "episode_type": "BUILDUP",
+    "episode_id": "episode:9f53225404c3a0cb",
+    "approx_video_time_seconds": 0.47,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/locatelli_01_BUILDUP.png"
+  },
+  {
+    "fixture": "locatelli",
+    "scene_ordinal": 2,
+    "episode_type": "ISOLATION",
+    "episode_id": "episode:a7f121e0cf4571fd",
+    "approx_video_time_seconds": 0.57,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/locatelli_02_ISOLATION.png"
+  },
+  {
+    "fixture": "locatelli",
+    "scene_ordinal": 3,
+    "episode_type": "CUTBACK",
+    "episode_id": "episode:f84f5d48a3d06af8",
+    "approx_video_time_seconds": 5.83,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/locatelli_03_CUTBACK.png"
+  },
+  {
+    "fixture": "locatelli",
+    "scene_ordinal": 4,
+    "episode_type": "SWITCH_OF_PLAY",
+    "episode_id": "episode:d98b2e3d758a88c4",
+    "approx_video_time_seconds": 7.34,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/locatelli_04_SWITCH_OF_PLAY.png"
+  },
+  {
+    "fixture": "locatelli",
+    "scene_ordinal": 5,
+    "episode_type": "OFF_BALL_RUN",
+    "episode_id": "episode:e0f5c262eb612cd4",
+    "approx_video_time_seconds": 8.69,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/locatelli_05_OFF_BALL_RUN.png"
+  },
+  {
+    "fixture": "locatelli",
+    "scene_ordinal": 6,
+    "episode_type": "FINISH",
+    "episode_id": "episode:e6e35b12273b76b8",
+    "approx_video_time_seconds": 22.76,
+    "frame": "audit/tactical_semantic_review/contact_sheet_frames/locatelli_06_FINISH.png"
+  }
+]

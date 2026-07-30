@@ -29,11 +29,17 @@ from matplotlib.patches import Circle
 
 from analysis.interpolate import apply_relevant_player_selection, build_animation_model, state_at
 from analysis.normalize import load_and_normalize
-from render.animation import actor_player, coordinates, split_players
+from render.animation import coordinates, split_players
 from render.pitch import draw_pitch, sb_to_plot
 from render.styles import colors
 from src.render.annotations import draw_annotations, load_annotations
 from src.render.overlays import clear_overlays, create_overlay_artists, execute_instruction
+from src.pipelines.provenance import (
+    validate_annotations_payload,
+    validate_config_match,
+    validate_scene_plan_possession,
+)
+from src.pipelines.narrative_config import apply_narrative, load_narrative_config
 
 
 def load_config(path: Path = Path("config.yaml")) -> dict[str, Any]:
@@ -82,7 +88,10 @@ def scene_segments(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[di
             else:
                 model_start = starts.get(start_event_id, 0.0)
             end_item = by_id.get(end_event_id)
-            model_end = end_item.end if end_item else model["duration"]
+            if scene.get("to_event_boundary") == "start":
+                model_end = starts.get(end_event_id, model["duration"])
+            else:
+                model_end = end_item.end if end_item else model["duration"]
             if model_end <= model_start:
                 continue
             target_duration = scene.get("target_duration_seconds")
@@ -100,6 +109,8 @@ def scene_segments(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[di
                     "model_start": model_start,
                     "model_end": model_end,
                     "playback_speed": speed,
+                    "event_id": start_event_id,
+                    "instructions": scene.get("instructions", []),
                     "scene": scene,
                 }
             )
@@ -134,6 +145,10 @@ def scene_segments(scene_plan: dict[str, Any], model: dict[str, Any]) -> list[di
 
         if scene_type == "hold":
             model_time = scene_event_time(scene, starts, by_id, fps=fps) or model["duration"]
+            resolved_start = int(output_cursor * fps + 1e-9) / fps
+            if segments and resolved_start < output_cursor:
+                segments[-1]["output_end"] = resolved_start
+            output_cursor = resolved_start
             duration = max(0.0, float(scene.get("duration_seconds") or 0.0))
             segments.append(
                 {
@@ -191,6 +206,26 @@ def map_render_time(t: float, segments: list[dict[str, Any]], hook_hold: float, 
     return model_t, active_pause, False
 
 
+def resolve_presentation(scene_plan: dict[str, Any], animation_config: dict[str, Any]) -> tuple[bool, bool]:
+    """Returns (hide_event_hud, debug_mode) for this render.
+
+    `scene_plan["presentation"]["mode"]` is an optional consumer/audit switch: "consumer"
+    hides raw event captions and lifecycle/debug detail; "audit" shows both. When mode is
+    absent, behavior is unchanged from before this switch existed (config-driven debug,
+    and hide_event_hud taken literally from presentation.hide_event_hud)."""
+    presentation = scene_plan.get("presentation") or {}
+    mode = presentation.get("mode")
+    hide_event_hud = bool(presentation.get("hide_event_hud"))
+    debug_mode = bool(animation_config.get("debug", False))
+    if mode == "consumer":
+        hide_event_hud = True
+        debug_mode = False
+    elif mode == "audit":
+        hide_event_hud = False
+        debug_mode = True
+    return hide_event_hud, debug_mode
+
+
 def social_intro(scene_plan: dict[str, Any]) -> tuple[float, float, dict[str, Any]]:
     social = scene_plan.get("social_video") or {}
     identity = social.get("identity_hook") or {}
@@ -210,17 +245,35 @@ def caption_timing_diagnostics(scene_plan: dict[str, Any], model: dict[str, Any]
     fps = int((scene_plan.get("format") or {}).get("fps") or 30)
     hook, transition, _ = resolved_social_intro(scene_plan, fps)
     rows = []
-    for segment in scene_segments(scene_plan, model):
+    segments = scene_segments(scene_plan, model)
+    seen_episode_captions: set[tuple[str | None, str]] = set()
+    for index, segment in enumerate(segments):
         caption = next((item.get("text") for item in segment.get("instructions", []) if item.get("type") == "show_caption"), None)
         if not caption:
             continue
+        episode_id = segment.get("scene", {}).get("episode_id")
+        episode_caption_key = (episode_id, str(caption))
+        if episode_caption_key in seen_episode_captions:
+            continue
+        seen_episode_captions.add(episode_caption_key)
         event_time = hook + transition + float(segment["output_start"])
-        timing = resolve_caption_frame(event_time, event_time, fps)
+        next_action = next(
+            (
+                candidate for candidate in segments[index + 1 :]
+                if candidate["type"] == "play"
+                and (episode_id is None or candidate.get("scene", {}).get("episode_id") == episode_id)
+            ),
+            segment,
+        )
+        action_time = hook + transition + float(next_action["output_start"])
+        timing = resolve_caption_frame(event_time, action_time, fps)
         rows.append({
             "scene_id": segment["scene"].get("scene_id"),
             "caption": caption,
             "event_id": segment.get("event_id"),
             "event_relative_timestamp": round(float(segment.get("model_time", 0.0)), 6),
+            "action_output_timestamp": round(action_time, 6),
+            "caption_lead_seconds": round(max(0.0, action_time - event_time), 6),
             **timing,
         })
     return rows
@@ -258,7 +311,8 @@ def jersey_number(player: dict[str, Any]) -> str:
 
 
 def player_label(player: dict[str, Any], event: dict[str, Any]) -> str | None:
-    if player.get("actor") and event.get("player_name"):
+    same_player = player.get("player_id") is None or str(player.get("player_id")) == str(event.get("player_id"))
+    if player.get("actor") and same_player and event.get("player_name"):
         parts = str(event["player_name"]).split()
         return parts[-1] if parts else None
     return None
@@ -281,7 +335,24 @@ def draw_player_disc(ax: Any, player: dict[str, Any], event: dict[str, Any], col
         return []
     artists: list[Any] = []
     outline = debug_edge(player, edge) if debug else edge
-    disc = Circle(point, radius=1.85, facecolor=color, edgecolor=outline, linewidth=2.0 if debug else 1.15, zorder=10)
+    alpha = max(0.0, min(1.0, float(player.get("alpha", 1.0))))
+    status = str(player.get("status") or "UNKNOWN")
+    line_style = {
+        "OBSERVED": "solid",
+        "INTERPOLATED": (0, (4, 2)),
+        "PREDICTED_OR_HELD": (0, (2, 2)),
+        "MISSING_BUT_ALIVE": (0, (1, 3)),
+    }.get(status, (0, (1, 3)))
+    disc = Circle(
+        point,
+        radius=1.85,
+        facecolor=color,
+        edgecolor=outline,
+        linewidth=2.0 if debug else 1.15,
+        linestyle=line_style,
+        alpha=alpha,
+        zorder=10,
+    )
     ax.add_patch(disc)
     artists.append(disc)
     artists.append(
@@ -294,6 +365,7 @@ def draw_player_disc(ax: Any, player: dict[str, Any], event: dict[str, Any], col
             color=text_color,
             fontsize=7.5,
             weight="bold",
+            alpha=alpha,
             zorder=11,
         )
     )
@@ -309,6 +381,7 @@ def draw_player_disc(ax: Any, player: dict[str, Any], event: dict[str, Any], col
                 color=text_color,
                 fontsize=7.2,
                 weight="bold",
+                alpha=alpha,
                 zorder=12,
                 bbox={"boxstyle": "round,pad=0.16", "facecolor": "#121912", "edgecolor": edge, "linewidth": 0.5, "alpha": 0.72},
             )
@@ -324,6 +397,7 @@ def draw_player_disc(ax: Any, player: dict[str, Any], event: dict[str, Any], col
                 color=outline,
                 fontsize=7,
                 weight="bold",
+                alpha=alpha,
                 zorder=13,
             )
         )
@@ -416,6 +490,8 @@ def apply_camera(
     camera: dict[str, float],
     style_config: dict[str, Any],
     timeline: list[Any] | None = None,
+    focus_player_ids: set[str] | None = None,
+    anticipated_event: dict[str, Any] | None = None,
 ) -> None:
     ball_point = sb_to_plot(state.get("ball"))
     event = state.get("event") or {}
@@ -424,7 +500,8 @@ def apply_camera(
         point = sb_to_plot(player.get("location"))
         if point is None:
             continue
-        if ball_point is None or np.hypot(point[0] - ball_point[0], point[1] - ball_point[1]) <= 34.0 or player.get("actor"):
+        canonical_player_id = f"player:statsbomb:{player.get('player_id')}" if player.get("player_id") is not None else None
+        if ball_point is None or np.hypot(point[0] - ball_point[0], point[1] - ball_point[1]) <= 34.0 or player.get("actor") or canonical_player_id in (focus_player_ids or set()):
             points.append(point)
     points.extend(active_annotation_points(annotations, float(state["time"])))
     points.extend(
@@ -435,6 +512,10 @@ def apply_camera(
             float(style_config.get("camera_lookahead_seconds", 0.0)),
         )
     )
+    for location in ((anticipated_event or {}).get("start_location"), (anticipated_event or {}).get("end_location")):
+        point = sb_to_plot(location)
+        if point is not None:
+            points.append(point)
     points = [point for point in points if point is not None]
     if not points:
         return
@@ -518,8 +599,60 @@ def render_tracking_check_frames(model: dict[str, Any], config: dict[str, Any], 
     return paths
 
 
+def apply_tactical_participant_selection(model: dict[str, Any], scene_plan: dict[str, Any]) -> dict[str, Any]:
+    """Narrow presentation to declared tactical actors plus deterministic graph context."""
+    participant_plan = scene_plan.get("tactical_participants") or {}
+    canonical_ids = {str(value) for value in participant_plan.get("mandatory_player_ids") or []}
+    if not canonical_ids:
+        return model
+    selection = model.get("relevant_player_selection") or {}
+    existing = set(selection.get("selected_track_ids") or [])
+    player_ids_by_track: dict[str, set[str]] = {}
+    for frame in model.get("frame_states", []):
+        for player in frame.players:
+            if player.player_id is not None:
+                player_ids_by_track.setdefault(player.tracking_id, set()).add(f"player:statsbomb:{player.player_id}")
+    mandatory = {
+        track_id for track_id in existing
+        if player_ids_by_track.get(track_id, set()) & canonical_ids
+    }
+    maximum_context = max(0, int(participant_plan.get("maximum_context_players", 6)))
+    scores = {
+        str(item.get("track_id")): float(item.get("score") or 0.0)
+        for item in selection.get("players") or []
+    }
+    context_candidates = (set(selection.get("context_track_ids") or []) | set(selection.get("optional_track_ids") or [])) - mandatory
+    context = sorted(context_candidates, key=lambda track_id: (-scores.get(track_id, 0.0), track_id))[:maximum_context]
+    selected = sorted(mandatory | set(context))
+    selection["selected_track_ids"] = selected
+    selection["mandatory_track_ids"] = sorted(mandatory)
+    selection["context_track_ids"] = sorted(context)
+    selection["optional_track_ids"] = []
+    selection["tactical_presentation"] = {
+        "mandatory_player_ids": sorted(canonical_ids),
+        "mandatory_track_ids": sorted(mandatory),
+        "context_track_ids": sorted(context),
+        "maximum_context_players": maximum_context,
+        "selection_rule": "DECLARED_TACTICAL_ACTORS_THEN_HIGHEST_SCORED_DIRECT_CONTEXT",
+    }
+    return model
+
+
+def _read_json_object(path: Path | None) -> dict[str, Any] | None:
+    if not path or not Path(path).exists():
+        return None
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
 def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], config: dict[str, Any], output_path: Path, frames_dir: Path | None = None, frame_range: tuple[int, int] | None = None) -> dict[str, Any]:
     animation_config = config["animation"]
+    possession_match_id = possession.get("match_id")
+    possession_id = possession.get("possession_id")
+    validate_scene_plan_possession(scene_plan, possession_id)
+    annotations_file = animation_config.get("annotations_file")
+    annotations_path = ROOT / annotations_file if annotations_file else None
+    annotations_payload = _read_json_object(annotations_path)
+    validate_annotations_payload(annotations_payload, possession_match_id, possession_id)
     fps = int(scene_plan.get("format", {}).get("fps") or animation_config.get("fps", 30))
     width = int(scene_plan.get("format", {}).get("width") or animation_config.get("width", 1080))
     height = int(scene_plan.get("format", {}).get("height") or animation_config.get("height", 1920))
@@ -527,7 +660,8 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
     hook_hold = social_hook + transition_duration if identity_hook else max(0.0, float(animation_config.get("hook_hold_seconds", 0.0)))
     hook_text_value = str(animation_config.get("hook_text") or "")
     hook_model_time = max(0.0, float(animation_config.get("hook_model_time", 0.0)))
-    debug_mode = bool(animation_config.get("debug", False))
+    presentation_mode = (scene_plan.get("presentation") or {}).get("mode")
+    hide_event_hud, debug_mode = resolve_presentation(scene_plan, animation_config)
     dpi = 100
     style = colors(config)
     model = build_animation_model(possession, config)
@@ -538,12 +672,14 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
         end_idx = next((idx for idx, event in enumerate(events) if event["id"] == window["window_end_event_id"]), len(events) - 1)
         event_ids = {str(event["id"]) for event in events[start_idx : end_idx + 1]}
         model = apply_relevant_player_selection(model, config, event_ids, scene_plan.get("selected_finding"))
-    annotations_file = animation_config.get("annotations_file")
-    annotations_path = ROOT / annotations_file if annotations_file else None
+    model = apply_tactical_participant_selection(model, scene_plan)
     annotations = load_annotations(annotations_path)
     segments = scene_segments(scene_plan, model)
     duration = hook_hold + (segments[-1]["output_end"] if segments else model["duration"])
     event_by_id = {event["id"]: event for event in possession["events"]}
+    visual_focus = scene_plan.get("visual_focus") or {}
+    protagonist_id = visual_focus.get("protagonist_id")
+    focus_player_ids = {str(item) for item in ([protagonist_id] + list(visual_focus.get("secondary_player_ids") or [])) if item}
 
     fig = plt.figure(figsize=(width / dpi, height / dpi), dpi=dpi)
     fig.patch.set_facecolor(style["field"])
@@ -564,6 +700,7 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
     identity_name = fig.text(0.5, 0.66, "", ha="center", va="center", color=style["text"], fontsize=42, weight="bold")
     identity_context = fig.text(0.5, 0.61, "", ha="center", va="center", color=style["muted_text"], fontsize=17)
     identity_hook_text = fig.text(0.5, 0.52, "", ha="center", va="center", color=style["text"], fontsize=25, weight="bold", wrap=True)
+    audit_text = fig.text(0.5, 0.015, "", ha="center", va="bottom", color=style["muted_text"], fontsize=10, weight="bold")
     portrait_artist = None
     portrait_path = identity_hook.get("portrait_path")
     if portrait_path and Path(portrait_path).is_file():
@@ -589,6 +726,11 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
         nonlocal progress_bar
         output_t = min(duration, frame_idx / fps)
         model_t, active_pause, is_hook = map_render_time(output_t, segments, hook_hold, hook_model_time)
+        relative_output_t = output_t - hook_hold
+        active_render_segment = next(
+            (segment for segment in segments if segment["output_start"] <= relative_output_t <= segment["output_end"]),
+            None,
+        )
         state = state_at(model, model_t)
         if model_t < camera["last_model_t"]:
             trail_history.clear()
@@ -606,7 +748,12 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
         if portrait_artist is not None:
             portrait_artist.set_visible(intro_alpha > 0)
             portrait_artist.patch.set_alpha(intro_alpha)
-        apply_camera(ax, state, annotations, camera, animation_config, model["timeline"])
+        anticipated_event = event_by_id.get(
+            str((active_render_segment or {}).get("scene", {}).get("camera_target_event_id"))
+        )
+        apply_camera(
+            ax, state, annotations, camera, animation_config, model["timeline"], focus_player_ids, anticipated_event
+        )
         event = state["event"] or {}
         start = sb_to_plot(event.get("start_location"))
         ball_point = sb_to_plot(state["ball"])
@@ -624,8 +771,22 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
         dynamic_artists.extend(draw_annotations(ax, annotations, model_t, style))
         dynamic_artists.extend(draw_players(ax, state, style, trail_history, debug_mode))
 
-        actor = actor_player(state["players"])
-        actor_point = sb_to_plot(actor.get("location")) if actor else None
+        if protagonist_id:
+            event_player_id = f"player:statsbomb:{event.get('player_id')}" if event.get("player_id") is not None else None
+            authenticated_actor_position = event_player_id == protagonist_id
+            protagonist = next((player for player in state["players"] if f"player:statsbomb:{player.get('player_id')}" == protagonist_id), None)
+            protagonist_point = start if authenticated_actor_position else (sb_to_plot(protagonist.get("location")) if protagonist else None)
+            if protagonist_point:
+                ring = Circle(protagonist_point, radius=3.8, facecolor="none", edgecolor="#FFFFFF", linewidth=2.4,
+                              linestyle="-" if authenticated_actor_position else (0, (3, 2)), zorder=21)
+                ax.add_patch(ring)
+                label_text = "PROTAGONIST" if authenticated_actor_position else "PROTAGONIST · RECONSTRUCTED"
+                label = ax.text(protagonist_point[0], protagonist_point[1] - 4.8, label_text, ha="center", va="top",
+                                color="#FFFFFF", fontsize=7, weight="bold", clip_on=True, zorder=22,
+                                bbox={"boxstyle": "round,pad=0.2", "facecolor": "#0B2019", "edgecolor": "none", "alpha": 0.82})
+                dynamic_artists.extend((ring, label))
+
+        actor_point = start
         if actor_point:
             actor_ring = Circle(actor_point, radius=3.0, facecolor="none", edgecolor=style["actor_edge"], linewidth=2.2, zorder=19)
             ax.add_patch(actor_ring)
@@ -635,7 +796,8 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
             ax.add_patch(ball)
             dynamic_artists.append(ball)
 
-        event_text.set_text(f"{event.get('type', '')}  |  {event.get('player_name') or ''}".strip())
+        event_text.set_text("" if hide_event_hud else f"{event.get('type', '')}  |  {event.get('player_name') or ''}".strip())
+        event_text.set_alpha(0.0 if hide_event_hud else 1.0)
         if is_hook and hook_text_value:
             top_text.set_text(hook_text_value)
             top_text.set_alpha(1.0)
@@ -644,17 +806,47 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
             top_text.set_alpha(0.0)
         if event.get("type") == "Shot" and event.get("xg") is not None:
             xg_text.set_text(f"xG {float(event['xg']):.3f}")
-            detail_text.set_text(f"xG {float(event['xg']):.3f}")
+            detail_text.set_text("" if hide_event_hud else f"xG {float(event['xg']):.3f}")
         else:
             xg_text.set_text("")
-            detail_text.set_text(f"{possession.get('team') or 'Attack'} reconstruction from StatsBomb 360")
+            detail_text.set_text("" if hide_event_hud else f"{possession.get('team') or 'Attack'} reconstruction from StatsBomb 360")
+        detail_text.set_alpha(0.0 if hide_event_hud else 1.0)
 
         clear_overlays(overlay_artists)
-        if active_pause:
-            pause_event = event_by_id.get(active_pause["event_id"], event)
-            for instruction in active_pause["instructions"]:
-                instruction_event = event_by_id.get(instruction.get("event_id") or active_pause["event_id"], pause_event)
-                execute_instruction(instruction, instruction_event, overlay_artists)
+        instruction_segment = active_render_segment if active_render_segment is not None else active_pause
+        if instruction_segment:
+            segment_event_id = instruction_segment.get("event_id") or instruction_segment.get("scene", {}).get("from_event_id")
+            segment_event = event_by_id.get(segment_event_id, event)
+            instructions = instruction_segment.get("instructions") or instruction_segment.get("scene", {}).get("instructions", [])
+            for instruction in instructions:
+                instruction_event = event_by_id.get(instruction.get("event_id") or segment_event_id, segment_event)
+                execute_instruction(instruction, instruction_event, overlay_artists, event_by_id)
+            caption_artist = overlay_artists["caption"]
+            if caption_artist.get_text():
+                segment_duration = max(1e-9, instruction_segment["output_end"] - instruction_segment["output_start"])
+                elapsed = max(0.0, relative_output_t - instruction_segment["output_start"])
+                remaining = max(0.0, instruction_segment["output_end"] - relative_output_t)
+                timing = instruction_segment.get("scene", {}).get("caption_timing") or {}
+                fade_in = max(0.0, float(timing.get("fade_in_seconds", 0.25)))
+                fade_out = max(0.0, float(timing.get("fade_out_seconds", 0.25)))
+                alpha_in = 1.0 if fade_in == 0.0 else min(1.0, elapsed / fade_in)
+                alpha_out = 1.0 if fade_out == 0.0 else min(1.0, remaining / fade_out)
+                caption_artist.set_alpha(min(alpha_in, alpha_out, 1.0 if segment_duration > 0 else 0.0))
+
+        if presentation_mode == "audit" and instruction_segment:
+            audit_scene = instruction_segment.get("scene", {})
+            episode_id = audit_scene.get("episode_id")
+            if episode_id:
+                confidence = audit_scene.get("episode_confidence")
+                confidence_text = f"{float(confidence):.2f}" if isinstance(confidence, (int, float)) else "?"
+                audit_text.set_text(f"episode={episode_id}  scene={audit_scene.get('scene_id')}  confidence={confidence_text}")
+                audit_text.set_alpha(0.85)
+            else:
+                audit_text.set_text("")
+                audit_text.set_alpha(0.0)
+        else:
+            audit_text.set_text("")
+            audit_text.set_alpha(0.0)
 
         progress_bar.remove()
         progress_bar = timeline_line.axvspan(0, output_t, color=style["ball"], ymin=0, ymax=1)
@@ -667,6 +859,7 @@ def render_scene_plan(possession: dict[str, Any], scene_plan: dict[str, Any], co
             identity_name,
             identity_context,
             identity_hook_text,
+            audit_text,
             progress_bar,
             *overlay_artists.values(),
         ]
@@ -696,15 +889,26 @@ def main() -> None:
     parser.add_argument("--scene-plan", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--config", default=Path("config.yaml"), type=Path)
+    parser.add_argument(
+        "--narrative",
+        required=True,
+        type=Path,
+        help="Per-possession narrative file (see narratives/*.yaml). Provides this "
+        "possession's hook_text, hook_model_time, and annotations_file explicitly; "
+        "never inherited from --config.",
+    )
     args = parser.parse_args()
 
     config = load_config(args.config)
     possession = load_and_normalize(args.input)
     scene_plan = json.loads(args.scene_plan.read_text(encoding="utf-8"))
-    model = render_scene_plan(possession, scene_plan, config, args.output)
+    narrative = load_narrative_config(args.narrative)
+    validate_config_match(narrative, possession.get("match_id"), possession.get("possession_id"))
+    resolved_config = apply_narrative(config, narrative)
+    model = render_scene_plan(possession, scene_plan, resolved_config, args.output)
     diagnostics_path = args.output.with_name(f"{args.output.stem}_tracking_diagnostics.json")
     write_tracking_diagnostics(model, diagnostics_path)
-    render_tracking_check_frames(model, config, pause_windows(scene_plan, model))
+    render_tracking_check_frames(model, resolved_config, pause_windows(scene_plan, model))
     print(f"Wrote {args.output}")
     print(f"Wrote {diagnostics_path}")
 

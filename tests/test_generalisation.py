@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from analysis.interpolate import build_animation_model, state_at
+from analysis.interpolate import build_animation_model, state_at, supported_pitch_position
 from analysis.normalize import load_and_normalize
 from src.pipelines.analyze_possession import analyze, load_config
 from src.pipelines.render_analysis import scene_segments
@@ -25,6 +25,7 @@ def test_exact_snapshot_fidelity_for_both_possessions() -> None:
             expected = {
                 player.get("source_index", idx): tuple(player["location"])
                 for idx, player in enumerate(event.get("freeze_frame", []))
+                if supported_pitch_position(player.get("location"))
             }
             actual = {
                 player.source_index: (player.position.x, player.position.y, player.status.value)

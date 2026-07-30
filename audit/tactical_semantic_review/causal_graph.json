@@ -1,0 +1,187 @@
+{
+  "di_maria": {
+    "detail": "select_source_documents() rejects this fixture before any tactical episode, causal, identity, or render-grounding logic runs. This is the fixture's existing negative-fixture contract (see tests/test_action_graph.py::test_locatelli_and_depay_succeed_and_di_maria_fails_before_action_graph). Per instructions this restriction was not bypassed: no tactical episodes exist for Di Maria to validate, and none of the validators in this audit were run against it.",
+    "error_code": "SRC_EVENT_INDEX_INVALID",
+    "match_id": 3869685,
+    "possession_id": 52,
+    "status": "REJECTED_UPSTREAM"
+  },
+  "fixtures": {
+    "depay": {
+      "corrected_sequence_transitions": [
+        {
+          "confidence": 0.4,
+          "created_intermediate_advantage": "Possession is retained and progressed to a wide, advanced position without turnover, making a delivery into the box possible.",
+          "note": "Low confidence: 'possession was not lost' is necessary but not sufficient evidence of enabling the cutback specifically; no defender-displacement or space-creation measurement exists in current data.",
+          "relation": "ENABLES",
+          "source_episode_id": "corrected:BUILDUP",
+          "supporting_evidence": {
+            "no_turnover_in_span": true,
+            "possession_retained_events": 61
+          },
+          "target_episode_id": "corrected:CUTBACK"
+        },
+        {
+          "confidence": 0.85,
+          "created_intermediate_advantage": "A pass from a wide attacking position lands inside the penalty area directly at the scorer's feet, immediately followed by the shot.",
+          "relation": "CREATES",
+          "source_episode_id": "corrected:CUTBACK",
+          "supporting_evidence": {
+            "backward_x": 3.8,
+            "end_position_in_box": true,
+            "immediate_next_event_is_shot": true
+          },
+          "target_episode_id": "corrected:FINISH"
+        }
+      ],
+      "fixture": "depay",
+      "original_sequence_transitions": [
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:874d063e70100624",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:283efcb45602010a",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:283efcb45602010a",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:9ab6fb5db66ef047",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:9ab6fb5db66ef047",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:f3ac99e003eee69e",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:f3ac99e003eee69e",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:e869ff80d404c7d9",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:e869ff80d404c7d9",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:2785afffc30cf649",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        }
+      ],
+      "original_sequence_verdict": "Every adjacent pair in the originally generated sequence is supported only by chronological adjacency. None of CREATES/ENABLES/FORCES/OPENS/ATTRACTS/RELEASES/EXPLOITS/FINISHES can be asserted between them with the evidence the episodes themselves carry (each episode's `evidence` field describes only its own internal pattern, never how it caused the next episode's outcome). All original transitions are REJECTED.",
+      "schema_id": "tip.tactical_semantic_review.causal_graph"
+    },
+    "locatelli": {
+      "corrected_sequence_transitions": [
+        {
+          "confidence": 0.4,
+          "created_intermediate_advantage": "Possession is retained and switched to Berardi in space, making the driving carry into the box possible.",
+          "note": "Same low-confidence caveat as Depay's BUILDUP->CUTBACK edge.",
+          "relation": "ENABLES",
+          "source_episode_id": "corrected:BUILDUP",
+          "supporting_evidence": {
+            "no_turnover_in_span": true,
+            "possession_retained_events": 42
+          },
+          "target_episode_id": "corrected:BOX_ARRIVAL"
+        },
+        {
+          "confidence": 0.8,
+          "created_intermediate_advantage": "The carry ends inside the penalty area; the very next action is a pass back to the arriving midfielder who shoots immediately.",
+          "relation": "CREATES",
+          "source_episode_id": "corrected:BOX_ARRIVAL",
+          "supporting_evidence": {
+            "end_position_in_box": true,
+            "immediate_next_event_is_pass_then_shot": true
+          },
+          "target_episode_id": "corrected:FINISH"
+        }
+      ],
+      "fixture": "locatelli",
+      "original_sequence_transitions": [
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:9f53225404c3a0cb",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:a7f121e0cf4571fd",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:a7f121e0cf4571fd",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:f84f5d48a3d06af8",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:f84f5d48a3d06af8",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:d98b2e3d758a88c4",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:d98b2e3d758a88c4",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:e0f5c262eb612cd4",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        },
+        {
+          "confidence": 0.0,
+          "relation": "IMPLIED_BY_ADJACENCY_ONLY",
+          "source_episode_id": "episode:e0f5c262eb612cd4",
+          "supporting_evidence": {
+            "adjacent": true
+          },
+          "target_episode_id": "episode:e6e35b12273b76b8",
+          "validator_detail": "transition 'IMPLIED_BY_ADJACENCY_ONLY' is supported only by chronological adjacency, not by an independent tactical mechanism",
+          "validator_outcome": "FAIL"
+        }
+      ],
+      "original_sequence_verdict": "Every adjacent pair in the originally generated sequence is supported only by chronological adjacency. None of CREATES/ENABLES/FORCES/OPENS/ATTRACTS/RELEASES/EXPLOITS/FINISHES can be asserted between them with the evidence the episodes themselves carry (each episode's `evidence` field describes only its own internal pattern, never how it caused the next episode's outcome). All original transitions are REJECTED.",
+      "schema_id": "tip.tactical_semantic_review.causal_graph"
+    }
+  },
+  "schema_id": "tip.tactical_semantic_review.causal_graph"
+}

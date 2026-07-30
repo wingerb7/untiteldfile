@@ -94,6 +94,51 @@ def test_unmatched_observation_creates_one_new_track() -> None:
     assert len({item.tracking_id for item in visible(built[0])}) == 2
 
 
+def test_spatial_fallback_never_reassigns_conflicting_authenticated_identity() -> None:
+    frames = [
+        frame("a", [identified_player(10, 10, True, 1)], index=0),
+        frame("b", [identified_player(10.1, 10, True, 2)], index=1),
+    ]
+    timeline = [
+        type("Timeline", (), {"event": {"id": item["event_id"]}, "start": float(idx)})()
+        for idx, item in enumerate(frames)
+    ]
+    built, diagnostics = build_frame_states(possession(frames), timeline, TrackingConfig())
+    histories: dict[str, set[int]] = {}
+    for state in built:
+        for item in state.players:
+            if item.player_id is not None:
+                histories.setdefault(item.tracking_id, set()).add(int(item.player_id))
+    assert all(len(identities) == 1 for identities in histories.values())
+    assert {item.player_id for item in built[-1].players} >= {1, 2}
+    assert diagnostics["association_conflicts"] == [
+        {
+            "reason_code": "IDENTITY_CONFLICT",
+            "track_id": "track_1",
+            "track_identity": "id:1",
+            "observation_id": "b:0",
+            "observation_identity": "id:2",
+            "source_event_id": "b",
+            "source_index": 0,
+            "model_time": 1.0,
+        }
+    ]
+
+
+def test_identity_conflict_diagnostics_are_deterministic() -> None:
+    frames = [
+        frame("a", [identified_player(10, 10, True, 1)], index=0),
+        frame("b", [identified_player(10.1, 10, True, 2)], index=1),
+    ]
+    timeline = [
+        type("Timeline", (), {"event": {"id": item["event_id"]}, "start": float(idx)})()
+        for idx, item in enumerate(frames)
+    ]
+    first = build_frame_states(possession(frames), timeline, TrackingConfig())[1]
+    second = build_frame_states(possession(frames), timeline, TrackingConfig())[1]
+    assert first["association_conflicts"] == second["association_conflicts"]
+
+
 def test_temporary_disappearance_and_termination() -> None:
     built = states(
         [

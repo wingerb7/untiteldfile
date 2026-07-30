@@ -1,0 +1,96 @@
+{
+  "contract_version": "0.1.0",
+  "first_divergence_layer": "NARRATIVE_GROUPING",
+  "first_divergence_reason": "The previous storytelling entry point never supplied graph-backed tactical episodes to relevance or scene planning. With no return-combination match, it selected the first canonical same-player continuation ending in the shot.",
+  "historical_generic_video": {
+    "candidate_episode_types": [
+      "BUILDUP",
+      "ISOLATION",
+      "OFF_BALL_RUN",
+      "SWITCH_OF_PLAY",
+      "CUTBACK",
+      "FINISH"
+    ],
+    "causal_relevance_ranking": null,
+    "maximum_episode_rule": null,
+    "result": "Earlier generic detections were treated as equally scene-worthy and therefore occupied five explanatory beats before the finish.",
+    "selected_episode_count": 6,
+    "selected_scene_count": 12
+  },
+  "historical_generic_video_first_divergence_layer": "GENERIC_EPISODE_GENERATION_WITHOUT_CAUSAL_RELEVANCE_SELECTION",
+  "schema_id": "tip.depay_storytelling_selection_trace",
+  "selection_model_assessment": "The graph semantic route is optimized for authenticated validity and canonical ordering, not narrative importance. The previous storytelling route is optimized for one-player continuity, not the decisive multi-player mechanism.",
+  "stages": [
+    {
+      "diverges": false,
+      "input_count": 3582,
+      "result": "CORRECT_POSSESSION_SELECTED",
+      "selected_possession_event_count": 59,
+      "stage": "SOURCE_POSSESSION_SELECTION"
+    },
+    {
+      "candidate_count": 7,
+      "diverges": false,
+      "episode_types": [
+        "LINE_BREAK",
+        "LINE_BREAK",
+        "LINE_BREAK",
+        "LINE_BREAK",
+        "LINE_BREAK",
+        "LINE_BREAK",
+        "FINISH"
+      ],
+      "result": "DECISIVE_ATTACK_DETECTED",
+      "stage": "GRAPH_TACTICAL_EPISODE_GENERATION"
+    },
+    {
+      "diverges": false,
+      "result": "NO_ATTACK_IMPORTANCE_SIGNAL_PRODUCED",
+      "rule": "classify_episode_players only; no episode-level causal relevance classification",
+      "stage": "EPISODE_RELEVANCE"
+    },
+    {
+      "confidence_use": "validation metadata only; all candidates are 1.0",
+      "diverges": false,
+      "mandatory_rule": "FINISH always retained",
+      "maximum_episode_count": null,
+      "pattern_priority": "none",
+      "ranking_score": null,
+      "result": "ALL_AUTHENTICATED_EPISODES_RETAINED",
+      "selected_count": 7,
+      "stage": "GRAPH_SEMANTIC_EPISODE_SELECTION",
+      "tie_breaker": "canonical episode ordering"
+    },
+    {
+      "diverges": true,
+      "entry_point": "scripts/render_tactical_storytelling.py::action_chain_for",
+      "fallback": "FACTUAL_CONTINUATION_FALLBACK",
+      "first_divergence": true,
+      "graph_episode_candidates_received": 0,
+      "omitted_first_causal_event": "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+      "result": "ATTACK_REFRAMED_AS_ONE_PLAYER_CONTINUATION",
+      "return_combination_match_count": 0,
+      "selected_player": "player:statsbomb:2988",
+      "selected_step_count": 7,
+      "selection_rule": "FIRST_CANONICAL_CHAIN_ENDING_IN_AUTHENTICATED_SHOT",
+      "stage": "PREVIOUS_STORYTELLING_NARRATIVE_GROUPING"
+    },
+    {
+      "diverges": true,
+      "episode_count": 1,
+      "planning_basis": "ONE_EPISODE_FROM_AUTHENTICATED_PLAYER_ACTION_CONTINUATION",
+      "result": "ONE_SETUP_PAUSE_ONE_COMPRESSED_PLAY_ONE_FINISH_HOLD",
+      "scene_count": 3,
+      "stage": "PREVIOUS_SCENE_DIRECTION_AND_ORDERING"
+    },
+    {
+      "diverges": false,
+      "executed_scene_count": 3,
+      "planned_duration": 8.95,
+      "planned_scene_count": 3,
+      "rendered_duration": 8.95,
+      "result": "EXECUTED_SUPPLIED_PLAN_EXACTLY",
+      "stage": "RENDERER"
+    }
+  ]
+}

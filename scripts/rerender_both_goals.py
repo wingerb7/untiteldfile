@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import copy
 import json
 import math
 import os
@@ -40,6 +39,8 @@ from scripts.narrative_window import (
 from scripts.second_goal_generalisation import write_event_timeline
 from src.domain.models import Position
 from src.pipelines.analyze_possession import analyze, load_config
+from src.pipelines.narrative_config import apply_narrative, load_narrative_config
+from src.pipelines.provenance import validate_config_match
 from src.pipelines.render_analysis import render_scene_plan, scene_segments
 
 
@@ -56,7 +57,7 @@ CASES = {
         "goal_event_id": "ef86f4d9-7acd-4ed0-a5ec-9129079e8fbe",
         "input_file": ROOT / "data" / "possession_52.json",
         "annotation_file": ROOT / "annotations" / "possession_52.json",
-        "annotation_config": "annotations/possession_52.json",
+        "narrative_file": ROOT / "narratives" / "di_maria.yaml",
         "analysis": OUT / "argentina_52_analysis.json",
         "scene_plan": OUT / "argentina_52_scene_plan.json",
         "timeline": OUT / "argentina_52_timeline.json",
@@ -73,7 +74,7 @@ CASES = {
         "goal_event_id": "e0c628ae-6a37-414e-818e-5e3911c07dfc",
         "input_file": ROOT / "data" / "second_goal.json",
         "annotation_file": ROOT / "annotations" / "second_goal.json",
-        "annotation_config": "annotations/second_goal.json",
+        "narrative_file": ROOT / "narratives" / "locatelli.yaml",
         "analysis": OUT / "italy_locatelli_analysis.json",
         "scene_plan": OUT / "italy_locatelli_scene_plan.json",
         "timeline": OUT / "italy_locatelli_timeline.json",
@@ -106,12 +107,9 @@ def git_clean() -> bool:
 
 
 def case_config(base: dict[str, Any], case: dict[str, Any], short: bool = False) -> dict[str, Any]:
-    config = copy.deepcopy(base)
-    config["animation"] = copy.deepcopy(config.get("animation", {}))
-    config["animation"]["annotations_file"] = case["annotation_config"]
-    if case["match_id"] == 3788754:
-        config["animation"]["hook_text"] = "Can Italy turn circulation into a goal?"
-        config["animation"]["hook_model_time"] = 1.0
+    narrative = load_narrative_config(case["narrative_file"])
+    validate_config_match(narrative, case["match_id"], case["possession_id"])
+    config = apply_narrative(base, narrative)
     if short:
         config["animation"]["hook_hold_seconds"] = 0.0
         config["animation"]["hook_text"] = ""

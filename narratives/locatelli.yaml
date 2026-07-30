@@ -1,0 +1,13 @@
+# Per-possession narrative content for the Italy vs Switzerland (Locatelli) possession.
+# This file is the ONLY source for this possession's hook text, hook freeze-frame time,
+# and annotation overlay file. It is never inherited from the shared config.yaml.
+match:
+  match_id: 3788754
+  possession_id: 40
+  label: "Italy 3-0 Switzerland, UEFA Euro 2020 (Locatelli first goal)"
+
+animation:
+  hook_text: "Can Italy turn circulation into a goal?"
+  hook_model_time: 1.0
+  hook_hold_seconds: 2.0
+  annotations_file: "annotations/second_goal.json"

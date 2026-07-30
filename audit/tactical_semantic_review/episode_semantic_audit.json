@@ -1,0 +1,2401 @@
+{
+  "di_maria": {
+    "detail": "select_source_documents() rejects this fixture before any tactical episode, causal, identity, or render-grounding logic runs. This is the fixture's existing negative-fixture contract (see tests/test_action_graph.py::test_locatelli_and_depay_succeed_and_di_maria_fails_before_action_graph). Per instructions this restriction was not bypassed: no tactical episodes exist for Di Maria to validate, and none of the validators in this audit were run against it.",
+    "error_code": "SRC_EVENT_INDEX_INVALID",
+    "match_id": 3869685,
+    "possession_id": 52,
+    "status": "REJECTED_UPSTREAM"
+  },
+  "fixtures": {
+    "depay": {
+      "episodes": [
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "event_count": 3
+          },
+          "end_model_time": "00:08:32.240",
+          "episode_id": "episode:874d063e70100624",
+          "episode_type": "BUILDUP",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": [
+                  41.2,
+                  28.7
+                ],
+                "event_id": "df062304-317d-4ecc-940e-848563aa6140",
+                "location": [
+                  80.5,
+                  25.7
+                ],
+                "player": "Daley Blind",
+                "player_id": "3311",
+                "timestamp": "00:08:28.540",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "903c2486-0e63-458c-890e-88930f119291",
+                "location": [
+                  41.2,
+                  28.7
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:32.240",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  41.2,
+                  28.7
+                ],
+                "event_id": "87a2348f-3097-4ac8-a7b4-2929c60b6f79",
+                "location": [
+                  41.2,
+                  28.7
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:32.240",
+                "type": "Carry"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:87a2348f-3097-4ac8-a7b4-2929c60b6f79:1",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.607
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "df062304-317d-4ecc-940e-848563aa6140",
+            "903c2486-0e63-458c-890e-88930f119291",
+            "87a2348f-3097-4ac8-a7b4-2929c60b6f79"
+          ],
+          "plausible_alternative_classifications": [],
+          "primary_actors": [
+            {
+              "id": "3311",
+              "is_synthetic_observation": false,
+              "name": "Daley Blind"
+            },
+            {
+              "id": "3669",
+              "is_synthetic_observation": false,
+              "name": "Virgil van Dijk"
+            }
+          ],
+          "relevant_defenders": [],
+          "scene_highlighted_players": [
+            "3311",
+            "3669"
+          ],
+          "scene_visible_players": [
+            "3311",
+            "3669",
+            "recon:87a2348f-3097-4ac8-a7b4-2929c60b6f79:1"
+          ],
+          "start_model_time": "00:08:28.540",
+          "validity": "PASS",
+          "why_alternatives_rejected": "BUILDUP is the only type in the catalogue that does not assert a specific mechanism, so it cannot be falsified the way the others can.",
+          "why_valid_or_invalid": "Explicit placeholder for pre-tactical circulation; makes no specific tactical claim beyond 'the team is still probing', which the 3-event span (Blind -> Van Dijk pass + carry) supports."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "diagnostics": {
+              "lane": {
+                "defenders_in_lane": 0,
+                "is_open": true,
+                "lane_length": 34.894,
+                "minimum_defender_distance": 7.859,
+                "openness": 1.0
+              },
+              "receiver": {
+                "freedom": 1.0,
+                "is_free": true,
+                "lane_openness": 1.0,
+                "nearest_defender_distance": 39.21
+              }
+            },
+            "feature_values": {
+              "defenders_in_lane": 0,
+              "lane_openness": 1.0,
+              "nearest_defender_distance": 39.21,
+              "receiver_freedom": 1.0
+            },
+            "pattern": "free_man_creation"
+          },
+          "end_model_time": "00:08:32.266",
+          "episode_id": "episode:283efcb45602010a",
+          "episode_type": "ISOLATION",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": [
+                  7.8,
+                  38.8
+                ],
+                "event_id": "dc9a1aa0-6970-47ad-8d68-e565c3b46271",
+                "location": [
+                  41.2,
+                  28.7
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:32.266",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:dc9a1aa0-6970-47ad-8d68-e565c3b46271:1",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.607
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "dc9a1aa0-6970-47ad-8d68-e565c3b46271"
+          ],
+          "plausible_alternative_classifications": [
+            "BUILDUP (folded into surrounding circulation)",
+            "PRESS_ESCAPE (rejected: no presser was ever close enough to escape)"
+          ],
+          "primary_actors": [
+            {
+              "id": "3669",
+              "is_synthetic_observation": false,
+              "name": "Virgil van Dijk"
+            },
+            {
+              "id": "8326",
+              "is_synthetic_observation": false,
+              "name": "Andries Noppert"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:dc9a1aa0-6970-47ad-8d68-e565c3b46271:1",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "3669",
+            "8326"
+          ],
+          "scene_visible_players": [
+            "3669",
+            "8326",
+            "recon:dc9a1aa0-6970-47ad-8d68-e565c3b46271:1"
+          ],
+          "start_model_time": "00:08:32.266",
+          "validity": "FAIL",
+          "why_alternatives_rejected": "BUILDUP is the correct label: this is exactly the 'patient circulation... without yet breaking' the BUILDUP template describes.",
+          "why_valid_or_invalid": "INVALID. The 'isolated attacker' the free_man_creation detector fires on is the pass recipient of Van Dijk's pass at (41.2, 28.7) -> (7.8, 38.8): Andries Noppert, the Netherlands goalkeeper, receiving a backward safety pass 112m from the opponent's goal. The spec requires an ISOLATION to identify 'the isolated attacker'; the goalkeeper is not an attacker and this is not an attacking isolation, it is routine defensive-third possession retention. The detector's free_man_creation signal (no defender within 39m) fires because nobody presses a goalkeeper receiving the ball in his own third, not because a tactical mismatch was created."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "feature_values": {
+              "events_since_first_involvement": 12,
+              "first_involvement_event_id": "df062304-317d-4ecc-940e-848563aa6140"
+            },
+            "pattern": "late_support"
+          },
+          "end_model_time": "00:08:41.123",
+          "episode_id": "episode:9ab6fb5db66ef047",
+          "episode_type": "OFF_BALL_RUN",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "a8e53ed3-f745-429c-a517-1ee8d880c8da",
+                "location": [
+                  7.8,
+                  38.8
+                ],
+                "player": "Andries Noppert",
+                "player_id": "8326",
+                "timestamp": "00:08:34.570",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  12.6,
+                  39.4
+                ],
+                "event_id": "9dec58c4-f09b-4eb6-8462-77291b0db89b",
+                "location": [
+                  7.8,
+                  38.8
+                ],
+                "player": "Andries Noppert",
+                "player_id": "8326",
+                "timestamp": "00:08:34.570",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  27.2,
+                  31.9
+                ],
+                "event_id": "79d2ee20-8bfb-4e32-a06c-9decadfb9c15",
+                "location": [
+                  12.6,
+                  39.4
+                ],
+                "player": "Andries Noppert",
+                "player_id": "8326",
+                "timestamp": "00:08:36.570",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "3dc1753c-52c0-439c-ad0f-2173b550178d",
+                "location": [
+                  27.2,
+                  31.9
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:37.935",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  27.2,
+                  31.9
+                ],
+                "event_id": "c4ef8e1b-865f-4859-96ce-8caade56bdd3",
+                "location": [
+                  27.2,
+                  31.9
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:37.935",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  32.5,
+                  24.9
+                ],
+                "event_id": "fe2fb592-040e-4ba4-9ef0-355f9d5a9fc5",
+                "location": [
+                  27.2,
+                  31.9
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:38.855",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "dd5a512d-d500-484b-ba88-bb391404df7a",
+                "location": [
+                  32.5,
+                  24.9
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:08:39.796",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  29.7,
+                  24.6
+                ],
+                "event_id": "d4fd6465-986c-449d-8137-3cd305fd52d6",
+                "location": [
+                  32.5,
+                  24.9
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:08:39.796",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  27.9,
+                  35.1
+                ],
+                "event_id": "cd4e2356-a699-4aff-8f50-21b532223687",
+                "location": [
+                  29.7,
+                  24.6
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:08:41.123",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:cd4e2356-a699-4aff-8f50-21b532223687:2",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.826
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "a8e53ed3-f745-429c-a517-1ee8d880c8da",
+            "9dec58c4-f09b-4eb6-8462-77291b0db89b",
+            "79d2ee20-8bfb-4e32-a06c-9decadfb9c15",
+            "3dc1753c-52c0-439c-ad0f-2173b550178d",
+            "c4ef8e1b-865f-4859-96ce-8caade56bdd3",
+            "fe2fb592-040e-4ba4-9ef0-355f9d5a9fc5",
+            "dd5a512d-d500-484b-ba88-bb391404df7a",
+            "d4fd6465-986c-449d-8137-3cd305fd52d6",
+            "cd4e2356-a699-4aff-8f50-21b532223687"
+          ],
+          "plausible_alternative_classifications": [
+            "BUILDUP (folded into surrounding circulation)"
+          ],
+          "primary_actors": [
+            {
+              "id": "3669",
+              "is_synthetic_observation": false,
+              "name": "Virgil van Dijk"
+            },
+            {
+              "id": "8118",
+              "is_synthetic_observation": false,
+              "name": "Frenkie de Jong"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:cd4e2356-a699-4aff-8f50-21b532223687:2",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "3669",
+            "8118"
+          ],
+          "scene_visible_players": [
+            "3669",
+            "8118",
+            "recon:cd4e2356-a699-4aff-8f50-21b532223687:2"
+          ],
+          "start_model_time": "00:08:34.570",
+          "validity": "WARN",
+          "why_alternatives_rejected": "No alternative finding-episode type fits better; the honest label is 'no distinct tactical idea here yet'.",
+          "why_valid_or_invalid": "WEAK. The late_support detector fires because Van Dijk (first touched the ball 12 events earlier, as the very first pass of the possession) receives again. His net displacement over the span is a lateral drift within the defensive third (approx. (27.2, 31.9) -> (34.9, 44.6)), not a 'meaningful displacement... that attacks or creates relevant space' as the spec requires. This is a center-back recycling possession, not a supporting run into an attacking zone."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "feature_values": {
+              "ball_circulation_speed": 11.88,
+              "changed_side": false,
+              "lateral_change": 32.4
+            },
+            "pattern": "switch_of_play"
+          },
+          "end_model_time": "00:08:44.839",
+          "episode_id": "episode:f3ac99e003eee69e",
+          "episode_type": "SWITCH_OF_PLAY",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "e143fc93-d2fc-4c12-95ba-29f61aa97d96",
+                "location": [
+                  27.9,
+                  35.1
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:42.329",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  34.9,
+                  44.6
+                ],
+                "event_id": "02b87b59-f027-403c-aa27-e37136864348",
+                "location": [
+                  27.9,
+                  35.1
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:42.329",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  41.8,
+                  77.0
+                ],
+                "event_id": "59521513-b2dc-43f1-9b3f-738b802459b1",
+                "location": [
+                  34.9,
+                  44.6
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:08:44.839",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:59521513-b2dc-43f1-9b3f-738b802459b1:4",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.574
+            },
+            {
+              "player_id": "recon:59521513-b2dc-43f1-9b3f-738b802459b1:5",
+              "reason": "defender controlling the passing lane / closest to the receiver",
+              "relevance_score": 0.0
+            },
+            {
+              "player_id": "recon:59521513-b2dc-43f1-9b3f-738b802459b1:3",
+              "reason": "player occupying the far side before the switch",
+              "relevance_score": 0.6
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "e143fc93-d2fc-4c12-95ba-29f61aa97d96",
+            "02b87b59-f027-403c-aa27-e37136864348",
+            "59521513-b2dc-43f1-9b3f-738b802459b1"
+          ],
+          "plausible_alternative_classifications": [
+            "WIDE_PROGRESSION (weak: still deep, minimal forward-x progress)",
+            "BUILDUP"
+          ],
+          "primary_actors": [
+            {
+              "id": "3669",
+              "is_synthetic_observation": false,
+              "name": "Virgil van Dijk"
+            },
+            {
+              "id": "8125",
+              "is_synthetic_observation": false,
+              "name": "Denzel Dumfries"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:59521513-b2dc-43f1-9b3f-738b802459b1:5",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "3669",
+            "8125"
+          ],
+          "scene_visible_players": [
+            "3669",
+            "8125",
+            "recon:59521513-b2dc-43f1-9b3f-738b802459b1:4",
+            "recon:59521513-b2dc-43f1-9b3f-738b802459b1:5",
+            "recon:59521513-b2dc-43f1-9b3f-738b802459b1:3"
+          ],
+          "start_model_time": "00:08:42.329",
+          "validity": "FAIL",
+          "why_alternatives_rejected": "WIDE_PROGRESSION requires the receiver to meaningfully stretch an engaged defense; at (41.8, 77.0) in the middle third this is not yet threatening. BUILDUP is the honest label.",
+          "why_valid_or_invalid": "OBJECTIVELY INVALID. The episode's own evidence states changed_side=false: the pass runs (34.9, 44.6) -> (41.8, 77.0), staying on the same side of the pitch (y stays >= 40 throughout) and simply advancing the ball into the right-wide channel to the overlapping fullback Dumfries. lateral_change=32.4m alone triggered the detector because its confidence formula is lateral-distance-only once above threshold; it does not require changed_side to be true. This is progression to a flank, not a switch of the point of attack."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "feature_values": {
+              "backward_x": 18.0,
+              "from_wide_zone": true,
+              "target_central": true
+            },
+            "pattern": "cutback_candidate"
+          },
+          "end_model_time": "00:08:51.424",
+          "episode_id": "episode:e869ff80d404c7d9",
+          "episode_type": "CUTBACK",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "268d1c4b-3c2e-4ad3-810c-3ef002adf78d",
+                "location": [
+                  41.8,
+                  77.0
+                ],
+                "player": "Denzel Dumfries",
+                "player_id": "8125",
+                "timestamp": "00:08:46.860",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  40.0,
+                  75.0
+                ],
+                "event_id": "3681411c-43e3-48c5-92af-c4bb9104ff20",
+                "location": [
+                  41.8,
+                  77.0
+                ],
+                "player": "Denzel Dumfries",
+                "player_id": "8125",
+                "timestamp": "00:08:46.860",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  26.1,
+                  65.3
+                ],
+                "event_id": "8d724265-e4fe-48f9-bb48-50e6e1fb4812",
+                "location": [
+                  40.0,
+                  75.0
+                ],
+                "player": "Denzel Dumfries",
+                "player_id": "8125",
+                "timestamp": "00:08:48.583",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "f9e81322-ad6b-420f-93a8-6b819beb32e2",
+                "location": [
+                  26.1,
+                  65.3
+                ],
+                "player": "Jurriën David Norman Timber",
+                "player_id": "21809",
+                "timestamp": "00:08:50.357",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  26.8,
+                  63.9
+                ],
+                "event_id": "37452390-3d42-4da5-9746-bd18f9a7a50c",
+                "location": [
+                  26.1,
+                  65.3
+                ],
+                "player": "Jurriën David Norman Timber",
+                "player_id": "21809",
+                "timestamp": "00:08:50.357",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  8.8,
+                  38.5
+                ],
+                "event_id": "ccb4756f-3aa6-4b0d-b83a-7126e78bd630",
+                "location": [
+                  26.8,
+                  63.9
+                ],
+                "player": "Jurriën David Norman Timber",
+                "player_id": "21809",
+                "timestamp": "00:08:51.424",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:ccb4756f-3aa6-4b0d-b83a-7126e78bd630:2",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.592
+            },
+            {
+              "player_id": "recon:ccb4756f-3aa6-4b0d-b83a-7126e78bd630:4",
+              "reason": "defender controlling the passing lane / closest to the receiver",
+              "relevance_score": 0.0
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "268d1c4b-3c2e-4ad3-810c-3ef002adf78d",
+            "3681411c-43e3-48c5-92af-c4bb9104ff20",
+            "8d724265-e4fe-48f9-bb48-50e6e1fb4812",
+            "f9e81322-ad6b-420f-93a8-6b819beb32e2",
+            "37452390-3d42-4da5-9746-bd18f9a7a50c",
+            "ccb4756f-3aa6-4b0d-b83a-7126e78bd630"
+          ],
+          "plausible_alternative_classifications": [
+            "BUILDUP (folded into surrounding circulation)"
+          ],
+          "primary_actors": [
+            {
+              "id": "21809",
+              "is_synthetic_observation": false,
+              "name": "Jurriën David Norman Timber"
+            },
+            {
+              "id": "8326",
+              "is_synthetic_observation": false,
+              "name": "Andries Noppert"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:ccb4756f-3aa6-4b0d-b83a-7126e78bd630:4",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "21809",
+            "8326"
+          ],
+          "scene_visible_players": [
+            "21809",
+            "8326",
+            "recon:ccb4756f-3aa6-4b0d-b83a-7126e78bd630:2",
+            "recon:ccb4756f-3aa6-4b0d-b83a-7126e78bd630:4"
+          ],
+          "start_model_time": "00:08:46.860",
+          "validity": "FAIL",
+          "why_alternatives_rejected": "The real cutback of this possession occurs later and unlabelled: Dumfries' pass (108.7, 68.3) -> (104.9, 43.7), backward_x=3.8, from a wide zone into the box, immediately received by Depay who scores. It satisfies both cutback_candidate (confidence 0.64) and box_arrival (confidence 0.75) but lost the MAX_FINDING_EPISODES=4 cap to four defensive-third patterns that saturated to confidence 1.0 -- see root-cause report.",
+          "why_valid_or_invalid": "SEVERELY INVALID. The decisive pass (26.8, 63.9) -> (8.8, 38.5) is received by Andries Noppert -- the Netherlands GOALKEEPER -- 111m from the opponent's goal. backward_x=18.0 satisfied the cutback_candidate threshold purely on y-zone geometry (from_wide_zone / target_central) and raw backward distance, with zero constraint on proximity to the attacking goal. A cutback must satisfy an origin-zone AND receiving-zone requirement near the box (spec Section 1); this pass's receiving zone is the team's own penalty area, not the opponent's. The caption 'Creates a more central, lower-angle opportunity than continuing forward' is false for this instance: the pass creates no scoring opportunity, it returns the ball to the keeper."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "pattern": "finish"
+          },
+          "end_model_time": "00:09:31.453",
+          "episode_id": "episode:2785afffc30cf649",
+          "episode_type": "FINISH",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "b2ae321b-5843-4ddc-9fd7-86ffe97f7c5e",
+                "location": [
+                  8.8,
+                  38.5
+                ],
+                "player": "Andries Noppert",
+                "player_id": "8326",
+                "timestamp": "00:08:53.730",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  9.2,
+                  35.6
+                ],
+                "event_id": "919ff3aa-6807-40b8-9661-8b1dd1867f7b",
+                "location": [
+                  8.8,
+                  38.5
+                ],
+                "player": "Andries Noppert",
+                "player_id": "8326",
+                "timestamp": "00:08:53.730",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  22.7,
+                  29.4
+                ],
+                "event_id": "d0e83c2e-32b9-4ef5-adbe-25864755480f",
+                "location": [
+                  9.2,
+                  35.6
+                ],
+                "player": "Andries Noppert",
+                "player_id": "8326",
+                "timestamp": "00:08:54.745",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "5dbf1a67-ddcb-4624-a0c4-a8de1e643bab",
+                "location": [
+                  22.7,
+                  29.4
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:08:55.994",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  11.6,
+                  46.8
+                ],
+                "event_id": "d97611a6-434c-4610-b14b-3796f5ecdbb9",
+                "location": [
+                  22.7,
+                  29.4
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:08:55.994",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  18.5,
+                  70.2
+                ],
+                "event_id": "b3a34ac0-981c-4ad0-8155-be43abeac9b5",
+                "location": [
+                  11.6,
+                  46.8
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:09:02.185",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "a08c6d71-49e8-425d-b9fd-fe9d0d203d75",
+                "location": [
+                  18.5,
+                  70.2
+                ],
+                "player": "Jurriën David Norman Timber",
+                "player_id": "21809",
+                "timestamp": "00:09:03.497",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  32.0,
+                  74.1
+                ],
+                "event_id": "1df0719b-177a-429d-9b5f-8c99268b1d8e",
+                "location": [
+                  18.5,
+                  70.2
+                ],
+                "player": "Jurriën David Norman Timber",
+                "player_id": "21809",
+                "timestamp": "00:09:03.497",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  19.9,
+                  74.6
+                ],
+                "event_id": "6893acbc-96b6-4855-bc2f-7c9971c0cbc5",
+                "location": [
+                  32.0,
+                  74.1
+                ],
+                "player": "Jurriën David Norman Timber",
+                "player_id": "21809",
+                "timestamp": "00:09:08.679",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "e332b233-7b3b-4708-9f82-e9166a761ef7",
+                "location": [
+                  19.9,
+                  74.6
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:09:09.778",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  19.3,
+                  72.5
+                ],
+                "event_id": "ce502d31-4aed-4f57-ae9e-a1035c124be0",
+                "location": [
+                  19.9,
+                  74.6
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:09:09.778",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  14.9,
+                  52.7
+                ],
+                "event_id": "7576c661-5860-4af5-9ca0-2006c94eaace",
+                "location": [
+                  19.3,
+                  72.5
+                ],
+                "player": "Frenkie de Jong",
+                "player_id": "8118",
+                "timestamp": "00:09:10.684",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "1dc45fcd-476c-4357-8aaf-250dcb1c58b3",
+                "location": [
+                  14.9,
+                  52.7
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:09:11.851",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  14.9,
+                  46.8
+                ],
+                "event_id": "d5a3617a-7d0f-4d9a-9642-6f97c805b6d3",
+                "location": [
+                  14.9,
+                  52.7
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:09:11.851",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  23.5,
+                  14.2
+                ],
+                "event_id": "671c26ef-5cdb-4628-8e92-6a37309cc5b8",
+                "location": [
+                  14.9,
+                  46.8
+                ],
+                "player": "Virgil van Dijk",
+                "player_id": "3669",
+                "timestamp": "00:09:13.188",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "8dea516d-a09d-4ddb-94aa-3a68e10d611e",
+                "location": [
+                  23.5,
+                  14.2
+                ],
+                "player": "Nathan Aké",
+                "player_id": "3306",
+                "timestamp": "00:09:15.157",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  25.0,
+                  12.7
+                ],
+                "event_id": "cad77793-b88d-4252-a4ad-e667d1093963",
+                "location": [
+                  23.5,
+                  14.2
+                ],
+                "player": "Nathan Aké",
+                "player_id": "3306",
+                "timestamp": "00:09:15.157",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  33.5,
+                  3.2
+                ],
+                "event_id": "7ec90a6a-4dde-4be8-bacd-4d6a77f65600",
+                "location": [
+                  25.0,
+                  12.7
+                ],
+                "player": "Nathan Aké",
+                "player_id": "3306",
+                "timestamp": "00:09:16.346",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "560ac771-2cfb-46fe-b5f7-b14d722d217a",
+                "location": [
+                  33.5,
+                  3.2
+                ],
+                "player": "Daley Blind",
+                "player_id": "3311",
+                "timestamp": "00:09:17.192",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  33.5,
+                  3.2
+                ],
+                "event_id": "aae401d3-7199-49af-aa87-efe9cbda1fa3",
+                "location": [
+                  33.5,
+                  3.2
+                ],
+                "player": "Daley Blind",
+                "player_id": "3311",
+                "timestamp": "00:09:17.192",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  46.6,
+                  17.9
+                ],
+                "event_id": "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+                "location": [
+                  33.5,
+                  3.2
+                ],
+                "player": "Daley Blind",
+                "player_id": "3311",
+                "timestamp": "00:09:17.943",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "b4491768-f744-4de3-87b0-ccd4ef7be5a2",
+                "location": [
+                  46.6,
+                  17.9
+                ],
+                "player": "Memphis Depay",
+                "player_id": "2988",
+                "timestamp": "00:09:19.662",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  46.4,
+                  18.5
+                ],
+                "event_id": "6aa97dbd-fd3d-47d5-bb43-7217223a2377",
+                "location": [
+                  46.6,
+                  17.9
+                ],
+                "player": "Memphis Depay",
+                "player_id": "2988",
+                "timestamp": "00:09:19.662",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  44.5,
+                  11.4
+                ],
+                "event_id": "788a800f-e752-4193-a241-c7d26b568a0b",
+                "location": [
+                  46.4,
+                  18.5
+                ],
+                "player": "Memphis Depay",
+                "player_id": "2988",
+                "timestamp": "00:09:19.797",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "69e4ed64-2769-43d3-83f7-ee49148abea3",
+                "location": [
+                  44.5,
+                  11.4
+                ],
+                "player": "Marten de Roon",
+                "player_id": "6994",
+                "timestamp": "00:09:21.040",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  54.4,
+                  21.1
+                ],
+                "event_id": "ac15aa15-db77-464e-89c6-e0ab2dce8077",
+                "location": [
+                  44.5,
+                  11.3
+                ],
+                "player": "Marten de Roon",
+                "player_id": "6994",
+                "timestamp": "00:09:21.040",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "fbb669e7-25a0-4046-a0d5-07f25d313b72",
+                "location": [
+                  54.4,
+                  21.1
+                ],
+                "player": "Davy Klaassen",
+                "player_id": "4318",
+                "timestamp": "00:09:22.030",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  49.1,
+                  23.9
+                ],
+                "event_id": "8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+                "location": [
+                  54.7,
+                  22.1
+                ],
+                "player": "Davy Klaassen",
+                "player_id": "4318",
+                "timestamp": "00:09:22.030",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "541e8c54-a938-4d39-bb18-e3db49e71c72",
+                "location": [
+                  49.1,
+                  23.9
+                ],
+                "player": "Memphis Depay",
+                "player_id": "2988",
+                "timestamp": "00:09:22.907",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  62.9,
+                  37.0
+                ],
+                "event_id": "d3264b17-4393-4e4d-8970-51128f9d9bf3",
+                "location": [
+                  49.1,
+                  24.1
+                ],
+                "player": "Memphis Depay",
+                "player_id": "2988",
+                "timestamp": "00:09:22.907",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "37ed1aa4-d393-4e6d-9b3a-42ee3eb52716",
+                "location": [
+                  62.9,
+                  37.0
+                ],
+                "player": "Cody Mathès Gakpo",
+                "player_id": "20750",
+                "timestamp": "00:09:23.895",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  81.2,
+                  52.0
+                ],
+                "event_id": "51616ac2-e9c6-44b2-95b1-647995956765",
+                "location": [
+                  62.9,
+                  37.0
+                ],
+                "player": "Cody Mathès Gakpo",
+                "player_id": "20750",
+                "timestamp": "00:09:23.895",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  107.9,
+                  68.1
+                ],
+                "event_id": "fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+                "location": [
+                  81.2,
+                  52.0
+                ],
+                "player": "Cody Mathès Gakpo",
+                "player_id": "20750",
+                "timestamp": "00:09:27.486",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "cd4dc2d3-79fe-448a-a970-607196d54290",
+                "location": [
+                  107.9,
+                  68.1
+                ],
+                "player": "Denzel Dumfries",
+                "player_id": "8125",
+                "timestamp": "00:09:30.220",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  104.9,
+                  43.7
+                ],
+                "event_id": "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+                "location": [
+                  108.7,
+                  68.3
+                ],
+                "player": "Denzel Dumfries",
+                "player_id": "8125",
+                "timestamp": "00:09:30.220",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "7aa42ebe-62ce-4dcb-a700-296e34d9b6c5",
+                "location": [
+                  104.9,
+                  43.7
+                ],
+                "player": "Memphis Depay",
+                "player_id": "2988",
+                "timestamp": "00:09:31.356",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  120.0,
+                  36.4,
+                  0.2
+                ],
+                "event_id": "05907c05-0a6c-4aa7-a62a-1f1a70bebba7",
+                "location": [
+                  104.9,
+                  43.7
+                ],
+                "player": "Memphis Depay",
+                "player_id": "2988",
+                "timestamp": "00:09:31.453",
+                "type": "Shot"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:0",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.746
+            },
+            {
+              "player_id": "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:10",
+              "reason": "defender controlling the passing lane / closest to the receiver",
+              "relevance_score": 0.516
+            },
+            {
+              "player_id": "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:12",
+              "reason": "goalkeeper facing the shot",
+              "relevance_score": 0.9
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "b2ae321b-5843-4ddc-9fd7-86ffe97f7c5e",
+            "919ff3aa-6807-40b8-9661-8b1dd1867f7b",
+            "d0e83c2e-32b9-4ef5-adbe-25864755480f",
+            "5dbf1a67-ddcb-4624-a0c4-a8de1e643bab",
+            "d97611a6-434c-4610-b14b-3796f5ecdbb9",
+            "b3a34ac0-981c-4ad0-8155-be43abeac9b5",
+            "a08c6d71-49e8-425d-b9fd-fe9d0d203d75",
+            "1df0719b-177a-429d-9b5f-8c99268b1d8e",
+            "6893acbc-96b6-4855-bc2f-7c9971c0cbc5",
+            "e332b233-7b3b-4708-9f82-e9166a761ef7",
+            "ce502d31-4aed-4f57-ae9e-a1035c124be0",
+            "7576c661-5860-4af5-9ca0-2006c94eaace",
+            "1dc45fcd-476c-4357-8aaf-250dcb1c58b3",
+            "d5a3617a-7d0f-4d9a-9642-6f97c805b6d3",
+            "671c26ef-5cdb-4628-8e92-6a37309cc5b8",
+            "8dea516d-a09d-4ddb-94aa-3a68e10d611e",
+            "cad77793-b88d-4252-a4ad-e667d1093963",
+            "7ec90a6a-4dde-4be8-bacd-4d6a77f65600",
+            "560ac771-2cfb-46fe-b5f7-b14d722d217a",
+            "aae401d3-7199-49af-aa87-efe9cbda1fa3",
+            "33afe8ec-1aea-40be-a7cc-97610032e3b5",
+            "b4491768-f744-4de3-87b0-ccd4ef7be5a2",
+            "6aa97dbd-fd3d-47d5-bb43-7217223a2377",
+            "788a800f-e752-4193-a241-c7d26b568a0b",
+            "69e4ed64-2769-43d3-83f7-ee49148abea3",
+            "ac15aa15-db77-464e-89c6-e0ab2dce8077",
+            "fbb669e7-25a0-4046-a0d5-07f25d313b72",
+            "8d6e145c-7e04-420d-b346-3514e3fbfb9b",
+            "541e8c54-a938-4d39-bb18-e3db49e71c72",
+            "d3264b17-4393-4e4d-8970-51128f9d9bf3",
+            "37ed1aa4-d393-4e6d-9b3a-42ee3eb52716",
+            "51616ac2-e9c6-44b2-95b1-647995956765",
+            "fb2800dc-0e2c-42f6-9708-aaf3caf2b6e7",
+            "cd4dc2d3-79fe-448a-a970-607196d54290",
+            "f13d1fcc-d78b-4932-a6ae-f24f0e153753",
+            "7aa42ebe-62ce-4dcb-a700-296e34d9b6c5",
+            "05907c05-0a6c-4aa7-a62a-1f1a70bebba7"
+          ],
+          "plausible_alternative_classifications": [
+            "Split into BOX_ARRIVAL/CUTBACK (Dumfries -> Depay) + FINISH (Depay's shot)"
+          ],
+          "primary_actors": [
+            {
+              "id": "2988",
+              "is_synthetic_observation": false,
+              "name": "Memphis Depay"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:0",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "2988"
+          ],
+          "scene_visible_players": [
+            "2988",
+            "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:0",
+            "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:10",
+            "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:12"
+          ],
+          "start_model_time": "00:08:53.730",
+          "validity": "WARN",
+          "why_alternatives_rejected": "See corrected sequence: this split is the corrected recommendation, not a rejected alternative.",
+          "why_valid_or_invalid": "The FINISH label itself is defensible (a shot did conclude the possession), but its 37-event span silently absorbs the possession's actual decisive mechanism -- Gakpo's progressive carry (62.9, 37.0) -> (81.2, 52.0), his pass to Dumfries in the box, and Dumfries' cutback pass to Depay -- without surfacing any of it as its own episode. The caption 'The build-up concludes with a shot' and cause 'The build-up concludes with a shot' are true but tactically empty: they do not identify the mechanism that actually created the goal."
+        }
+      ],
+      "match_id": "3869117",
+      "possession_id": 20
+    },
+    "locatelli": {
+      "episodes": [
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "event_count": 1
+          },
+          "end_model_time": "00:24:24.046",
+          "episode_id": "episode:9f53225404c3a0cb",
+          "episode_type": "BUILDUP",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": [
+                  8.8,
+                  26.7
+                ],
+                "event_id": "f3761d40-7236-4128-9ce5-a6e84d2e0dc8",
+                "location": [
+                  9.5,
+                  22.8
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:24:24.046",
+                "type": "Carry"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:f3761d40-7236-4128-9ce5-a6e84d2e0dc8:4",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.007
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "f3761d40-7236-4128-9ce5-a6e84d2e0dc8"
+          ],
+          "plausible_alternative_classifications": [],
+          "primary_actors": [
+            {
+              "id": "7036",
+              "is_synthetic_observation": false,
+              "name": "Gianluigi Donnarumma"
+            }
+          ],
+          "relevant_defenders": [],
+          "scene_highlighted_players": [
+            "7036"
+          ],
+          "scene_visible_players": [
+            "7036",
+            "recon:f3761d40-7236-4128-9ce5-a6e84d2e0dc8:4"
+          ],
+          "start_model_time": "00:24:24.046",
+          "validity": "PASS",
+          "why_alternatives_rejected": "n/a",
+          "why_valid_or_invalid": "Single-event placeholder (Donnarumma carry) before the first pattern hit; makes no falsifiable tactical claim."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "diagnostics": {
+              "lane": {
+                "defenders_in_lane": 0,
+                "is_open": true,
+                "lane_length": 16.448,
+                "minimum_defender_distance": 24.613,
+                "openness": 1.0
+              },
+              "receiver": {
+                "freedom": 1.0,
+                "is_free": true,
+                "lane_openness": 1.0,
+                "nearest_defender_distance": 32.169
+              }
+            },
+            "feature_values": {
+              "defenders_in_lane": 0,
+              "lane_openness": 1.0,
+              "nearest_defender_distance": 32.169,
+              "receiver_freedom": 1.0
+            },
+            "pattern": "free_man_creation"
+          },
+          "end_model_time": "00:24:25.462",
+          "episode_id": "episode:a7f121e0cf4571fd",
+          "episode_type": "ISOLATION",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": [
+                  17.1,
+                  40.9
+                ],
+                "event_id": "ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605",
+                "location": [
+                  8.8,
+                  26.7
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:24:25.462",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605:4",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.0
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605"
+          ],
+          "plausible_alternative_classifications": [
+            "BUILDUP"
+          ],
+          "primary_actors": [
+            {
+              "id": "7036",
+              "is_synthetic_observation": false,
+              "name": "Gianluigi Donnarumma"
+            },
+            {
+              "id": "7173",
+              "is_synthetic_observation": false,
+              "name": "Leonardo Bonucci"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605:4",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "7036",
+            "7173"
+          ],
+          "scene_visible_players": [
+            "7036",
+            "7173",
+            "recon:ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605:4"
+          ],
+          "start_model_time": "00:24:25.462",
+          "validity": "FAIL",
+          "why_alternatives_rejected": "BUILDUP is the honest label for this circulation.",
+          "why_valid_or_invalid": "INVALID, same defect as Depay. Donnarumma's pass (8.8, 26.7) -> (17.1, 40.9) is received by Leonardo Bonucci, a center-back, 103m from the opponent's goal, during a routine goalkeeper distribution. No defender presses a goalkeeper's outlet pass in the defensive third; that absence of pressure is not an attacking isolation."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "feature_values": {
+              "backward_x": 15.8,
+              "from_wide_zone": true,
+              "target_central": true
+            },
+            "pattern": "cutback_candidate"
+          },
+          "end_model_time": "00:24:38.518",
+          "episode_id": "episode:f84f5d48a3d06af8",
+          "episode_type": "CUTBACK",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "192924bb-8c59-48ca-9c06-b80bc58a8827",
+                "location": [
+                  17.1,
+                  40.9
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:27.110",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  36.3,
+                  42.1
+                ],
+                "event_id": "83ee676f-c508-4cc8-abc3-1b7940cd9e2a",
+                "location": [
+                  17.1,
+                  40.9
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:27.110",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  40.7,
+                  70.9
+                ],
+                "event_id": "5fd931c4-7bb3-4430-ab22-df88b545c85b",
+                "location": [
+                  36.3,
+                  42.1
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:34.918",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "ba848efe-15f3-4e8c-ac8d-e79d521b6ba2",
+                "location": [
+                  40.7,
+                  70.9
+                ],
+                "player": "Giovanni Di Lorenzo",
+                "player_id": "11514",
+                "timestamp": "00:24:36.518",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  41.7,
+                  72.1
+                ],
+                "event_id": "8a83d53a-f9e6-4312-b20f-55dc094b3e21",
+                "location": [
+                  40.7,
+                  70.9
+                ],
+                "player": "Giovanni Di Lorenzo",
+                "player_id": "11514",
+                "timestamp": "00:24:36.518",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  25.9,
+                  49.9
+                ],
+                "event_id": "12f7bd2d-6420-41c6-92bb-ae10fd7111db",
+                "location": [
+                  41.7,
+                  72.1
+                ],
+                "player": "Giovanni Di Lorenzo",
+                "player_id": "11514",
+                "timestamp": "00:24:38.518",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:12f7bd2d-6420-41c6-92bb-ae10fd7111db:5",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.607
+            },
+            {
+              "player_id": "recon:12f7bd2d-6420-41c6-92bb-ae10fd7111db:2",
+              "reason": "defender controlling the passing lane / closest to the receiver",
+              "relevance_score": 0.032
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "192924bb-8c59-48ca-9c06-b80bc58a8827",
+            "83ee676f-c508-4cc8-abc3-1b7940cd9e2a",
+            "5fd931c4-7bb3-4430-ab22-df88b545c85b",
+            "ba848efe-15f3-4e8c-ac8d-e79d521b6ba2",
+            "8a83d53a-f9e6-4312-b20f-55dc094b3e21",
+            "12f7bd2d-6420-41c6-92bb-ae10fd7111db"
+          ],
+          "plausible_alternative_classifications": [
+            "BUILDUP"
+          ],
+          "primary_actors": [
+            {
+              "id": "11514",
+              "is_synthetic_observation": false,
+              "name": "Giovanni Di Lorenzo"
+            },
+            {
+              "id": "7173",
+              "is_synthetic_observation": false,
+              "name": "Leonardo Bonucci"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:12f7bd2d-6420-41c6-92bb-ae10fd7111db:2",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "11514",
+            "7173"
+          ],
+          "scene_visible_players": [
+            "11514",
+            "7173",
+            "recon:12f7bd2d-6420-41c6-92bb-ae10fd7111db:5",
+            "recon:12f7bd2d-6420-41c6-92bb-ae10fd7111db:2"
+          ],
+          "start_model_time": "00:24:27.110",
+          "validity": "FAIL",
+          "why_alternatives_rejected": "The real cutback-shaped ball of this possession is Berardi's pass (117.4, 55.5) -> (116.2, 39.2) into Locatelli in the box for the shot, but it fails the detector's own from_wide_zone (|55.5-40|=15.5 < 22) and backward_x (1.2 < 3.0) thresholds, so it is not classified as anything at all -- see root-cause report.",
+          "why_valid_or_invalid": "INVALID, same defect as Depay's CUTBACK. The decisive pass (41.7, 72.1) -> (25.9, 49.9) is a backward pass from Di Lorenzo back to Bonucci in the middle/defensive third, 94m from goal -- not a pull-back from the byline into the box. backward_x=15.8 and the wide-then-central y-geometry satisfied the detector with no notion of pitch zone."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "feature_values": {
+              "ball_circulation_speed": 6.924,
+              "changed_side": true,
+              "lateral_change": 24.1
+            },
+            "pattern": "switch_of_play"
+          },
+          "end_model_time": "00:24:42.249",
+          "episode_id": "episode:d98b2e3d758a88c4",
+          "episode_type": "SWITCH_OF_PLAY",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "d4e7fe67-31c0-471d-812c-8d1157c6142d",
+                "location": [
+                  25.9,
+                  49.9
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:40.620",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  28.0,
+                  49.9
+                ],
+                "event_id": "ee42b8ec-c044-4115-803c-41a9caf90880",
+                "location": [
+                  25.9,
+                  49.9
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:40.620",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  35.2,
+                  25.8
+                ],
+                "event_id": "8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf",
+                "location": [
+                  28.0,
+                  49.9
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:42.249",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:3",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.38
+            },
+            {
+              "player_id": "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:5",
+              "reason": "defender controlling the passing lane / closest to the receiver",
+              "relevance_score": 0.345
+            },
+            {
+              "player_id": "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:2",
+              "reason": "player occupying the far side before the switch",
+              "relevance_score": 0.6
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "d4e7fe67-31c0-471d-812c-8d1157c6142d",
+            "ee42b8ec-c044-4115-803c-41a9caf90880",
+            "8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf"
+          ],
+          "plausible_alternative_classifications": [
+            "BUILDUP"
+          ],
+          "primary_actors": [
+            {
+              "id": "7119",
+              "is_synthetic_observation": false,
+              "name": "Francesco Acerbi"
+            },
+            {
+              "id": "7173",
+              "is_synthetic_observation": false,
+              "name": "Leonardo Bonucci"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:5",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "7119",
+            "7173"
+          ],
+          "scene_visible_players": [
+            "7119",
+            "7173",
+            "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:3",
+            "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:5",
+            "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:2"
+          ],
+          "start_model_time": "00:24:40.620",
+          "validity": "WARN",
+          "why_alternatives_rejected": "Downgraded rather than rejected outright: unlike Depay's case, the evidence does not contradict the label, only its significance.",
+          "why_valid_or_invalid": "Internally consistent (changed_side=true, unlike Depay's instance) but tactically insignificant: the pass (28.0, 49.9) -> (35.2, 25.8) happens between Bonucci and Acerbi, two central defenders, still inside Italy's own half with negligible forward progress toward goal. It is a genuine side change by the letter of the detector, but does not 'unbalance the defense' in any dangerous sense, so the caption overstates its stakes."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "feature_values": {
+              "events_since_first_involvement": 12,
+              "first_involvement_event_id": "ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605"
+            },
+            "pattern": "late_support"
+          },
+          "end_model_time": "00:24:45.606",
+          "episode_id": "episode:e0f5c262eb612cd4",
+          "episode_type": "OFF_BALL_RUN",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "afb607ba-5ce1-4f67-b46e-004467267f16",
+                "location": [
+                  35.2,
+                  25.8
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:24:44.449",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  36.6,
+                  19.2
+                ],
+                "event_id": "f79c20a4-f70f-4ef3-b4f3-d6e0a2d7fafe",
+                "location": [
+                  35.2,
+                  25.8
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:24:44.449",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  29.5,
+                  45.5
+                ],
+                "event_id": "f42c6b85-d665-4c51-b2d5-6ccab8a27270",
+                "location": [
+                  36.6,
+                  19.2
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:24:45.606",
+                "type": "Pass"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:f42c6b85-d665-4c51-b2d5-6ccab8a27270:4",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.506
+            },
+            {
+              "player_id": "recon:f42c6b85-d665-4c51-b2d5-6ccab8a27270:3",
+              "reason": "defender controlling the passing lane / closest to the receiver",
+              "relevance_score": 0.103
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "afb607ba-5ce1-4f67-b46e-004467267f16",
+            "f79c20a4-f70f-4ef3-b4f3-d6e0a2d7fafe",
+            "f42c6b85-d665-4c51-b2d5-6ccab8a27270"
+          ],
+          "plausible_alternative_classifications": [
+            "BUILDUP"
+          ],
+          "primary_actors": [
+            {
+              "id": "7119",
+              "is_synthetic_observation": false,
+              "name": "Francesco Acerbi"
+            },
+            {
+              "id": "7173",
+              "is_synthetic_observation": false,
+              "name": "Leonardo Bonucci"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:f42c6b85-d665-4c51-b2d5-6ccab8a27270:3",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "7119",
+            "7173"
+          ],
+          "scene_visible_players": [
+            "7119",
+            "7173",
+            "recon:f42c6b85-d665-4c51-b2d5-6ccab8a27270:4",
+            "recon:f42c6b85-d665-4c51-b2d5-6ccab8a27270:3"
+          ],
+          "start_model_time": "00:24:44.449",
+          "validity": "WARN",
+          "why_alternatives_rejected": "No stronger alternative finding exists for this span.",
+          "why_valid_or_invalid": "Same defect as Depay's OFF_BALL_RUN. Acerbi 'reappears' 12 events after his first involvement, but his span (35.2, 25.8) -> (29.5, 45.5) nets -5.7m of goal-distance progress: lateral repositioning during circulation, not a run that attacks or creates relevant space."
+        },
+        {
+          "action_graph_linkage_gap": "No linkage exists: TacticalEpisode.participating_action_ids are raw StatsBomb event UUIDs from the legacy pipeline (src/ingest/possession_loader.py); action_graph.ActionNode.node_id is a sha256 of (recognition_id, action_type) from the separate formal pipeline. Neither pipeline references the other's identifiers. See identity_bridge_audit.json for the same gap applied to player identity.",
+          "confidence": 1.0,
+          "detector_evidence": {
+            "pattern": "finish"
+          },
+          "end_model_time": "00:25:22.263",
+          "episode_id": "episode:e6e35b12273b76b8",
+          "episode_type": "FINISH",
+          "geometric_evidence": {
+            "event_trace": [
+              {
+                "end_location": null,
+                "event_id": "5264a92d-d564-46ff-a26d-14d8fb54db95",
+                "location": [
+                  29.5,
+                  45.5
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:47.511",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  31.4,
+                  22.8
+                ],
+                "event_id": "8545ee8e-bae9-4cca-8b0f-cb6eabc283eb",
+                "location": [
+                  29.8,
+                  43.6
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:47.511",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "e287d31d-ee72-4ce6-83c2-bf05a1e37382",
+                "location": [
+                  31.4,
+                  22.8
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:24:49.624",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  7.1,
+                  40.5
+                ],
+                "event_id": "fd2664dd-c01f-44cb-9445-b39d6b3db33d",
+                "location": [
+                  31.4,
+                  22.8
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:24:49.624",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "28bafad9-8613-419c-8c81-a6e0a97742fe",
+                "location": [
+                  7.1,
+                  40.5
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:24:51.930",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  7.1,
+                  40.5
+                ],
+                "event_id": "fbd5530c-448a-4ff8-aaf0-b043bb54bf9c",
+                "location": [
+                  7.1,
+                  40.5
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:24:51.930",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  13.7,
+                  48.9
+                ],
+                "event_id": "c7f6375f-3fe2-4856-b6f6-3988640e9adf",
+                "location": [
+                  7.1,
+                  40.5
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:24:53.785",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "f5bae712-9be5-4f4e-abc4-45a2f8c97f4b",
+                "location": [
+                  13.7,
+                  48.9
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:54.985",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  15.2,
+                  48.5
+                ],
+                "event_id": "f7311fe6-e54b-40e9-9672-f8755850ca48",
+                "location": [
+                  13.7,
+                  48.9
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:54.985",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  6.8,
+                  33.1
+                ],
+                "event_id": "615f8cd8-ac13-4d3d-9ca1-ec1d13327815",
+                "location": [
+                  15.2,
+                  48.5
+                ],
+                "player": "Leonardo Bonucci",
+                "player_id": "7173",
+                "timestamp": "00:24:58.185",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "27af0a1a-5f1c-4572-91b5-37959c8bf962",
+                "location": [
+                  6.8,
+                  33.1
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:25:00.585",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  8.0,
+                  31.9
+                ],
+                "event_id": "89569e82-3968-4eaf-9461-5bb14a0ba260",
+                "location": [
+                  6.8,
+                  33.1
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:25:00.585",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  9.1,
+                  12.1
+                ],
+                "event_id": "6c6f68dc-da7b-4eb3-afa6-9680c2d5a51f",
+                "location": [
+                  8.0,
+                  31.9
+                ],
+                "player": "Gianluigi Donnarumma",
+                "player_id": "7036",
+                "timestamp": "00:25:03.785",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "6ef7fbcd-7098-4861-9082-3186b1dd5ce6",
+                "location": [
+                  9.1,
+                  12.1
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:25:04.779",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  9.3,
+                  9.4
+                ],
+                "event_id": "6aa340be-ec66-4d5a-82da-bb89681b40d9",
+                "location": [
+                  9.1,
+                  12.1
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:25:04.779",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  30.2,
+                  4.6
+                ],
+                "event_id": "60719aaf-0c36-4aa6-a13f-ad6c69943646",
+                "location": [
+                  9.3,
+                  9.4
+                ],
+                "player": "Francesco Acerbi",
+                "player_id": "7119",
+                "timestamp": "00:25:05.699",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "fdcd62c6-5bc4-4a8b-8388-81e554a7cda9",
+                "location": [
+                  30.2,
+                  4.6
+                ],
+                "player": "Leonardo Spinazzola",
+                "player_id": "8286",
+                "timestamp": "00:25:07.301",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  52.9,
+                  30.5
+                ],
+                "event_id": "98a22299-e98a-486d-b6cf-5b25a7659b89",
+                "location": [
+                  29.3,
+                  3.9
+                ],
+                "player": "Leonardo Spinazzola",
+                "player_id": "8286",
+                "timestamp": "00:25:07.301",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "2d23a4c4-a1f1-4ef2-91b7-3e7e16d32e2a",
+                "location": [
+                  52.9,
+                  30.5
+                ],
+                "player": "Ciro Immobile",
+                "player_id": "7788",
+                "timestamp": "00:25:09.494",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  55.8,
+                  35.3
+                ],
+                "event_id": "a10e93ca-9968-4472-8209-1441ac94b02a",
+                "location": [
+                  54.1,
+                  28.9
+                ],
+                "player": "Ciro Immobile",
+                "player_id": "7788",
+                "timestamp": "00:25:09.494",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "1cba92f6-e388-483f-8e77-ecf792df4809",
+                "location": [
+                  58.5,
+                  36.7
+                ],
+                "player": "Nicolò Barella",
+                "player_id": "8181",
+                "timestamp": "00:25:09.957",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  66.7,
+                  41.6
+                ],
+                "event_id": "e795a26f-89e9-47eb-97bb-30e681294249",
+                "location": [
+                  64.3,
+                  44.8
+                ],
+                "player": "Fabian Lukas Schär",
+                "player_id": "5537",
+                "timestamp": "00:25:09.957",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "d164fb2a-b35c-4b4e-a273-5c7ed724e5f1",
+                "location": [
+                  68.1,
+                  41.6
+                ],
+                "player": "Granit Xhaka",
+                "player_id": "3500",
+                "timestamp": "00:25:11.241",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  47.5,
+                  41.6
+                ],
+                "event_id": "5a0ce72c-057a-4155-80a8-b17bc3160d3d",
+                "location": [
+                  53.4,
+                  38.5
+                ],
+                "player": "Ciro Immobile",
+                "player_id": "7788",
+                "timestamp": "00:25:11.241",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "8ea6dc96-9de9-42e4-aae0-41de853a228c",
+                "location": [
+                  47.5,
+                  41.6
+                ],
+                "player": "Manuel Locatelli",
+                "player_id": "7038",
+                "timestamp": "00:25:12.323",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  46.1,
+                  40.2
+                ],
+                "event_id": "b72ae147-e085-42ce-b03f-c93749f44580",
+                "location": [
+                  47.5,
+                  41.6
+                ],
+                "player": "Manuel Locatelli",
+                "player_id": "7038",
+                "timestamp": "00:25:12.323",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  74.3,
+                  79.6
+                ],
+                "event_id": "e51fde20-708e-49e4-ae77-5bc768e5f411",
+                "location": [
+                  46.1,
+                  40.2
+                ],
+                "player": "Manuel Locatelli",
+                "player_id": "7038",
+                "timestamp": "00:25:12.335",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "9141f1b5-8961-4842-b566-e583d271c6d3",
+                "location": [
+                  74.3,
+                  79.6
+                ],
+                "player": "Domenico Berardi",
+                "player_id": "7131",
+                "timestamp": "00:25:15.044",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  117.4,
+                  55.5
+                ],
+                "event_id": "bf030fd5-c8e0-47b5-8be9-96d9b5a7fc12",
+                "location": [
+                  74.3,
+                  79.6
+                ],
+                "player": "Domenico Berardi",
+                "player_id": "7131",
+                "timestamp": "00:25:15.044",
+                "type": "Carry"
+              },
+              {
+                "end_location": [
+                  116.2,
+                  39.2
+                ],
+                "event_id": "c5c47922-95e2-425f-bea5-ba40caf2339f",
+                "location": [
+                  117.4,
+                  55.5
+                ],
+                "player": "Domenico Berardi",
+                "player_id": "7131",
+                "timestamp": "00:25:21.636",
+                "type": "Pass"
+              },
+              {
+                "end_location": null,
+                "event_id": "cbae2ef1-c60c-4ad7-882f-9d5d0a0a61cb",
+                "location": [
+                  116.2,
+                  39.2
+                ],
+                "player": "Manuel Locatelli",
+                "player_id": "7038",
+                "timestamp": "00:25:22.263",
+                "type": "Ball Receipt*"
+              },
+              {
+                "end_location": [
+                  120.0,
+                  40.4,
+                  1.0
+                ],
+                "event_id": "e0c628ae-6a37-414e-818e-5e3911c07dfc",
+                "location": [
+                  115.6,
+                  41.3
+                ],
+                "player": "Manuel Locatelli",
+                "player_id": "7038",
+                "timestamp": "00:25:22.263",
+                "type": "Shot"
+              }
+            ]
+          },
+          "opponents_retained": [
+            {
+              "player_id": "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:2",
+              "reason": "nearest pressing defender at the start of this episode",
+              "relevance_score": 0.774
+            },
+            {
+              "player_id": "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:4",
+              "reason": "defender controlling the passing lane / closest to the receiver",
+              "relevance_score": 0.641
+            },
+            {
+              "player_id": "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:9",
+              "reason": "goalkeeper facing the shot",
+              "relevance_score": 0.9
+            }
+          ],
+          "participating_action_graph_node_ids": null,
+          "participating_event_ids": [
+            "5264a92d-d564-46ff-a26d-14d8fb54db95",
+            "8545ee8e-bae9-4cca-8b0f-cb6eabc283eb",
+            "e287d31d-ee72-4ce6-83c2-bf05a1e37382",
+            "fd2664dd-c01f-44cb-9445-b39d6b3db33d",
+            "28bafad9-8613-419c-8c81-a6e0a97742fe",
+            "fbd5530c-448a-4ff8-aaf0-b043bb54bf9c",
+            "c7f6375f-3fe2-4856-b6f6-3988640e9adf",
+            "f5bae712-9be5-4f4e-abc4-45a2f8c97f4b",
+            "f7311fe6-e54b-40e9-9672-f8755850ca48",
+            "615f8cd8-ac13-4d3d-9ca1-ec1d13327815",
+            "27af0a1a-5f1c-4572-91b5-37959c8bf962",
+            "89569e82-3968-4eaf-9461-5bb14a0ba260",
+            "6c6f68dc-da7b-4eb3-afa6-9680c2d5a51f",
+            "6ef7fbcd-7098-4861-9082-3186b1dd5ce6",
+            "6aa340be-ec66-4d5a-82da-bb89681b40d9",
+            "60719aaf-0c36-4aa6-a13f-ad6c69943646",
+            "fdcd62c6-5bc4-4a8b-8388-81e554a7cda9",
+            "98a22299-e98a-486d-b6cf-5b25a7659b89",
+            "2d23a4c4-a1f1-4ef2-91b7-3e7e16d32e2a",
+            "a10e93ca-9968-4472-8209-1441ac94b02a",
+            "1cba92f6-e388-483f-8e77-ecf792df4809",
+            "e795a26f-89e9-47eb-97bb-30e681294249",
+            "d164fb2a-b35c-4b4e-a273-5c7ed724e5f1",
+            "5a0ce72c-057a-4155-80a8-b17bc3160d3d",
+            "8ea6dc96-9de9-42e4-aae0-41de853a228c",
+            "b72ae147-e085-42ce-b03f-c93749f44580",
+            "e51fde20-708e-49e4-ae77-5bc768e5f411",
+            "9141f1b5-8961-4842-b566-e583d271c6d3",
+            "bf030fd5-c8e0-47b5-8be9-96d9b5a7fc12",
+            "c5c47922-95e2-425f-bea5-ba40caf2339f",
+            "cbae2ef1-c60c-4ad7-882f-9d5d0a0a61cb",
+            "e0c628ae-6a37-414e-818e-5e3911c07dfc"
+          ],
+          "plausible_alternative_classifications": [
+            "Split into BOX_ARRIVAL (Berardi's carry) + FINISH (pass back + shot)"
+          ],
+          "primary_actors": [
+            {
+              "id": "7038",
+              "is_synthetic_observation": false,
+              "name": "Manuel Locatelli"
+            }
+          ],
+          "relevant_defenders": [
+            {
+              "id": "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:2",
+              "is_synthetic_observation": true,
+              "name": null
+            }
+          ],
+          "scene_highlighted_players": [
+            "7038"
+          ],
+          "scene_visible_players": [
+            "7038",
+            "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:2",
+            "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:4",
+            "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:9"
+          ],
+          "start_model_time": "00:24:47.511",
+          "validity": "WARN",
+          "why_alternatives_rejected": "See corrected sequence: this split is the corrected recommendation.",
+          "why_valid_or_invalid": "Same defect as Depay's FINISH: its 32-event span absorbs the actual decisive mechanism -- Locatelli's raking switch to Berardi (46.1, 40.2) -> (74.3, 79.6), Berardi's driving carry into the box (74.3, 79.6) -> (117.4, 55.5), and his pass back to Locatelli for the shot -- without surfacing any of it."
+        }
+      ],
+      "match_id": "3788754",
+      "possession_id": 40
+    }
+  },
+  "schema_id": "tip.tactical_semantic_review.episode_semantic_audit"
+}

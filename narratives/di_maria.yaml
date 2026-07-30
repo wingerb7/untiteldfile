@@ -1,0 +1,13 @@
+# Per-possession narrative content for the Argentina vs France (Di Maria) possession.
+# This file is the ONLY source for this possession's hook text, hook freeze-frame time,
+# and annotation overlay file. It is never inherited from the shared config.yaml.
+match:
+  match_id: 3869685
+  possession_id: 52
+  label: "Argentina 2-0 France, FIFA World Cup Final 2022 (36')"
+
+animation:
+  hook_text: "Waarom stond Di Maria helemaal vrij?"
+  hook_model_time: 9.35
+  hook_hold_seconds: 2.0
+  annotations_file: "annotations/possession_52.json"

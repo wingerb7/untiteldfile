@@ -1,0 +1,136 @@
+{
+  "di_maria": {
+    "detail": "select_source_documents() rejects this fixture before any tactical episode, causal, identity, or render-grounding logic runs. This is the fixture's existing negative-fixture contract (see tests/test_action_graph.py::test_locatelli_and_depay_succeed_and_di_maria_fails_before_action_graph). Per instructions this restriction was not bypassed: no tactical episodes exist for Di Maria to validate, and none of the validators in this audit were run against it.",
+    "error_code": "SRC_EVENT_INDEX_INVALID",
+    "match_id": 3869685,
+    "possession_id": 52,
+    "status": "REJECTED_UPSTREAM"
+  },
+  "fixtures": {
+    "depay": {
+      "bridge_contract": {
+        "does_not_fabricate_identity": true,
+        "does_not_redesign_reconstruction": true,
+        "module": "src/identity_bridge.py",
+        "states": [
+          "AUTHENTICATED_TRACK",
+          "OBSERVATION_ONLY",
+          "AMBIGUOUS_TRACK_SET",
+          "UNRESOLVED"
+        ],
+        "summary": "Legacy-pipeline `relevant_defender_ids` are always `recon:{event_id}:{idx}` synthetic freeze-frame snapshot ids (src/ingest/possession_loader.py), which resolve_identity() classifies as OBSERVATION_ONLY: single-observation-scoped, no cross-event persistence. `primary_actor_ids` are raw StatsBomb player_ids, which resolve to AUTHENTICATED_TRACK. No AMBIGUOUS_TRACK_SET or UNRESOLVED case is produced by the current builder because it always emits exactly one nearest-defender id per episode rather than surfacing genuine ambiguity or absence -- see identity_gap_findings."
+      },
+      "defender_resolution_records": [
+        {
+          "defender_id": "recon:dc9a1aa0-6970-47ad-8d68-e565c3b46271:1",
+          "episode_id": "episode:283efcb45602010a",
+          "episode_type": "ISOLATION",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:cd4e2356-a699-4aff-8f50-21b532223687:2",
+          "episode_id": "episode:9ab6fb5db66ef047",
+          "episode_type": "OFF_BALL_RUN",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:59521513-b2dc-43f1-9b3f-738b802459b1:5",
+          "episode_id": "episode:f3ac99e003eee69e",
+          "episode_type": "SWITCH_OF_PLAY",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:ccb4756f-3aa6-4b0d-b83a-7126e78bd630:4",
+          "episode_id": "episode:e869ff80d404c7d9",
+          "episode_type": "CUTBACK",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:05907c05-0a6c-4aa7-a62a-1f1a70bebba7:0",
+          "episode_id": "episode:2785afffc30cf649",
+          "episode_type": "FINISH",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        }
+      ],
+      "fixture": "depay",
+      "identity_gap_findings": [
+        "Reconstruction/world-model identity (src/world_model.py: IDENTIFIED/OBSERVATION_SCOPED, per-state lifecycle) and action-graph event_id space are entirely disconnected from the legacy tactical_episodes/tactical_relevance pipeline's tracking_id space; there is no code path that could resolve a legacy `recon:` id back to a world-model entity even if one existed.",
+        "The tactical_episodes builder always returns exactly one relevant_defender_id (the single nearest defender) even when the evidence for that pick is weak (see e.g. SWITCH_OF_PLAY/CUTBACK 'defender controlling the passing lane' entries retained at relevance_score=0.0 in audit_trace.json) -- the bridge contract's AMBIGUOUS_TRACK_SET state exists to let a future caller represent that honestly instead of forcing a single pick."
+      ],
+      "schema_id": "tip.tactical_semantic_review.identity_bridge_audit"
+    },
+    "locatelli": {
+      "bridge_contract": {
+        "does_not_fabricate_identity": true,
+        "does_not_redesign_reconstruction": true,
+        "module": "src/identity_bridge.py",
+        "states": [
+          "AUTHENTICATED_TRACK",
+          "OBSERVATION_ONLY",
+          "AMBIGUOUS_TRACK_SET",
+          "UNRESOLVED"
+        ],
+        "summary": "Legacy-pipeline `relevant_defender_ids` are always `recon:{event_id}:{idx}` synthetic freeze-frame snapshot ids (src/ingest/possession_loader.py), which resolve_identity() classifies as OBSERVATION_ONLY: single-observation-scoped, no cross-event persistence. `primary_actor_ids` are raw StatsBomb player_ids, which resolve to AUTHENTICATED_TRACK. No AMBIGUOUS_TRACK_SET or UNRESOLVED case is produced by the current builder because it always emits exactly one nearest-defender id per episode rather than surfacing genuine ambiguity or absence -- see identity_gap_findings."
+      },
+      "defender_resolution_records": [
+        {
+          "defender_id": "recon:ff68f0b9-0fc4-4f72-bce7-fb6a4f54a605:4",
+          "episode_id": "episode:a7f121e0cf4571fd",
+          "episode_type": "ISOLATION",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:12f7bd2d-6420-41c6-92bb-ae10fd7111db:2",
+          "episode_id": "episode:f84f5d48a3d06af8",
+          "episode_type": "CUTBACK",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:8a16f13f-5cc4-4ab8-8a4f-cda2e2d47bdf:5",
+          "episode_id": "episode:d98b2e3d758a88c4",
+          "episode_type": "SWITCH_OF_PLAY",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:f42c6b85-d665-4c51-b2d5-6ccab8a27270:3",
+          "episode_id": "episode:e0f5c262eb612cd4",
+          "episode_type": "OFF_BALL_RUN",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        },
+        {
+          "defender_id": "recon:e0c628ae-6a37-414e-818e-5e3911c07dfc:2",
+          "episode_id": "episode:e6e35b12273b76b8",
+          "episode_type": "FINISH",
+          "reason": "synthetic per-event freeze-frame snapshot id; not persistent across events",
+          "renderer_displayed_intended_player": true,
+          "resolution_state": "OBSERVATION_ONLY"
+        }
+      ],
+      "fixture": "locatelli",
+      "identity_gap_findings": [
+        "Reconstruction/world-model identity (src/world_model.py: IDENTIFIED/OBSERVATION_SCOPED, per-state lifecycle) and action-graph event_id space are entirely disconnected from the legacy tactical_episodes/tactical_relevance pipeline's tracking_id space; there is no code path that could resolve a legacy `recon:` id back to a world-model entity even if one existed.",
+        "The tactical_episodes builder always returns exactly one relevant_defender_id (the single nearest defender) even when the evidence for that pick is weak (see e.g. SWITCH_OF_PLAY/CUTBACK 'defender controlling the passing lane' entries retained at relevance_score=0.0 in audit_trace.json) -- the bridge contract's AMBIGUOUS_TRACK_SET state exists to let a future caller represent that honestly instead of forcing a single pick."
+      ],
+      "schema_id": "tip.tactical_semantic_review.identity_bridge_audit"
+    }
+  },
+  "schema_id": "tip.tactical_semantic_review.identity_bridge_audit"
+}

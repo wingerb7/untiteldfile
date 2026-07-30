@@ -1,0 +1,252 @@
+{
+  "encoded_duration_seconds": 20.875,
+  "fixture": "new_goal",
+  "legacy_fallback": {
+    "activation": "explicit_only",
+    "available": true,
+    "used": false
+  },
+  "match_id": 3773387,
+  "planned_duration_seconds": 20.9,
+  "possession_id": 46,
+  "scene_count": 8,
+  "scene_plan_path": "renders/causal_narrative/new_goal/scene_plan.json",
+  "schema_id": "tip.causal_narrative_production_result",
+  "selection": {
+    "action_continuation_sha256": "596c6723256dda1776c2e44de86f4350e3516ebf85e4715ada08c9444b65ddcb",
+    "action_graph_sha256": "f2b29ed1e7c72c737b84d69e001a8563dde44474ee891f6f2e59eac61bf9b2a8",
+    "contract_version": "0.1.0",
+    "exclusions": [],
+    "finish_candidate_episode_ids": [
+      "graph_episode:f89ea8060767cd7a448c9b54cf1c153c2f83189cc1ffc8e14d739d3e155ca7b7"
+    ],
+    "graph_episode_dataset_sha256": "e8759246938a54fb39d7664beabbbe80ac6fee80e5eb06ea87998c538995c24f",
+    "input_provenance": {
+      "action_continuation_sha256": "596c6723256dda1776c2e44de86f4350e3516ebf85e4715ada08c9444b65ddcb",
+      "action_graph_sha256": "f2b29ed1e7c72c737b84d69e001a8563dde44474ee891f6f2e59eac61bf9b2a8",
+      "graph_episode_dataset_sha256": "e8759246938a54fb39d7664beabbbe80ac6fee80e5eb06ea87998c538995c24f"
+    },
+    "limitations": [
+      "Narrative grouping is a presentation abstraction and does not create a tactical fact.",
+      "Only existing LINE_BREAK, RETURN_COMBINATION, FINISH, and continuation evidence is described."
+    ],
+    "match_id": "match:statsbomb:3773387",
+    "possession_id": "match:statsbomb:3773387:possession:46",
+    "schema_id": "tip.causal_narrative_selection",
+    "selected_finish_episode_id": "graph_episode:f89ea8060767cd7a448c9b54cf1c153c2f83189cc1ffc8e14d739d3e155ca7b7",
+    "selection_policy": "FINISH_ANCHORED_AUTHENTICATED_CONTINUATION_THEN_CAUSAL_ROLE;CANONICAL_ORDER_TIE_BREAK",
+    "source_episode_ids": [
+      "graph_episode:8250465cf1b6380931e77cede2087f03e2cf3395adf9a6cb34c4edf22ffd5d7d",
+      "graph_episode:bd9cd3789594170bd289b89d561f1fd3907dfdb85ad47d7a87be1d7415b4d9cc",
+      "graph_episode:82318921b10d947bc703c63b25d90b9e59383191c851fb78a1aa2930ed1f7b48",
+      "graph_episode:f89ea8060767cd7a448c9b54cf1c153c2f83189cc1ffc8e14d739d3e155ca7b7"
+    ],
+    "units": [
+      {
+        "causal_predecessor_unit_id": null,
+        "causal_successor_unit_id": "causal_unit:9a13a4832491a0a2c5d6621fc78bd3d55338fe1d98170e98324700db7b4b5a04",
+        "continuation_relation_ids": [],
+        "end_ordering_key": [
+          11,
+          1471.214,
+          "event:statsbomb:cc3c94ad-e7f3-464d-bf5f-9e397c153a82"
+        ],
+        "factual_caption": "The authenticated passing chain creates the decisive mechanism.",
+        "graph_relation_ids": [
+          "action_edge:158b05f7823a38528403aba4e6add7ce45ccd39425bdf85be3ea48d8f21e60cd",
+          "action_edge:bad00547006e5abdb2164e96c28cc4c7b1101d8838f7525aa0f0ec3eb10bc893"
+        ],
+        "limitations": [
+          "Defensive-line recognition is observation-scoped and does not claim the entire defensive block."
+        ],
+        "narrative_role": "DECISIVE_MECHANISM",
+        "primary_actor_ids": [
+          "player:statsbomb:5503",
+          "player:statsbomb:5487"
+        ],
+        "primary_episode_id": "graph_episode:8250465cf1b6380931e77cede2087f03e2cf3395adf9a6cb34c4edf22ffd5d7d",
+        "schema_id": "tip.causal_narrative_unit",
+        "selection_provenance": {
+          "operation": "SELECT_AUTHENTICATED_CAUSAL_NARRATIVE_UNIT",
+          "ordered_member_episode_ids": [
+            "graph_episode:8250465cf1b6380931e77cede2087f03e2cf3395adf9a6cb34c4edf22ffd5d7d"
+          ],
+          "presentation_abstraction_only": false,
+          "role": "DECISIVE_MECHANISM"
+        },
+        "source_event_ids": [
+          "event:statsbomb:ac2802a9-1462-4150-a381-0dfb412cca5b",
+          "event:statsbomb:cc3c94ad-e7f3-464d-bf5f-9e397c153a82"
+        ],
+        "start_ordering_key": [
+          10,
+          1470.329,
+          "action_node:59d6ae399f6b210db2cde4e2b48b70ccdacd6e07add8b121ee59b962680fa109"
+        ],
+        "supporting_episode_ids": [
+          "graph_episode:8250465cf1b6380931e77cede2087f03e2cf3395adf9a6cb34c4edf22ffd5d7d"
+        ],
+        "tactical_purpose": "Show the causal actions that construct the scoring mechanism.",
+        "unit_id": "causal_unit:804d880f3713f7f6ff10eb466d043679b58341f75df73849531ad6a5b9028671"
+      },
+      {
+        "causal_predecessor_unit_id": "causal_unit:804d880f3713f7f6ff10eb466d043679b58341f75df73849531ad6a5b9028671",
+        "causal_successor_unit_id": "causal_unit:1bc81b28b4f52e3a2bff7be106034e6b7409371cc617d7fe57ac3f9e5d80c0ae",
+        "continuation_relation_ids": [],
+        "end_ordering_key": [
+          16,
+          1478.624,
+          "event:statsbomb:9afd41c1-d0e9-4cc8-8f26-e7c6fcc7ce71"
+        ],
+        "factual_caption": "The authenticated passing chain creates the decisive mechanism.",
+        "graph_relation_ids": [
+          "action_edge:2aa398ad45b688d284d3f910a6ac3e2fe9b7d4841c53cb6a46f9272d85b1c253",
+          "action_edge:48af4e286365bbdc668bbff83c18205e6cf44e9400925756170db0ce4f3b2df1"
+        ],
+        "limitations": [
+          "Defensive-line recognition is observation-scoped and does not claim the entire defensive block."
+        ],
+        "narrative_role": "DECISIVE_MECHANISM",
+        "primary_actor_ids": [
+          "player:statsbomb:30486",
+          "player:statsbomb:5487"
+        ],
+        "primary_episode_id": "graph_episode:bd9cd3789594170bd289b89d561f1fd3907dfdb85ad47d7a87be1d7415b4d9cc",
+        "schema_id": "tip.causal_narrative_unit",
+        "selection_provenance": {
+          "operation": "SELECT_AUTHENTICATED_CAUSAL_NARRATIVE_UNIT",
+          "ordered_member_episode_ids": [
+            "graph_episode:bd9cd3789594170bd289b89d561f1fd3907dfdb85ad47d7a87be1d7415b4d9cc"
+          ],
+          "presentation_abstraction_only": false,
+          "role": "DECISIVE_MECHANISM"
+        },
+        "source_event_ids": [
+          "event:statsbomb:bcb2a9f3-e23a-4e17-b767-184791457b8e",
+          "event:statsbomb:9afd41c1-d0e9-4cc8-8f26-e7c6fcc7ce71"
+        ],
+        "start_ordering_key": [
+          15,
+          1477.833,
+          "action_node:965967720c057d01e463ad87521c215d164cb6eaf19dd187671822c707e810dd"
+        ],
+        "supporting_episode_ids": [
+          "graph_episode:bd9cd3789594170bd289b89d561f1fd3907dfdb85ad47d7a87be1d7415b4d9cc"
+        ],
+        "tactical_purpose": "Show the causal actions that construct the scoring mechanism.",
+        "unit_id": "causal_unit:9a13a4832491a0a2c5d6621fc78bd3d55338fe1d98170e98324700db7b4b5a04"
+      },
+      {
+        "causal_predecessor_unit_id": "causal_unit:9a13a4832491a0a2c5d6621fc78bd3d55338fe1d98170e98324700db7b4b5a04",
+        "causal_successor_unit_id": "causal_unit:42b8e579f1a8b2e749391d74c782ce39ad5ec770211455f60f4da9246d89372f",
+        "continuation_relation_ids": [],
+        "end_ordering_key": [
+          31,
+          1497.327,
+          "event:statsbomb:a50ca932-ce15-4147-b45f-6e160f9728ed"
+        ],
+        "factual_caption": "The final authenticated action supplies the finish.",
+        "graph_relation_ids": [
+          "action_edge:bb78017dd4b5d76785f742e8155b8949f69fde0455ec22906fc00cdcd17c9acf",
+          "action_edge:f07d3433df29b06bcb52fe2e74ca22530bb0c95083423e859f07bd4334ab9191"
+        ],
+        "limitations": [
+          "Defensive-line recognition is observation-scoped and does not claim the entire defensive block."
+        ],
+        "narrative_role": "FINAL_ACTION",
+        "primary_actor_ids": [
+          "player:statsbomb:30486",
+          "player:statsbomb:5211"
+        ],
+        "primary_episode_id": "graph_episode:82318921b10d947bc703c63b25d90b9e59383191c851fb78a1aa2930ed1f7b48",
+        "schema_id": "tip.causal_narrative_unit",
+        "selection_provenance": {
+          "operation": "SELECT_AUTHENTICATED_CAUSAL_NARRATIVE_UNIT",
+          "ordered_member_episode_ids": [
+            "graph_episode:82318921b10d947bc703c63b25d90b9e59383191c851fb78a1aa2930ed1f7b48"
+          ],
+          "presentation_abstraction_only": false,
+          "role": "FINAL_ACTION"
+        },
+        "source_event_ids": [
+          "event:statsbomb:5f759775-20f0-4b39-b103-827758f26697",
+          "event:statsbomb:a50ca932-ce15-4147-b45f-6e160f9728ed"
+        ],
+        "start_ordering_key": [
+          30,
+          1495.51,
+          "action_node:8a7afd28243c125e369fc04e2c1c9b68e2f6d574a8fb676249f3a1ecbbe06727"
+        ],
+        "supporting_episode_ids": [
+          "graph_episode:82318921b10d947bc703c63b25d90b9e59383191c851fb78a1aa2930ed1f7b48"
+        ],
+        "tactical_purpose": "Show the final action directly enabling the shot.",
+        "unit_id": "causal_unit:1bc81b28b4f52e3a2bff7be106034e6b7409371cc617d7fe57ac3f9e5d80c0ae"
+      },
+      {
+        "causal_predecessor_unit_id": "causal_unit:1bc81b28b4f52e3a2bff7be106034e6b7409371cc617d7fe57ac3f9e5d80c0ae",
+        "causal_successor_unit_id": null,
+        "continuation_relation_ids": [],
+        "end_ordering_key": [
+          35,
+          1500.123,
+          "event:statsbomb:bfaa342c-57a7-44c0-a299-4f6a3d1c0298"
+        ],
+        "factual_caption": "The authenticated sequence concludes with the shot.",
+        "graph_relation_ids": [
+          "action_edge:9bd9fad38b4ab1dae5c78b2216a288330e3686d5802cccd28380f1b9b01b8010"
+        ],
+        "limitations": [
+          "This is a factual finish episode; no additional tactical mechanism is inferred."
+        ],
+        "narrative_role": "FINISH",
+        "primary_actor_ids": [
+          "player:statsbomb:5503"
+        ],
+        "primary_episode_id": "graph_episode:f89ea8060767cd7a448c9b54cf1c153c2f83189cc1ffc8e14d739d3e155ca7b7",
+        "schema_id": "tip.causal_narrative_unit",
+        "selection_provenance": {
+          "operation": "SELECT_AUTHENTICATED_CAUSAL_NARRATIVE_UNIT",
+          "ordered_member_episode_ids": [
+            "graph_episode:f89ea8060767cd7a448c9b54cf1c153c2f83189cc1ffc8e14d739d3e155ca7b7"
+          ],
+          "presentation_abstraction_only": false,
+          "role": "FINISH"
+        },
+        "source_event_ids": [
+          "event:statsbomb:bfaa342c-57a7-44c0-a299-4f6a3d1c0298"
+        ],
+        "start_ordering_key": [
+          35,
+          1500.123,
+          "event:statsbomb:bfaa342c-57a7-44c0-a299-4f6a3d1c0298"
+        ],
+        "supporting_episode_ids": [
+          "graph_episode:f89ea8060767cd7a448c9b54cf1c153c2f83189cc1ffc8e14d739d3e155ca7b7"
+        ],
+        "tactical_purpose": "Conclude the causal story with the authenticated shot.",
+        "unit_id": "causal_unit:42b8e579f1a8b2e749391d74c782ce39ad5ec770211455f60f4da9246d89372f"
+      }
+    ]
+  },
+  "selection_sha256": "0f7b8030fe9a16787ef2482f5d60240f834de090eef04b5592321562c7a257a4",
+  "source_graph_episode_ids": [
+    "graph_episode:8250465cf1b6380931e77cede2087f03e2cf3395adf9a6cb34c4edf22ffd5d7d",
+    "graph_episode:bd9cd3789594170bd289b89d561f1fd3907dfdb85ad47d7a87be1d7415b4d9cc",
+    "graph_episode:82318921b10d947bc703c63b25d90b9e59383191c851fb78a1aa2930ed1f7b48",
+    "graph_episode:f89ea8060767cd7a448c9b54cf1c153c2f83189cc1ffc8e14d739d3e155ca7b7"
+  ],
+  "source_graph_episode_types": [
+    "LINE_BREAK",
+    "LINE_BREAK",
+    "LINE_BREAK",
+    "FINISH"
+  ],
+  "unsupported_mechanisms": [
+    "BOX_ENTRY",
+    "FINAL_THIRD_ARRIVAL",
+    "OVERLOAD",
+    "FREE_MAN_CREATION"
+  ],
+  "video_path": "renders/causal_narrative/new_goal/new_goal_causal_story.mp4"
+}

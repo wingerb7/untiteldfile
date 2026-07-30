@@ -1,0 +1,540 @@
+{
+  "di_maria": {
+    "detail": "select_source_documents() rejects this fixture before any tactical episode, causal, identity, or render-grounding logic runs. This is the fixture's existing negative-fixture contract (see tests/test_action_graph.py::test_locatelli_and_depay_succeed_and_di_maria_fails_before_action_graph). Per instructions this restriction was not bypassed: no tactical episodes exist for Di Maria to validate, and none of the validators in this audit were run against it.",
+    "error_code": "SRC_EVENT_INDEX_INVALID",
+    "match_id": 3869685,
+    "possession_id": 52,
+    "status": "REJECTED_UPSTREAM"
+  },
+  "fixtures": {
+    "depay": {
+      "fixture": "depay",
+      "scenes": [
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "N/A"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "PASS"
+            }
+          ],
+          "episode_id": "episode:874d063e70100624",
+          "episode_type": "BUILDUP",
+          "overall": "WARN",
+          "scene_id": "scene_1"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "PASS"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=2.1",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=2.1",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "FAIL"
+            }
+          ],
+          "episode_id": "episode:283efcb45602010a",
+          "episode_type": "ISOLATION",
+          "overall": "FAIL",
+          "scene_id": "scene_3"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "N/A"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "WARN"
+            }
+          ],
+          "episode_id": "episode:9ab6fb5db66ef047",
+          "episode_type": "OFF_BALL_RUN",
+          "overall": "WARN",
+          "scene_id": "scene_4"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "PASS"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay draws a switch-of-play pass arrow, but the episode's own evidence shows changed_side=False",
+              "outcome": "FAIL"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "FAIL"
+            }
+          ],
+          "episode_id": "episode:f3ac99e003eee69e",
+          "episode_type": "SWITCH_OF_PLAY",
+          "overall": "FAIL",
+          "scene_id": "scene_6"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "PASS"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "FAIL"
+            }
+          ],
+          "episode_id": "episode:e869ff80d404c7d9",
+          "episode_type": "CUTBACK",
+          "overall": "FAIL",
+          "scene_id": "scene_8"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "N/A"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "WARN"
+            }
+          ],
+          "episode_id": "episode:2785afffc30cf649",
+          "episode_type": "FINISH",
+          "overall": "WARN",
+          "scene_id": "scene_10"
+        }
+      ],
+      "schema_id": "tip.tactical_semantic_review.render_grounding_audit"
+    },
+    "locatelli": {
+      "fixture": "locatelli",
+      "scenes": [
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "N/A"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=2.1",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=2.1",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "PASS"
+            }
+          ],
+          "episode_id": "episode:9f53225404c3a0cb",
+          "episode_type": "BUILDUP",
+          "overall": "WARN",
+          "scene_id": "scene_1"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "PASS"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=2.1",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=2.1",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "FAIL"
+            }
+          ],
+          "episode_id": "episode:a7f121e0cf4571fd",
+          "episode_type": "ISOLATION",
+          "overall": "FAIL",
+          "scene_id": "scene_2"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "PASS"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "FAIL"
+            }
+          ],
+          "episode_id": "episode:f84f5d48a3d06af8",
+          "episode_type": "CUTBACK",
+          "overall": "FAIL",
+          "scene_id": "scene_3"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "PASS"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "WARN"
+            }
+          ],
+          "episode_id": "episode:d98b2e3d758a88c4",
+          "episode_type": "SWITCH_OF_PLAY",
+          "overall": "WARN",
+          "scene_id": "scene_5"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "N/A"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "WARN"
+            }
+          ],
+          "episode_id": "episode:e0f5c262eb612cd4",
+          "episode_type": "OFF_BALL_RUN",
+          "overall": "WARN",
+          "scene_id": "scene_7"
+        },
+        {
+          "checks": [
+            {
+              "check": "primary_actor_visible",
+              "detail": "all primary actors listed in visible_players",
+              "outcome": "PASS"
+            },
+            {
+              "check": "named_defender_visible_when_message_depends_on_them",
+              "detail": "n/a or satisfied",
+              "outcome": "N/A"
+            },
+            {
+              "check": "tactically_relevant_space_in_viewport",
+              "detail": "camera_intent is a symbolic label (e.g. 'track_switch_across_pitch'), not a numeric viewport bound; this audit cannot deterministically verify pixel-level containment from the scene plan alone. Downgraded to WARN rather than asserting an unverifiable PASS.",
+              "outcome": "WARN"
+            },
+            {
+              "check": "primary_overlay_matches_episode_evidence",
+              "detail": "primary_overlay is consistent with the episode's evidence type",
+              "outcome": "PASS"
+            },
+            {
+              "check": "caption_before_or_during_action",
+              "detail": "lead_seconds=0.5, duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "scene_visible_long_enough_to_understand",
+              "detail": "duration_seconds=1.3",
+              "outcome": "PASS"
+            },
+            {
+              "check": "claimed_tactical_concept_is_visually_observable",
+              "detail": "inherits the episode's semantic validity finding: a scene cannot visually ground a tactical claim that the underlying evidence does not support, regardless of what is rendered on screen.",
+              "outcome": "WARN"
+            }
+          ],
+          "episode_id": "episode:e6e35b12273b76b8",
+          "episode_type": "FINISH",
+          "overall": "WARN",
+          "scene_id": "scene_9"
+        }
+      ],
+      "schema_id": "tip.tactical_semantic_review.render_grounding_audit"
+    }
+  },
+  "schema_id": "tip.tactical_semantic_review.render_grounding_audit"
+}

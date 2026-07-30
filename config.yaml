@@ -1,8 +1,3 @@
-match:
-  match_id: 3869685
-  possession_id: 52
-  label: "Argentina 2-0 France, FIFA World Cup Final 2022 (36')"
-
 data:
   output_dir: "data"
   possession_file: "data/possession_52.json"
@@ -31,11 +26,8 @@ animation:
   start_hold_seconds: 1.0
   end_hold_seconds: 1.5
   show_player_names: false
-  annotations_file: "annotations/possession_52.json"
   fm_output_file: "renders/possession_52_fm_analysis.mp4"
-  hook_text: "Waarom stond Di Maria helemaal vrij?"
   hook_hold_seconds: 2.0
-  hook_model_time: 9.35
   debug: false
 
 tracking:
@@ -44,6 +36,9 @@ tracking:
   max_missing_snapshots: 1
   unmatched_cost: 1000000
   enable_team_shape_propagation: false
+  stale_fade_start_seconds: 0.75
+  stale_omit_seconds: 2.0
+  stale_visibility_hysteresis_seconds: 0.25
 
 relevance:
   minimum_attackers: 3

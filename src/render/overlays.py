@@ -30,6 +30,21 @@ def create_overlay_artists(ax: Axes, fig: Any, style: dict[str, str]) -> dict[st
             arrowprops={"arrowstyle": "->", "color": style["ball"], "lw": 3.2, "alpha": 0.0},
             zorder=10,
         ),
+        "carry_arrow": ax.annotate(
+            "",
+            xy=(0, 0),
+            xytext=(0, 0),
+            arrowprops={"arrowstyle": "-|>", "color": "#5DD6E8", "lw": 2.2, "linestyle": "-", "alpha": 0.0, "connectionstyle": "arc3,rad=-0.08"},
+            zorder=10,
+        ),
+        "continuation_arrow": ax.annotate(
+            "",
+            xy=(0, 0),
+            xytext=(0, 0),
+            arrowprops={"arrowstyle": "->", "color": "#F2F4F3", "lw": 1.8, "linestyle": "--", "alpha": 0.0, "connectionstyle": "arc3,rad=0.12"},
+            zorder=9,
+        ),
+        "continuation_label": ax.text(0, 0, "SCHEMATIC", color="#F2F4F3", fontsize=7, weight="bold", alpha=0.0, zorder=12),
         "defensive_line": ax.plot([], [], color=style["text"], linewidth=2.4, linestyle=(0, (5, 4)), alpha=0.0, zorder=9)[0],
         "caption": fig.text(
             0.5,
@@ -52,13 +67,18 @@ def clear_overlays(artists: dict[str, Any]) -> None:
     artists["pass_arrow"].set_position((0, 0))
     artists["pass_arrow"].xy = (0, 0)
     artists["pass_arrow"].arrow_patch.set_alpha(0.0)
+    for key in ("carry_arrow", "continuation_arrow"):
+        artists[key].set_position((0, 0))
+        artists[key].xy = (0, 0)
+        artists[key].arrow_patch.set_alpha(0.0)
+    artists["continuation_label"].set_alpha(0.0)
     artists["defensive_line"].set_data([], [])
     artists["defensive_line"].set_alpha(0.0)
     artists["caption"].set_text("")
     artists["caption"].set_alpha(0.0)
 
 
-def execute_instruction(instruction: dict[str, Any], event: dict[str, Any], artists: dict[str, Any]) -> None:
+def execute_instruction(instruction: dict[str, Any], event: dict[str, Any], artists: dict[str, Any], event_by_id: dict[str, dict[str, Any]] | None = None) -> None:
     instruction_type = instruction.get("type")
     if instruction_type == "highlight_player":
         target = instruction.get("target")
@@ -75,6 +95,28 @@ def execute_instruction(instruction: dict[str, Any], event: dict[str, Any], arti
             artists["pass_arrow"].set_position(start)
             artists["pass_arrow"].xy = end
             artists["pass_arrow"].arrow_patch.set_alpha(0.95)
+    elif instruction_type == "draw_carry_arrow":
+        start = sb_to_plot(event.get("start_location"))
+        end = sb_to_plot(event.get("end_location"))
+        if start and end:
+            vector = np.array(end) - np.array(start)
+            distance = float(np.linalg.norm(vector))
+            shown_start = tuple(np.array(end) - vector * min(1.0, 28.0 / max(distance, 1e-9)))
+            artists["carry_arrow"].set_position(shown_start)
+            artists["carry_arrow"].xy = end
+            artists["carry_arrow"].arrow_patch.set_alpha(0.9)
+    elif instruction_type == "draw_schematic_continuation" and event_by_id:
+        start_event = event_by_id.get(str(instruction.get("start_event_id"))) or {}
+        end_event = event_by_id.get(str(instruction.get("end_event_id"))) or {}
+        start = sb_to_plot(start_event.get("start_location"))
+        end = sb_to_plot(end_event.get("start_location") or end_event.get("end_location"))
+        if start and end:
+            artists["continuation_arrow"].set_position(start)
+            artists["continuation_arrow"].xy = end
+            artists["continuation_arrow"].arrow_patch.set_alpha(0.72)
+            midpoint = ((start[0] + end[0]) / 2.0, (start[1] + end[1]) / 2.0)
+            artists["continuation_label"].set_position(midpoint)
+            artists["continuation_label"].set_alpha(0.82)
     elif instruction_type == "draw_defensive_line":
         line_x = instruction.get("x")
         if line_x is not None:

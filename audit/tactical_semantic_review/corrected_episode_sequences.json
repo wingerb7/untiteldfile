@@ -1,0 +1,76 @@
+{
+  "di_maria": {
+    "detail": "select_source_documents() rejects this fixture before any tactical episode, causal, identity, or render-grounding logic runs. This is the fixture's existing negative-fixture contract (see tests/test_action_graph.py::test_locatelli_and_depay_succeed_and_di_maria_fails_before_action_graph). Per instructions this restriction was not bypassed: no tactical episodes exist for Di Maria to validate, and none of the validators in this audit were run against it.",
+    "error_code": "SRC_EVENT_INDEX_INVALID",
+    "match_id": 3869685,
+    "possession_id": 52,
+    "status": "REJECTED_UPSTREAM"
+  },
+  "fixtures": {
+    "depay": {
+      "corrected_episodes": [
+        {
+          "episode_type": "BUILDUP",
+          "rationale": "Absorbs the original ISOLATION, OFF_BALL_RUN, SWITCH_OF_PLAY, and CUTBACK episodes: none clear the tactical-significance bar (all occur in the defensive/middle third with no meaningful goal-distance progress; two anchor on passes received by the goalkeeper).",
+          "span_event_ids": "df062304-317d-4ecc-940e-848563aa6140 .. 108.7,68.3 pass start (idx 308-368)"
+        },
+        {
+          "episode_type": "CUTBACK",
+          "rationale": "The possession's actual cutback: backward_x=3.8, played from a wide zone (|68.3-40|=28.3) into the box, immediately received by the scorer.",
+          "span_event_ids": "Dumfries pass (108.7,68.3) -> (104.9,43.7)"
+        },
+        {
+          "episode_type": "FINISH",
+          "rationale": "Unchanged in kind, but now correctly scoped to just the finish, since the mechanism that created it is its own episode.",
+          "span_event_ids": "Depay ball receipt + shot (idx 370-371)"
+        }
+      ],
+      "corrected_sequence": [
+        "BUILDUP",
+        "CUTBACK",
+        "FINISH"
+      ],
+      "original_sequence": [
+        "BUILDUP",
+        "ISOLATION",
+        "OFF_BALL_RUN",
+        "SWITCH_OF_PLAY",
+        "CUTBACK",
+        "FINISH"
+      ]
+    },
+    "locatelli": {
+      "corrected_episodes": [
+        {
+          "episode_type": "BUILDUP",
+          "rationale": "Absorbs the original ISOLATION, CUTBACK, SWITCH_OF_PLAY, and OFF_BALL_RUN episodes for the same reason as Depay: none clear the tactical-significance bar.",
+          "span_event_ids": "Donnarumma carry .. Locatelli's switch pass to Berardi (idx 1043-1085)"
+        },
+        {
+          "episode_type": "BOX_ARRIVAL",
+          "rationale": "The possession's actual decisive action: a driving carry from the switch reception directly into the penalty area. Already detected by the existing box_arrival detector (confidence 0.75) but discarded by the confidence-based episode cap.",
+          "span_event_ids": "Berardi carry (74.3,79.6) -> (117.4,55.5)"
+        },
+        {
+          "episode_type": "FINISH",
+          "rationale": "Correctly scoped to the pass-back and shot; the box entry that created it is now its own episode.",
+          "span_event_ids": "Berardi pass to Locatelli + shot (idx 1090-1092)"
+        }
+      ],
+      "corrected_sequence": [
+        "BUILDUP",
+        "BOX_ARRIVAL",
+        "FINISH"
+      ],
+      "original_sequence": [
+        "BUILDUP",
+        "ISOLATION",
+        "CUTBACK",
+        "SWITCH_OF_PLAY",
+        "OFF_BALL_RUN",
+        "FINISH"
+      ]
+    }
+  },
+  "schema_id": "tip.tactical_semantic_review.corrected_sequences"
+}
