@@ -47,6 +47,9 @@ class TrackingConfig:
     stale_fade_start_seconds: float = 0.75
     stale_omit_seconds: float = 2.0
     stale_visibility_hysteresis_seconds: float = 0.25
+    max_anonymous_association_gap_seconds: float = 8.0
+    maximum_association_displacement_m: float = 1_000_000.0
+    strict_association_speed_gate: bool = False
 
 
 @dataclass(frozen=True)
@@ -247,6 +250,15 @@ def tracking_config(config: dict[str, Any]) -> TrackingConfig:
         stale_omit_seconds=float(values.get("stale_omit_seconds", TrackingConfig.stale_omit_seconds)),
         stale_visibility_hysteresis_seconds=float(
             values.get("stale_visibility_hysteresis_seconds", TrackingConfig.stale_visibility_hysteresis_seconds)
+        ),
+        max_anonymous_association_gap_seconds=float(
+            values.get("max_anonymous_association_gap_seconds", TrackingConfig.max_anonymous_association_gap_seconds)
+        ),
+        maximum_association_displacement_m=float(
+            values.get("maximum_association_displacement_m", TrackingConfig.maximum_association_displacement_m)
+        ),
+        strict_association_speed_gate=bool(
+            values.get("strict_association_speed_gate", TrackingConfig.strict_association_speed_gate)
         ),
     )
 
@@ -484,6 +496,7 @@ def identity_matches(
             and track.is_goalkeeper == observation.is_goalkeeper
             and 0.0 <= observation.timestamp - track.last_timestamp <= config.identity_max_gap_seconds
             and metric_distance(track.last_position, observation.position) <= identity_maximum_distance_m(track, observation, config)
+            and (not config.strict_association_speed_gate or metric_distance(track.last_position, observation.position) <= config.maximum_speed_mps * max(0.0, observation.timestamp - track.last_timestamp))
         ]
         if not candidates:
             continue
@@ -531,7 +544,14 @@ def assign_group(
                 row.append(config.unmatched_cost)
                 continue
             distance_m = metric_distance(track.last_position, observation.position)
-            reachable = distance_m <= maximum_distance_m(track, observation, config)
+            gap = observation.timestamp - track.last_timestamp
+            anonymous_pair = track_identity(track) is None and observation_identity(observation) is None
+            reachable = (
+                distance_m <= maximum_distance_m(track, observation, config)
+                and distance_m <= config.maximum_association_displacement_m
+                and (not anonymous_pair or 0.0 <= gap <= config.max_anonymous_association_gap_seconds)
+                and (not config.strict_association_speed_gate or distance_m <= config.maximum_speed_mps * max(0.0, gap))
+            )
             if authenticated_identities_conflict(track, observation) and reachable:
                 row.append(config.unmatched_cost)
                 if association_diagnostics is not None:
@@ -1024,7 +1044,8 @@ def bridge_known_player_gaps(states: list[FrameState], config: TrackingConfig) -
                     for player in mutable_frames[idx]
                 ):
                     continue
-                progress = smootherstep((frame.timestamp - states[left_idx].timestamp) / span)
+                raw_progress = (frame.timestamp - states[left_idx].timestamp) / span
+                progress = clamp(raw_progress) if config.strict_association_speed_gate else smootherstep(raw_progress)
                 bridge_player = FramePlayerState(
                     tracking_id=left.tracking_id,
                     team_id=left.team_id,
@@ -1049,7 +1070,7 @@ def bridge_known_player_gaps(states: list[FrameState], config: TrackingConfig) -
                     (
                         player_idx
                         for player_idx, player in enumerate(mutable_frames[idx])
-                        if player.visible and player.tracking_id == left.tracking_id
+                        if player.tracking_id == left.tracking_id
                     ),
                     None,
                 )
@@ -1059,6 +1080,8 @@ def bridge_known_player_gaps(states: list[FrameState], config: TrackingConfig) -
                     mutable_frames[idx].append(bridge_player)
                 else:
                     existing = mutable_frames[idx][same_track_idx]
+                    if not existing.visible and sum(1 for player in mutable_frames[idx] if player.visible and player.team_id == left.team_id) >= 11:
+                        continue
                     if existing.observed and existing.source_event_id == frame.event_id:
                         mutable_frames[idx][same_track_idx] = replace(
                             existing,

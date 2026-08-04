@@ -40,6 +40,25 @@ tracking:
   stale_omit_seconds: 2.0
   stale_visibility_hysteresis_seconds: 0.25
 
+# Event-anchored reconstruction admission and conservative physical gates.
+# 9.5 m/s is a sustained elite sprint gate; 28.5 m is the corresponding
+# three-second maximum displacement. Violations become UNKNOWN, never clamped.
+reconstruction_window:
+  target_min_seconds: 3.0
+  target_max_seconds: 8.0
+  hard_max_seconds: 12.0
+  maximum_observation_gap_seconds: 4.0
+  maximum_interpolation_seconds: 3.0
+  maximum_anonymous_association_gap_seconds: 2.5
+  maximum_authenticated_association_gap_seconds: 4.0
+  maximum_player_speed_mps: 9.5
+  maximum_player_displacement_m: 28.5
+  observed_support_seconds: 0.125
+  unknown_rejection_percentage: 55.0
+  maximum_track_fragmentation_ratio: 2.0
+  quality_sample_hz: 8
+  uncertainty_display_lifetime_seconds: 0.75
+
 relevance:
   minimum_attackers: 3
   target_attackers: 5

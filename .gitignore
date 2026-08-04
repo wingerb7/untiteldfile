@@ -24,6 +24,10 @@ data/open-data/
 
 # Generated render outputs
 renders/
+audit/dutch_benchmark/
+audit/reconstruction_validation/
+cinematography_benchmark/
+viewer_benchmark/
 
 # Local editor files
 .idea/

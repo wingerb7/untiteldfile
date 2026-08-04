@@ -10,6 +10,20 @@ MEDIA_TYPE='application/vnd.tip.world-model+json'
 class WorldModelError(StageError):
  def __init__(self,c):super().__init__(c,'world_model')
 
+def build_world_model_from_reconstruction(reconstruction:dict[str,Any])->Artifact:
+ """Build a read-only world description from authoritative reconstructed state."""
+ from src.reconstruction import validate_reconstruction
+ try:validate_reconstruction(reconstruction)
+ except Exception as exc:raise WorldModelError('WORLD_RECONSTRUCTION_INPUT_INVALID') from exc
+ frames=[]
+ for index,keyframe in enumerate(reconstruction['keyframes']):
+  players=[]
+  for player in keyframe['players']:
+   players.append({'tracking_id':player['tracking_id'],'player_id':player['identity']['player_id'],'player_name':player['identity']['player_name'],'team_id':player['team_id'],'position':deepcopy(player['location']) if player['visible'] else None,'state':player['interpolation_state'],'confidence':player['confidence'],'visible':player['visible'],'last_observed_timestamp':player['last_observed_timestamp'],'provenance':deepcopy(player['provenance'])})
+  frames.append({'world_state_index':index,'canonical_time_seconds':keyframe['timestamp'],'anchor_event_id':keyframe['event_id'],'players':players,'visible_area':deepcopy(keyframe['visible_area'])})
+ data={'schema_id':'tip.reconstructed_world_model','contract_version':'1.0.0','reconstruction_sha256':reconstruction['sha256'],'match_id':reconstruction['match_id'],'coordinate_system':reconstruction['coordinate_system'],'frames':frames,'policy':{'read_only_reconstruction':True,'analysis_may_mutate':False}}
+ return Artifact(data,MEDIA_TYPE,reconstruction['sha256'],{'reconstruction':reconstruction['sha256']},validated=True)
+
 @dataclass(frozen=True)
 class EventEvidence:
  event_id: str
